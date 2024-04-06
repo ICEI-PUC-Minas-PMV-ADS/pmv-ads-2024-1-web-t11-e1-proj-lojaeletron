@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br"><html>
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  </head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Matheus Estrela">
+    <meta name="description" content="...">
+    <meta name="keywords" content="...">
+
+    <title>Eletron</title>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    
+</head>
+
+</html>
+
+<footer id="footer"></footer>
+
+<script>
+  // Função para carregar e inserir o conteúdo do cabeçalho
+  fetch('../includes/header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+
+  // Função para carregar e inserir o conteúdo do rodapé
+  fetch('../includes/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+  </script>
+
+<body>
+<link rel="stylesheet" href="/CODIGO_FONTE/PaginaInicial/css/styles.css">
+
+<body>
+
+  <h1 style=" color: #f9ce00">ELETRON</h1>
+  <body>
+    <div class="dropdown">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+          Entre
+        </button>
+        <form class="dropdown-menu p-4">
+          <div class="mb-3">
+            <label for="exampleDropdownFormEmail2" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="exampleDropdownFormPassword2" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+          </div>
+          <div class="mb-3">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+              <label class="form-check-label" for="dropdownCheck2">
+                Lembre-me
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Logar</button>
+        </form>
+     </div>
+</body>
+
+<!--   Botão de cadastro -->
+<section>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#corNavbar02" aria-controls="corNavbar02" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="corNavbar02">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Destaques</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Preços</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sobre</a>
+        </li>
+      </ul>
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Pesquisar</button>
+      </form>
+    </div>
+  </nav>
+
+</header>
+<!------------------------------ COMEÇO DO CARROUSEL-------------------------------------->
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/CODIGO_FONTE/PaginaInicial/imgs/iphone.png" class="d-block w-100" alt="..."width= 200 height = 200 >
+    </div>
+    <div class="carousel-item">
+      <img src="/CODIGO_FONTE/PaginaInicial/imgs/placa-mae.jpg" class="d-block w-100" alt="..."width= 200 height = 200 >
+    </div>
+    <div class="carousel-item">
+      <img src="/CODIGO_FONTE/PaginaInicial/imgs/play5.jpg" class="d-block w-100" alt="..."width= 200 height = 200 >
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!------------------------------FIM DO CARROUSEL-------------------------------------->
+
+<!--INICIO DA SESSAO DE PRODUTOS EM Destaque-->
+</section>
+
+<nav class="navbar bg-light fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><h1 style=" color: #f9ce00">ELETRON</h1></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Departamento</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Games</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Informatica</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Mais...
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Carrinho</a></li>
+              <li><a class="dropdown-item" href="#">Cameras</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Impressoras</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex mt-3" role="O que Procura?">
+          <input class="form-control me-2" type="search" placeholder="O que Procura?" aria-label="search">
+          <button class="btn btn-outline-success" type="submit">Procurar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
+
+</body>
+<html>
