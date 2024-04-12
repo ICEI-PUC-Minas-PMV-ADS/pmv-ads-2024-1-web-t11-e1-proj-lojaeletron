@@ -45,7 +45,7 @@ A aplicação em HTML/CSS/JS é um projeto que pode ser utilizado tanto em servi
 
 # Código-Fonte
 
-<li><a href="codigo-fonte/README.md"> Código Fonte</a></li>
+<li><a href="/CODIGO_FONTE//README.md"> Código Fonte</a></li>
 
 # Apresentação
 
