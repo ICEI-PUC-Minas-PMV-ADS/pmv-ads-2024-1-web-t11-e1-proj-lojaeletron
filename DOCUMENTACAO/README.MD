@@ -26,15 +26,15 @@ A Iniciativa do projeto tem como objetivo, suprir a  necessidade do mercado por 
 # Documentação
 
 <ol>
-<li><a href="DOCUMENTACAO/01-Documentação de Contexto.md"> Documentação de Contexto</a></li>
-<li><a href="DOCUMENTACAO/02-Especificação do Projeto.md"> Especificação do Projeto</a></li>
-<li><a href="DOCUMENTACAO/03-Metodologia.md"> Metodologia</a></li>
-<li><a href="DOCUMENTACAO/04-Projeto de Interface.md"> Projeto de Interface</a></li>
-<li><a href="DOCUMENTACAO/05-Template padrão do Site.md"> Template padrão do Site</a></li>
-<li><a href="DOCUMENTACAO/06-Programação de Funcionalidades.md"> Programação de Funcionalidades</a></li>
-<li><a href="DOCUMENTACAO/07-Plano de Testes de Software.md"> Plano de Testes de Software</a></li>
-<li><a href="DOCUMENTACAO/08-Registro de Testes de Software.md"> Registro de Testes de Software</a></li>
-<li><a href="DOCUMENTACAO/09-Referências.md"> Referências</a></li>
+<li><a href="DOCUMENTACAO/01.Documentação de Contexto.md"> Documentação de Contexto</a></li>
+<li><a href="DOCUMENTACAO/02.Especificação do Projeto.md"> Especificação do Projeto</a></li>
+<li><a href="DOCUMENTACAO/03.Metodologia.md"> Metodologia</a></li>
+<li><a href="DOCUMENTACAO/04.Projeto de Interface.md"> Projeto de Interface</a></li>
+<li><a href="DOCUMENTACAO/05.Template padrão do Site.md"> Template padrão do Site</a></li>
+<li><a href="DOCUMENTACAO/06.Programação de Funcionalidades.md"> Programação de Funcionalidades</a></li>
+<li><a href="DOCUMENTACAO/07.Plano de Testes de Software.md"> Plano de Testes de Software</a></li>
+<li><a href="DOCUMENTACAO/08.Registro de Testes de Software.md"> Registro de Testes de Software</a></li>
+<li><a href="DOCUMENTACAO/09.Referências.md"> Referências</a></li>
 </ol>
 
 
