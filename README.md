@@ -1,5 +1,5 @@
 # Loja Eletron
-Essa e a versao inicial do codigo fonte
+A loja nasce com a visão de proporcionar o melhor custo-beneficio e experiencia para os clientes, entendemos que a busca por produtos de qualidade, combinada com o desejo de adquiri-los a preço acessiveis, é o que impulsiona o mercado.
 
 # ELETRON
 
