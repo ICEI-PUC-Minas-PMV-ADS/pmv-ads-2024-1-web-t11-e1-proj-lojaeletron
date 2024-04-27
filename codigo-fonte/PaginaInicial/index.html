@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br"><html>
 <head>
@@ -28,7 +27,6 @@
 </html>
 
  
-
 <footer id="footer"></footer>
 
 <script>
@@ -46,6 +44,24 @@
       document.getElementById('footer').innerHTML = data;
     });
   </script>
+  <footer id="footer"></footer>
+
+  <script>
+    // Função para carregar e inserir o conteúdo do cabeçalho
+    fetch('../includes/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+  
+    // Função para carregar e inserir o conteúdo do rodapé
+    fetch('../includes/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+    </script>
+  
 
   
 <body>
