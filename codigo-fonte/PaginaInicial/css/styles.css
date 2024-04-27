@@ -1,3 +1,10 @@
+
+/*---------------------------------------------------------------- Parte do Estilo ---------------------------------------------------------------*/
+/*Pallete Color */
+
+#001234
+#FFD200                                                                                
+#45E555
 /* Reset CSS para remover estilos padrão do navegador */
 * {
     margin: 0;
@@ -7,6 +14,7 @@
 
 /* Estilos gerais */
 body {
+    
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
@@ -54,13 +62,63 @@ section {
     padding: 20px;
 }
 
-/* Estilos para o rodapé */
 footer {
-    background-color: #333;
-    color: #fff;
+    
+    background-color: #001234 ;
     text-align: center;
+    color: #FEB900;
+}
+/*---------------------------------------------------------------- Parte do Grip e Flexbox----------------------------------------------------------------*/
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+ /* Isso faz com que o conteúdo ocupe pelo menos toda a altura da viewport */
+}
+
+.content {
+    flex: 1; /* O conteúdo se expandirá para preencher o espaço restante */
+}
+
+footer {
+    
     padding: 20px 0;
-    position: fixed;
-    bottom: 0;
     width: 100%;
+    bottom: 0;
+}
+
+
+.header {
+    background-color: #001234;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000; /* Isso garante que o header fique sobre outros elementos */
+
+}
+
+.content {
+    margin-top: 80px; /* Ajuste esse valor para corresponder à altura do seu header */
+    /* O restante do seu estilo de conteúdo */
+}
+
+/*---------------------------------------------------------------- Parte de interacao do Bootstrap ----------------------------------------------------------------*/
+
+.header-menu {
+
+        background-color: #001234; 
+
+/* Fundo de cor da div "header-menu" alterado para a cor padrão do header */
+
+}
+
+#HomeTitle {
+        font-size: 5vw;
+        color: #FEB900;
+        font-family: Arial, Helvetica, sans-serif;
 }
