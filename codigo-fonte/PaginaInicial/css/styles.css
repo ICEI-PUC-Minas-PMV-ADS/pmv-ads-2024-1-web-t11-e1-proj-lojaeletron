@@ -25,6 +25,9 @@ body {
     width: 80%;
     margin: auto;
     overflow: hidden;
+    gap: 8px;
+    display: grid;
+
 }
 
 /* Estilos para o cabeçalho */
@@ -68,7 +71,7 @@ footer {
     text-align: center;
     color: #FEB900;
 }
-/*---------------------------------------------------------------- Parte do Grip e Flexbox----------------------------------------------------------------*/
+/*---------------------------------------------------------------- Parte do Grid e Flexbox----------------------------------------------------------------*/
 
 body {
     margin: 0;
@@ -109,16 +112,73 @@ footer {
 
 /*---------------------------------------------------------------- Parte de interacao do Bootstrap ----------------------------------------------------------------*/
 
-.header-menu {
-
-        background-color: #001234; 
-
-/* Fundo de cor da div "header-menu" alterado para a cor padrão do header */
-
-}
-
 #HomeTitle {
-        font-size: 5vw;
+        font-size: 50px;
         color: #FEB900;
         font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-menu {
+
+    background-color: #001234; 
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+/* Fundo de cor da div "header-menu" alterado para a cor padrão do header */
+}
+
+.grid-list {
+    list-style-type: none; /* Remove os pontos */
+    padding: 0; 
+    margin: 0; 
+
+  }
+
+.side-nav{
+    margin left: 0%;
+    margin-right: 30px;
+
+}
+.side-nav ul {
+    color: #FEB900;
+    list-style-type: none;
+    width: 100%;
+    border: 200px;
+    padding: 60px;
+    margin: 0px;
+    display: flex; /* Use flexbox para exibir os itens em uma linha */
+    flex-wrap: wrap; /* Permita que os itens sejam quebrados em várias linhas se necessário */
+}
+
+.side-nav li {
+    margin-right: 10px; /* Espaçamento entre os itens */
+}
+
+.side-nav li:last-child {
+    margin-right: 0; /* Remover o espaçamento direito do último item */
+}
+
+.side-nav li a {
+    display: block; /* Transformar os links em elementos de bloco */
+    color: #fff; /* Cor do texto */
+    text-decoration: none; /* Remover sublinhado do texto */
+}
+  
+#iframelogin{
+    width: 30px;
+    height: 200px;
+    position: fixed;
+    top: 100px;
+    left: 800px;
+
+    border-radius: 8px
+}
+
+#iframecarrinho{
+    width: 30px;
+    height: 200px;
+    position: fixed;
+    top: 100px;
+    left: 200px;
+    border-radius: 8px
 }
