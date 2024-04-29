@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     margin: auto;
     overflow: hidden;
     gap: 8px;
@@ -43,22 +43,8 @@ header h1 {
 }
 
 /* Estilos para a navegação */
-nav {
-    background-color: #444;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0 10px;
-}
 
-nav a:hover {
-    background-color: #555;
-}
 
 /* Estilos para o conteúdo */
 section {
@@ -135,12 +121,18 @@ footer {
   }
 
 .side-nav{
-    margin left: 0%;
-    margin-right: 30px;
+    margin-left: 0;
+    margin-right: 0px;
+    margin-block: 40px;
+    content: center;
+    list-style: color #000000;
+    font: Arial;
+    background-color: #ffaa00;
 
 }
+
 .side-nav ul {
-    color: #FEB900;
+    color: #030303;
     list-style-type: none;
     width: 100%;
     border: 200px;
@@ -160,10 +152,10 @@ footer {
 
 .side-nav li a {
     display: block; /* Transformar os links em elementos de bloco */
-    color: #fff; /* Cor do texto */
+    color: #850808; /* Cor do texto */
     text-decoration: none; /* Remover sublinhado do texto */
-}
-  
+} 
+
 #iframelogin{
     width: 30px;
     height: 200px;
