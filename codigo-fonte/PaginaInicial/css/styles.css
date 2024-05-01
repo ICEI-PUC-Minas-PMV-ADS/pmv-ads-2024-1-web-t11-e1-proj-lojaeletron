@@ -136,8 +136,10 @@ footer {
     list-style-type: none;
     width: 100%;
     border: 200px;
-    padding: 60px;
+    padding: 80px;
     margin: 0px;
+    margin-top: 30px;
+    padding-bottom: 50px;
     display: flex; /* Use flexbox para exibir os itens em uma linha */
     flex-wrap: wrap; /* Permita que os itens sejam quebrados em várias linhas se necessário */
 }
@@ -173,4 +175,9 @@ footer {
     top: 100px;
     left: 200px;
     border-radius: 8px
+}
+
+.grid-template-columns-1{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+       
 }
