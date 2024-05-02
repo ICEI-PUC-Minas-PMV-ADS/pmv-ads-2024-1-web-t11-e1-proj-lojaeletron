@@ -1,5 +1,5 @@
 
-/*---------------------------------------------------------------- Parte do Estilo ---------------------------------------------------------------*/
+/*---------------------------------------- Parte do Estilo -------------------------------------------*/
 /*Pallete Color */
 
 #001234
@@ -47,14 +47,14 @@ body {
 
 .side-nav ul li{
     font-family: "ubuntu";
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .side-nav a {
     display: block;
     color: (0, 0, 0, 0.1);
     border-radius: 5px;    
-    font-size: 15px;
+    font-size: 30px;
     transition: 0.1;
 }
 
@@ -65,7 +65,6 @@ body {
 
 
 .d-flex{
-    max-width: 1000px;
     display: flex;
     justify-content: center;
 }
@@ -78,7 +77,6 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    padding: 20px;
     text-align: center;
 }
 
@@ -103,7 +101,7 @@ footer {
 }
 
 
-/*---------------------------------------------------------------- Parte do Grid e Flexbox----------------------------------------------------------------*/
+/*--------------------------------------- Parte do Grid e Flexbox-----------------------------------------*/
 
 body {
     margin: 0;
@@ -128,7 +126,6 @@ footer {
 .header {
     background-color: #001234;
     color: #fff;
-    padding: 20px;
     text-align: center;
     width: 100%;
     position: fixed;
@@ -142,12 +139,11 @@ footer {
     /* O restante do seu estilo de conteúdo */
 }
 
-/*---------------------------------------------------------------- Parte de interacao do Bootstrap ----------------------------------------------------------------*/
-
+/*------------------------------ Parte de interacao do Bootstrap --------------*/
 #HomeTitle {
         font-size: 50px;
         color: #FEB900;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: "Ubuntu",Arial, Helvetica, sans-serif;
 }
 
 .header-menu {
@@ -205,31 +201,13 @@ footer {
     text-decoration: none; /* Remover sublinhado do texto */
 } 
 
-#iframelogin{
-    width: 30px;
-    height: 200px;
-    position: fixed;
-    top: 100px;
-    left: 800px;
-
-    border-radius: 8px
-}
-
-#iframecarrinho{
-    width: 30px;
-    height: 200px;
-    position: fixed;
-    top: 100px;
-    left: 200px;
-    border-radius: 8px
-}
 
 .grid-template-columns-1{
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr
-       
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+    
 }
 
- /* produtros */
+/* produtros */
 
 .estoque {
     color: green;
@@ -249,4 +227,26 @@ footer {
 
 .comprar {
     color: green;
+}
+
+/*------------------------------------- Itens do Bootstrap -----------------------------------------*/
+
+#iframelogin{
+    background-color: transparent;
+    width: 30px;
+    height: 200px;
+    position: fixed;
+    top: 40px;
+    left: 950px;
+    border: none;
+}
+
+#iframecarrinho{
+    background-color: transparent;
+    width: 30px;
+    height: 200px;
+    position: fixed;
+    top: 40px;
+    left: 200px;
+    border: none;
 }
