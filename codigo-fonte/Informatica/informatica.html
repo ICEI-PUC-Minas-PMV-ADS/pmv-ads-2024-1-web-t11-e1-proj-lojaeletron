@@ -21,20 +21,47 @@
       <meta name="keywords" content="Eletron">
 
 </head>
-</html>
 
 <body>
-       <!--cabecalho-->
-   <header class="header">
-    <h1 id="HomeTitle">ELETRON</h1>
-        <!--Iframe para codigo reutilizavel-->
-        <div id="iframelogin"><iframe src="/codigo-fonte/Includes/login.html"></iframe></div>
-        <div id="iframecarrinho"><iframe src="/codigo-fonte/Includes/carrinho.html"></iframe></div>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Pesquise por produto" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">PESQUISE</button>
-            </form>    
-    </header>
 
-<body>
-    
+        <!--cabecalho-->
+    <header class="header">
+     <h1 id="HomeTitle">ELETRON</h1>
+         <!--Iframe para codigo reutilizavel-->
+         <div id="iframelogin"><iframe src="/codigo-fonte/Includes/login.html"></iframe></div>
+         <div id="iframecarrinho"><iframe src="/codigo-fonte/Includes/carrinho.html"></iframe></div>
+             <form class="d-flex" role="search">
+                 <input class="form-control me-2" type="search" placeholder="Pesquise por produto" aria-label="Search">
+                 <button class="btn btn-outline-success" type="submit">PESQUISE</button>
+             </form>    
+     </header>
+ 
+
+    <section>
+
+        <main class="container">
+            <section  class="produto">
+                <img src="../PaginaInicial/imgs/iphone.png" alt="Iphone" width="200px"  height="auto">
+                <ul>
+                    <li><span>Iphone 14</span></li>
+                    <li><span>R̶$̶ ̶4̶8̶9̶9̶,̶9̶9̶</span></li>
+                    <li><span>R$ 3999,99</span></li>
+                    <li><span>COMPRAR</span></li>
+                    <li><span>4,8🌟</span></li>
+                </ul>
+                <a href="#">comprar</a>
+            </section>
+
+    </section>
+</body>
+
+<footer id="footer"></footer>
+<script>
+  // Função para carregar e inserir o conteúdo do rodapé
+  fetch('../includes/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+</script>
+<footer id="footer"></footer>

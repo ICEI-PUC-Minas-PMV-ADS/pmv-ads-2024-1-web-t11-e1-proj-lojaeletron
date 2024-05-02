@@ -50,11 +50,26 @@ body {
     font-size: 20px;
 }
 
+.side-nav a {
+    display: block;
+    color: (0, 0, 0, 0.1);
+    border-radius: 5px;    
+    font-size: 15px;
+    transition: 0.1;
+}
+
+.side-nav a:hover{
+    background: tomato ;
+    transition: 0.5;
+}
+
+
 .d-flex{
     max-width: 1000px;
     display: flex;
     justify-content: center;
 }
+
 .d-flex input[type="search"] {
     max-width: 300px; /* Define o valor máximo */
     
@@ -63,7 +78,7 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
 }
 
@@ -151,8 +166,9 @@ footer {
 
   }
 
+
 .side-nav{
-    margin-left: 0;
+    margin-left: 0px;
     margin-right: 0px;
     margin-block: 40px;
     content: center;
@@ -211,4 +227,26 @@ footer {
 .grid-template-columns-1{
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr
        
+}
+
+ /* produtros */
+
+.estoque {
+    color: green;
+}
+
+.valor1 {
+    color: blue;
+}
+
+.valor2 {
+    color: green;
+}
+
+.estrela {
+    color: yellow;
+}
+
+.comprar {
+    color: green;
 }

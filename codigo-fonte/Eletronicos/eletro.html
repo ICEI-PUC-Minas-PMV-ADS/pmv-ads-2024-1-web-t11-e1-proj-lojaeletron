@@ -1,0 +1,49 @@
+<header id="header"></header>
+<script>
+    // Função para carregar e inserir o conteúdo do cabeçalho
+    fetch('../includes/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+ </script>
+
+
+<body>
+    <main>
+        <section>
+            <h1>Você está pronto para mergulhar no universo empolgante da tecnologia? Deixe-me guiá-lo por uma jornada de descobertas incríveis! Como seu especialista em eletrônicos, estou aqui para ajudá-lo a encontrar os dispositivos perfeitos que se encaixam perfeitamente no seu estilo de vida.</h1>
+
+          <h1>O que deseja pesquisar?</h1>
+          
+
+            <section  class="produto">
+                <img src="../PaginaInicial/imgs/nvidia.png" alt="placa de video" width="200 px" height="200px">
+                <ul>
+                    <li><span>Placa de Vídeo Geforce 4GB DDR6 GTX 1650 - Galax</span></li>
+                    <Li><Span>R̶$̶ ̶1̶6̶9̶9̶,̶9̶9̶</Span></Li>
+                    <li><span>R$ 1.250,00</span></li>
+                    <li><span>3,0🌟</span></li>
+                  
+                </ul>
+                <a href="#">comprar</a>  
+            </section>
+            
+        </section>
+    </main>
+</body>
+
+
+
+
+
+<footer id="footer"></footer>
+<script>
+  // Função para carregar e inserir o conteúdo do rodapé
+  fetch('../includes/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+</script>
+<footer id="footer"></footer>
