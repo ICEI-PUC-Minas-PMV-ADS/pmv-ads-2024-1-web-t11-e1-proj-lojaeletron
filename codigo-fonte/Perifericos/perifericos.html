@@ -1,0 +1,26 @@
+<header id="header"></header>
+<script>
+    // Função para carregar e inserir o conteúdo do cabeçalho
+    fetch('../includes/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+ </script>
+
+
+<body>
+    <main><h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro doloremque obcaecati cumque aliquid dolor reprehenderit laudantium ullam, iusto eveniet soluta dicta sapiente, quod perspiciatis numquam repellendus quis hic impedit nisi alias dolore explicabo magni sequi commodi qui? Ratione quis earum voluptatum impedit natus. Reprehenderit, voluptatem. Nostrum fuga labore nulla nemo commodi delectus. Exercitationem, expedita magnam iure laboriosam, dicta neque, aliquid repellendus totam repellat fugit sit ipsam culpa officia rem ipsa fuga id incidunt hic quia! Odit illum ipsam corrupti, consequuntur sapiente, assumenda autem in dolor rem ducimus fugit!</h1>
+    </main>
+</body>
+
+
+ <footer id="footer"></footer>
+<script>
+  // Função para carregar e inserir o conteúdo do rodapé
+  fetch('../includes/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+</script>

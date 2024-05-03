@@ -166,8 +166,7 @@ footer {
 .side-nav{
     margin-left: 0px;
     margin-right: 0px;
-    margin-block: 40px;
-    content: center;
+    margin-top: 20 px;
     list-style: color #000000;
     font: Arial;
     background-color: #ffaa00;
@@ -178,11 +177,10 @@ footer {
     color: #030303;
     list-style-type: none;
     width: 100%;
-    border: 200px;
-    padding: 80px;
-    margin: 0px;
-    margin-top: 30px;
-    padding-bottom: 50px;
+    padding: 95px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
     display: flex; /* Use flexbox para exibir os itens em uma linha */
     flex-wrap: wrap; /* Permita que os itens sejam quebrados em várias linhas se necessário */
 }
@@ -242,6 +240,7 @@ footer {
 }
 
 #iframecarrinho{
+    margin-left: -130px;
     background-color: transparent;
     width: 30px;
     height: 200px;
