@@ -1,175 +1,236 @@
 <!DOCTYPE html>
-<html lang="pt-br"><html>
+<html lang="pt-br">
+    
 <head>
-    <meta charset="UTF-8">
-    <!--Bootstrap CDN , suporte aos servidores-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  
-    <script src="https://kit.fontawesome.com/cf6b0cd6b1.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <!--Bootstrap CDN , suporte aos servidores -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- Parte interativa JS --> 
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="/codigo-fonte/PaginaInicial/css/styles.css">
+
+
+    <!--Fontes-->
+    <script src="https://kit.fontawesome.com/cf6b0cd6b1.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+    </style>
+
+    <!-- MetaTags de Compatibilidade e Creditos-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="author" content="Arthur Isidorio, Gabriel Nakazato, Matheus Estrela, Vitor Hugo, Yuji Ohasi">
+    <meta name="description" content="Loja de Produtos Eletronicos em Geral!">
+    <meta name="keywords" content="Eletron">
+
     
-  </head>
-    <!-- MetaTags de Compatibilidade -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="author" content="...">
-    <meta name="description" content="...">
-    <meta name="keywords" content="...">
-
-    <title>Eletron</title>
-    
-
 </head>
 
-</html>
-
- 
-<footer id="footer"></footer>
-
-<script>
-  // Função para carregar e inserir o conteúdo do cabeçalho
-  fetch('../includes/header.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('header').innerHTML = data;
-    });
-
-  // Função para carregar e inserir o conteúdo do rodapé
-  fetch('../includes/footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer').innerHTML = data;
-    });
-  </script>
-  <footer id="footer"></footer>
-
-  <script>
-    // Função para carregar e inserir o conteúdo do cabeçalho
-    fetch('../includes/header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header').innerHTML = data;
-      });
-  
-    // Função para carregar e inserir o conteúdo do rodapé
-    fetch('../includes/footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer').innerHTML = data;
-      });
-    </script>
-  
-
-  
 <body>
-<link rel="stylesheet" href="/codigo-fonte/PaginaInicial/css/styles.css">
-<body>
-  
-  <h1 style=" color: #f9ce00">ELETRON</h1> 
-  <body>
-    <div class="dropdown">
-      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-        Entre
-      </button>
-      <form class="dropdown-menu p-4">
-        <div class="mb-3">
-          <label for="exampleDropdownFormEmail2" class="form-label">E-mail</label>
-          <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
-        </div>
-        <div class="mb-3">
-          <label for="exampleDropdownFormPassword2" class="form-label">Senha</label>
-          <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
-        </div>
-        <div class="mb-3">
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="dropdownCheck2">
-            <label class="form-check-label" for="dropdownCheck2">
-              Lembre-me
-            </label>
-          </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Logar</button>
-      </form>
-    </div>
-  </body>
-  
-  <!--   Botão de cadastro -->
-  <section>
-    
-  
+    <span id="header"></span>
 
-</header>
-<!------------------------------ COMEÇO DO CARROUSEL-------------------------------------->
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="/codigo-fonte/PaginaInicial/imgs/iphone.png" class="d-block w-100" alt="..."width= 200 height = 200 >
-    </div>
-    <div class="carousel-item">
-      <img src="/codigo-fonte/PaginaInicial/imgs/placa-mae.jpg" class="d-block w-100" alt="..."width= 200 height = 200 >
-    </div>
-    <div class="carousel-item">
-      <img src="/codigo-fonte/PaginaInicial/imgs/play5.jpg" class="d-block w-100" alt="..."width= 200 height = 200 >
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-<!------------------------------FIM DO CARROUSEL-------------------------------------->
+    <div style="width: 100%; padding: 30px"></div>
 
-<!--INICIO DA SESSAO DE PRODUTOS EM Destaque-->
-</section>
+<!-- Carrousel-->
 
-<nav class="navbar bg-light fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"><h1 style=" color: #f9ce00">ELETRON</h1></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Departamento</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Games</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Informatica</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Mais...
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Carrinho</a></li>
-              <li><a class="dropdown-item" href="#">Cameras</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Impressoras</a></li>
+<main class="container-fluid">
+    <row class="row">
+    <col class="col-3">
+    <div style="display: flex; flex-direction: column; align-items: center;">
+
+        <div style="flex-grow: 1">
+            <col class="col-12">
+                <div class="carousel slide d-block" id="carrousel"></div>
+            </col>
+        </div>
+
+        <div style="flex-grow: 1">
+            <div class="col-12">
+                <button type="button" class="btn btn-success btn-close w-100" aria-label="Close">COMPRAR <i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </div>
+
+    </div>
+    </col>
+    <col class="col-3">
+    <div style="display: flex; flex-direction: column ; align-items: center;">
+
+        <div style="flex-grow: 1">
+            <col class="col-12">
+                <div class="carousel slide d-block" id="carrousel2"></div>
+            </col>
+        </div>
+
+        <div style="flex-grow: 1">
+            <col class="col-12">
+                <button type="button" class="btn btn-success btn-close w-100" aria-label="Close">COMPRAR <i class="fa-solid fa-cart-shopping"></i></button>
+            </col>
+        </div>
+
+    </div>
+    </col>
+    <col class="col-3">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+
+            <div style="flex-grow: 1">
+                <col class="col-12">
+                    <div class="carousel slide d-block" id="carrousel3"></div>
+                </col>
+            </div>
+
+            <div style="flex-grow: 1">
+                <col class="col-12">
+                    <button type="button" class="btn btn-success btn-close w-100" aria-label="Close">COMPRAR <i class="fa-solid fa-cart-shopping"></i></button>
+                </col>
+            </div>
+
+        </div>
+    </col>
+    <col class="col-3">
+    <div style="display: flex; flex-direction: column; align-items: center;">
+
+        <div style="flex-grow: 1">
+            <col class="col-12">
+                <div class="carousel slide d-block" id="carrousel4"></div>
+            </col>
+        </div>
+
+        <div style="flex-grow: 1">
+            <col class="col-12">
+                <button type="button" class="btn btn-success btn-close w-100" aria-label="Close">COMPRAR <i class="fa-solid fa-cart-shopping"></i></button>
+            </col>
+        </div>
+
+    </div>
+    </col>
+    </row>
+</main>
+
+    <main class="container">        
+        <section  class="produto">
+            <img src="../PaginaInicial/imgs/iphone.png" alt="Iphone" width="200px"  height="auto">
+         
+
+            <li><span><h3>Iphone 14 128gb</h3></span></li>
+                    <Li><Span class="valor1"><h4>R̶$̶ ̶4̶8̶9̶9̶,̶9̶9̶</h4></Span></Li>
+                    <li><span class="valor2"><h4>R$ 3999,99</h4></span></li>
+                    <li><span><h4>À vista no PIX com até 5% OFF</h4></span></li>
+                    <li><span><h5>R$ 4200,00 Em até 12x de R$ 350,00 sem jurus no cartão
+                    </h5></span></li>
+                    <li><span class="estrela"><h4>🌟🌟🌟</h4></span></li>
+                    <li><span class="estoque"><h4>EM ESTOQUE</h4></span></li>
             </ul>
-          </li>
-        </ul>
-        <form class="d-flex mt-3" role="O que Procura?">
-          <input class="form-control me-2" type="search" placeholder="O que Procura?" aria-label="search">
-          <button class="btn btn-outline-success" type="submit">Procurar</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</nav>
+            <h3><a class="comprar" href="/codigo-fonte/">Comprar</a></h3>
+        </section>
+        
+        <section  class="produto">
+            <img src="../PaginaInicial/imgs/placa-mae.jpg" alt="placa-mae" width="200px" height="auto">
+    
+            
+            <ul>
+                <li><span><h3>PLACA MAE ASUS TUF GAMING Z690-PLUS D4, ATX, CHIPSET INTEL</h3></span></li>
+                    <Li><Span class="valor1"><h4>R̶$̶ ̶1̶7̶0̶0̶,̶9̶9̶</h4></Span></Li>
+                    <li><span class="valor2"><h4>R$ 1.579,99</h4></span></li>
+                    <li><span><h4>À vista no PIX com até 5% OFF</h4></span></li>
+                    <li><span><h5>R$ 1680,00 Em até 12x de R$ 140,00 sem jurus no cartão</h5></span></li>
+                    <li><span class="estrela"><h4>🌟🌟🌟</h4></span></li>
+                    <li><span class="estoque"><h4>EM ESTOQUE</h4></span></li>
+            </ul>
+            <h3><a class="comprar" href="/codigo-fonte/">Comprar</a></h3>
+        </section>
 
+        <section  class="produto">
+            <img src="../PaginaInicial/imgs/play5.jpg" alt="playstation" width="200 px" height="200px">
+          
+
+            <ul>
+                <li><span><h3>Console PlayStation 5</h3></span></li>
+                    <Li><Span class="valor1"><h4>R̶$̶ ̶4̶8̶9̶9̶,̶9̶9̶</h4></Span></Li>
+                    <li><span class="valor2"><h4>R$ 3.659,99</h4></span></li>
+                    <li><span><h4>À vista no PIX com até 5% OFF</h4></span></li>
+                    <li><span><h5>R$ 4000,00 Em até 12x de R$ 333,33 sem jurus no cartão</h5></span></li>
+                    <li><span class="estrela"><h4>🌟🌟🌟</h4></span></li>
+                    <li><span class="estoque"><h4>EM ESTOQUE</h4></span></li>
+            </ul>
+            <h3><a class="comprar" href="/codigo-fonte/">Comprar</a></h3>
+        </section>
+
+        <section  class="produto">
+            <img src="../PaginaInicial/imgs/9k.png" alt="teclado" width="200 px" height="200px">
+         
+
+            <ul>
+                <li><span><h3>Redragon Kumara - outemu blue</h3></span></li>
+                    <Li><Span class="valor1"><h4>R̶$̶ ̶3̶5̶0̶,̶0̶0̶</h4></Span></Li>
+                    <li><span class="valor2"><h4>R$ 220,00</h4></span></li>
+                    <li><span><h4>À vista no PIX com até 5% OFF</h4></span></li>
+                    <li><span><h5>R$ 300,00 Em até 12x de R$ 25,00 sem jurus no cartão</h5></span></li>
+                    <li><span class="estrela"><h4>🌟🌟🌟</h4></span></li>
+                    <li><span class="estoque"><h4>EM ESTOQUE</h4></span></li>
+            </ul>
+            <h3><a class="comprar" href="/codigo-fonte/">Comprar</a></h3>
+        </section>
+
+        <section  class="produto">
+            <img src="../PaginaInicial/imgs/desktop.png" alt="gabinete" width="200 px" height="200px">
+      
+
+            <ul>
+                <li><span><h3>Gabinete UP Gamer Cronos com tampa lateral de acrílico</h3></span></li>
+                    <Li><Span class="valor1"><h4>R̶$̶ ̶3̶5̶0̶,̶0̶0̶</h4></Span></Li>
+                    <li><span class="valor2"><h4>R$ 300,00</h4></span></li>
+                    <li><span><h4>À vista no PIX com até 5% OFF</h4></span></li>
+                    <li><span><h5>R$ 320,00 Em até 12x de R$ 26,66 sem jurus no cartão</h5></span></li>
+                    <li><span class="estrela"><h4>🌟🌟🌟</h4></span></li>
+                    <li><span class="estoque"><h4>EM ESTOQUE</h4></span></li>
+            </ul>
+            <h3><a class="comprar" href="/codigo-fonte/">Comprar</a></h3>
+        </section>
+
+        <section  class="produto">
+            <img src="../PaginaInicial/imgs/watercooler.png" alt="water cooler" width="200 px" height="200px">
+         
+
+            <ul>
+                <li><span><h3>WATER COOLER CORSAIR HYDRO H110I, CW-9060026-WW</h3></span></li>
+                    <Li><Span class="valor1"><h4>R̶$̶ ̶1̶2̶9̶9̶,̶0̶0̶</h4></Span></Li>
+                    <li><span class="valor2"><h4>R$ 869,99</h4></span></li>
+                    <li><span><h4>À vista no PIX com até 5% OFF</h4></span></li>
+                    <li><span><h5>R$ 1100,00 Em até 12x de R$ 91,66 sem jurus no cartão</h5></span></li>
+                    <li><span class="estrela"><h4>🌟🌟🌟</h4></span></li>
+                    <li><span class="estoque"><h4>EM ESTOQUE</h4></span></li>
+            </ul>
+            <h3><a class="comprar" href="/codigo-fonte/">Comprar</a></h3>
+        </section>
+
+        <section  class="produto">
+            <img src="../PaginaInicial/imgs/nvidia.png" alt="placa de video" width="200 px" height="200px">
+            <ul>
+                <li><span><h3>Placa de Vídeo Geforce 4GB DDR6 GTX 1650 - Galax </h3></span></li>
+                    <Li><Span class="valor1"><h4>R̶$̶ ̶1̶6̶9̶9̶,̶9̶9̶ </h4></Span></Li>
+                    <li><span class="valor2"><h4>R$ 1.250,00 </h4></span></li>
+                    <li><span><h4>À vista no PIX com até 5% OFF</h4></span></li>
+                    <li><span><h5>R$ 1400,00 Em até 12x de R$ 116,66 sem jurus no cartão</h5></span></li>
+                    <li><span class="estrela"><h4>🌟🌟🌟</h4></span></li>
+                    <li><span class="estoque"><h4>EM ESTOQUE</h4></span></li>
+            </ul>
+            <h3><a class="comprar" href="/codigo-fonte/">Comprar</a></h3>
+        </section>
+
+    </main> 
+
+    <!--Rodape-->
+    
+    <footer> 
+        <p>Entre em contato através de suporte.eletron@gmail.com</p>
+        <p>&copy; 2024 Eletron. Todos os direitos reservados.</p>
+        
+        <img src="../includes/imgs/seloebit.png" alt="Logotipo do Ebit">
+        <img src="../includes/imgs/selogoogle.png" alt="Logotipo do Google">
+        <img src="../includes/imgs/seloblindado.png" alt="Logotipo Blindado">
+    </footer>
+
+    <script src="../Scripts/pages.js"></script>
 </body>
-<html>

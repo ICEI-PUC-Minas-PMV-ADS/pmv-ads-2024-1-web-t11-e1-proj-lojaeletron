@@ -29,12 +29,23 @@
 </head>
 <header class="header">
 <h1 id="HomeTitle">ELETRON</h1>
-    <div id="login"></div>
-    <div id="carrinho"></div>
+    <div class="my-2" style="display: flex; flex-direction: row; flex-grow: 1">
+      
+      <div style="flex-grow: 1">
+        <div id="carrinho"></div>
+      </div>
+
+      <div style="flex-grow: 1">
         <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Pesquise por produto" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">PESQUISE</button>
+          <input class="form-control me-2" type="search" placeholder="Pesquise por produto" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">PESQUISE</button>
         </form>    
+      </div>
+
+      <div style="flex-grow: 1"><div id="login"></div></div>
+
+    </div>
+  
 </header>
 
 <nav class="side-nav">

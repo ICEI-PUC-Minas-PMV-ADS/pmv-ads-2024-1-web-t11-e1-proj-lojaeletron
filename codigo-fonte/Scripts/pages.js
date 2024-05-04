@@ -17,3 +17,29 @@ fetch('../Includes/header.html')
     .then(data => {
     document.getElementById('header').innerHTML = data;
 });
+
+fetch('../Includes/carrousel.html')
+    .then(response => response.text())
+    .then(data => {
+document.getElementById('carrousel').innerHTML = data;
+});
+
+fetch('../Includes/carrousel2.html')
+    .then(response => response.text())
+    .then(data => {
+document.getElementById('carrousel2').innerHTML = data;
+});
+
+fetch('../Includes/carrousel3.html')
+    .then(response => response.text())
+    .then(data => {
+document.getElementById('carrousel3').innerHTML = data;
+});
+
+fetch('../Includes/carrousel4.html')
+    .then(response => response.text())
+    .then(data => {
+document.getElementById('carrousel4').innerHTML = data;
+});
+
+

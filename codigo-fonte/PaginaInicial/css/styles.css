@@ -169,6 +169,7 @@ footer {
     margin-left: 0px;
     margin-right: 0px;
     margin-top: 20 px;
+    padding-top: 15px;
     list-style: color #000000;
     font: Arial;
     background-color: #ffaa00;
@@ -230,29 +231,22 @@ footer {
 }
 
 /*------------------------------------- Itens do Bootstrap -----------------------------------------*/
-
-#login{
-    background-color: transparent;
-    width: 30px;
-    height: 200px;
-    position: fixed;
-    top: 40px;
-    left: 950px;
-    border: none;
-}
-
-#carrinho{
-    margin-left: -130px;
-    background-color: transparent;
-    width: 30px;
-    height: 200px;
-    position: fixed;
-    top: 40px;
-    left: 200px;
-    border: none;
-}
-
 .carousel { 
     width: 400px !important;
 }
 
+.carousel-caption h5 {
+    color: #850808;
+}
+
+.carousel-caption{
+    background: rgba(0,0,0,0.5);
+}
+
+.carousel2{
+    padding-left: 40px;
+}
+
+.spacing{
+    
+}
