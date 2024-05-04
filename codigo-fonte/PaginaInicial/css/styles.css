@@ -124,6 +124,8 @@ footer {
 
 
 .header {
+    display: flex;
+    flex-direction: column;
     background-color: #001234;
     color: #fff;
     text-align: center;
@@ -141,9 +143,9 @@ footer {
 
 /*------------------------------ Parte de interacao do Bootstrap --------------*/
 #HomeTitle {
-        font-size: 50px;
-        color: #FEB900;
-        font-family: "Ubuntu",Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color: #FEB900;
+    font-family: "Ubuntu",Arial, Helvetica, sans-serif;
 }
 
 .header-menu {
@@ -229,7 +231,7 @@ footer {
 
 /*------------------------------------- Itens do Bootstrap -----------------------------------------*/
 
-#iframelogin{
+#login{
     background-color: transparent;
     width: 30px;
     height: 200px;
@@ -239,7 +241,7 @@ footer {
     border: none;
 }
 
-#iframecarrinho{
+#carrinho{
     margin-left: -130px;
     background-color: transparent;
     width: 30px;
@@ -249,3 +251,8 @@ footer {
     left: 200px;
     border: none;
 }
+
+.carousel { 
+    width: 400px !important;
+}
+
