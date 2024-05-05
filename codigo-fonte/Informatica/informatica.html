@@ -1,53 +1,130 @@
-<header id="header"></header>
-<script>
-    // Funcao para carregar e inserir o conteúdo do cabeçalho
-    fetch('../includes/header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header').innerHTML = data;
-      });
- </script>
- 
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+<head>
+    <!--Bootstrap CDN , suporte aos servidores -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- Parte interativa JS --> 
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="/codigo-fonte/PaginaInicial/css/styles.css">
+
+
+    <!--Fontes-->
+    <script src="https://kit.fontawesome.com/cf6b0cd6b1.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+    </style>
+
+    <!-- MetaTags de Compatibilidade e Creditos-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="author" content="Arthur Isidorio, Gabriel Nakazato, Matheus Estrela, Vitor Hugo, Yuji Ohasi">
+    <meta name="description" content="Loja de Produtos Eletronicos em Geral!">
+    <meta name="keywords" content="Eletron">
+
+    
+</head>
+
+
 <body>
+    <!----------------------Cabecalho--------------------------->
 
-        <!--cabecalho-->
-    <header class="header">
-     <h1 id="HomeTitle">ELETRON</h1>
-         <!--Iframe para codigo reutilizavel-->
-         <div id="iframelogin"><iframe src="/codigo-fonte/Includes/login.html"></iframe></div>
-         <div id="iframecarrinho"><iframe src="/codigo-fonte/Includes/carrinho.html"></iframe></div>
-             <form class="d-flex" role="search">
-                 <input class="form-control me-2" type="search" placeholder="Pesquise por produto" aria-label="Search">
-                 <button class="btn btn-outline-success" type="submit">PESQUISE</button>
-             </form>    
-     </header>
- 
+    <span id="header"></span>
 
-    <section>
+    <div style="width: 100%; padding: 30px"></div>
 
-        <main class="container">
-            <section  class="produto">
-                <img src="../PaginaInicial/imgs/iphone.png" alt="Iphone" width="200px"  height="auto">
-                <ul>
-                    <li><span>Iphone 14</span></li>
-                    <li><span>R̶$̶ ̶4̶8̶9̶9̶,̶9̶9̶</span></li>
-                    <li><span>R$ 3999,99</span></li>
-                    <li><span>COMPRAR</span></li>
-                    <li><span>4,8🌟</span></li>
-                </ul>
-                <a href="#">comprar</a>
-            </section>
+<!----------------------Carrousel--------------------------->
 
-    </section>
+<main class="container-fluid">
+  <row class="row">
+  <col class="col-3">
+  <div style="display: flex; flex-direction: column; align-items: center;">
+
+      <div style="flex-grow: 1">
+          <col class="col-12">
+              <div class="carousel slide d-block" id="carrousel"></div>
+          </col>
+      </div>
+
+      <div style="flex-grow: 1">
+          <div class="col-12">
+              <button type="button" class="btn btn-success btn-close w-100" aria-label="Close">COMPRAR <i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+      </div>
+
+  </div>
+  </col>
+  <col class="col-3">
+  <div style="display: flex; flex-direction: column ; align-items: center;">
+
+      <div style="flex-grow: 1">
+          <col class="col-12">
+              <div class="carousel slide d-block" id="carrousel2"></div>
+          </col>
+      </div>
+
+      <div style="flex-grow: 1">
+          <col class="col-12">
+              <button type="button" class="btn btn-success btn-close w-100" aria-label="Close">COMPRAR <i class="fa-solid fa-cart-shopping"></i></button>
+          </col>
+      </div>
+
+  </div>
+  </col>
+  <col class="col-3">
+      <div style="display: flex; flex-direction: column; align-items: center;">
+
+          <div style="flex-grow: 1">
+              <col class="col-12">
+                  <div class="carousel slide d-block" id="carrousel3"></div>
+              </col>
+          </div>
+
+          <div style="flex-grow: 1">
+              <col class="col-12">
+                  <button type="button" class="btn btn-success btn-close w-100" aria-label="Close">COMPRAR <i class="fa-solid fa-cart-shopping"></i></button>
+              </col>
+          </div>
+
+      </div>
+  </col>
+  <col class="col-3">
+  <div style="display: flex; flex-direction: column; align-items: center;">
+
+      <div style="flex-grow: 1">
+          <col class="col-12">
+              <div class="carousel slide d-block" id="carrousel4"></div>
+          </col>
+      </div>
+
+      <div style="flex-grow: 1">
+          <col class="col-12">
+              <button type="button" class="btn btn-success btn-close w-100" aria-label="Close">COMPRAR <i class="fa-solid fa-cart-shopping"></i></button>
+          </col>
+      </div>
+
+  </div>
+  </col>
+  </row>
+</main>
+
+<!---------------------Carrousel---------------------------->
+
+  
+
+    <!--Rodape-->
+    
+    <footer> 
+        <p>Entre em contato através de suporte.eletron@gmail.com</p>
+        <p>&copy; 2024 Eletron. Todos os direitos reservados.</p>
+        
+        <img src="../includes/imgs/seloebit.png" alt="Logotipo do Ebit">
+        <img src="../includes/imgs/selogoogle.png" alt="Logotipo do Google">
+        <img src="../includes/imgs/seloblindado.png" alt="Logotipo Blindado">
+    </footer>
+
+    <script src="../Scripts/pages.js"></script>
 </body>
-
-<footer id="footer"></footer>
-<script>
-  // Função para carregar e inserir o conteúdo do rodapé
-  fetch('../includes/footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer').innerHTML = data;
-    });
-</script>
-<footer id="footer"></footer>

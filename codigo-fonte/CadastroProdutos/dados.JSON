@@ -1,0 +1,31 @@
+{
+
+    "Produtos": [
+        {
+        "id":"01",
+        "nome":"Monitor",
+        "marca":"TUF Gaming",
+        "propriedades": {
+            "Taxa de atualizao":"144hz",
+            "polegadas":"24 Polegadas"
+        }
+        },
+    
+        {
+        "id": "02",
+        "nome":"Placa de Video",
+        "marca":"Aorus",
+        "propriedades":{
+            "Memoria":"6GB",
+            "Nucleos":"12"
+        } 
+         }
+    ]   
+}
+
+
+
+        
+
+
+    
