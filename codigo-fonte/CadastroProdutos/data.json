@@ -1,0 +1,40 @@
+{
+    "Produtos": [
+        {
+            "id": "01",
+            "nome": "Monitor",
+            "marca": "TUF Gaming",
+            "propriedades": {
+                "Taxa de atualização": "144hz",
+                "polegadas": "24 Polegadas"
+            }
+        },
+        {
+            "id": "02",
+            "nome": "Placa de Vídeo",
+            "marca": "Aorus",
+            "propriedades": {
+                "Memória": "6GB",
+                "Núcleos": "12"
+            }
+        },
+        {
+            "id": "03",
+            "nome": "Teclado",
+            "marca": "Logitech",
+            "propriedades": {
+                "Tipo": "Mecânico",
+                "Layout": "ABNT2"
+            }
+        },
+        {
+            "id": "04",
+            "nome": "Mouse",
+            "marca": "Razer",
+            "propriedades": {
+                "DPI": "16000",
+                "Botões": "6"
+            }
+        }
+    ]
+}

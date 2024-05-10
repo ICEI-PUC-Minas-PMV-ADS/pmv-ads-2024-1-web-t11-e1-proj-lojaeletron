@@ -269,3 +269,51 @@ footer {
     flex-grow: 1;
 }
 
+
+/* ------------------------------------------------ Footer --------------------------------------------------------------- */
+
+        /* Estilos CSS para a newsletter e footer */
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #001234;
+            color: #FFD200;
+            text-align: center;
+            padding: 20px;
+        }
+        #newsletter {
+            background-color: #001234;
+            color: #FFD200;
+            padding: 10px;
+            text-align: center;
+        }
+        #newsletter h2 {
+            color: #FFD200;
+        }
+        #newsletter p {
+            color: #FFD200;
+            margin: 5px 0;
+        }
+        #newsletter input[type="email"] {
+            padding: 10px;
+            border: 1px solid #FFD200;
+            margin-bottom: 5px;
+        }
+        #newsletter button {
+            padding: 10px 20px;
+            background-color: #45E555;
+            border: none;
+            color: #001234;
+            cursor: pointer;
+        }
+        #newsletter button:hover {
+            background-color: #37C444;
+        }
+        #contact-and-logos {
+            display: flex;
+            align-items: center;
+        }
+        footer img {
+            margin-left: 10px;
+        }
