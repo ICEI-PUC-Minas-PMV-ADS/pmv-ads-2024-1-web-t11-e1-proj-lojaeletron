@@ -1,26 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="./assets/index.js"></script>
 
-<!--- Dropdown de Login reutilizavel --->
-<div class="dropdown">
-    <button type="button" class="btn btn-success btn-lg dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-      <i class="fa-solid fa-user"></i>  Login ou Cadastro
-    </button>
-    <form class="dropdown-menu p-4">
-      <div class="mb-3">
-        <label for="exampleDropdownFormEmail2" class="form-label">E-mail</label>
-        <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@gmail.com">
-      </div>
-      <div class="mb-3">
-        <label for="exampleDropdownFormPassword2" class="form-label">Senha</label>
-        <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Senha">
-      </div>
-      <div class="mb-3">
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="dropdownCheck2">
-          <label class="form-check-label" for="dropdownCheck2">
-            Lembre-me
-          </label>
+    <title>Document</title>
+    <style>
+      * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+
+  font-family: arial;
+  background-color: aliceblue;
+
+}
+
+header {
+
+  background-color: #001234;
+  position: sticky;
+  top: 0%;
+  color: #FFD200;
+  text-align: center;
+  min-height: 150px;
+  font-size: 30px;
+
+}
+
+.login {
+
+  color: #FFD200;
+  background-color: #001234;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 70px;
+  border-radius: 15px;
+
+}
+
+input{
+
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+
+}
+
+.botao{
+    background: #FFD200;
+    border: none;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.botao:hover{
+
+  background-color: #faf493;
+  cursor: pointer;
+
+}
+  </style>
+</head>
+<body>
+    <header>
+        <div class="cabecalho">
+            <br>
+            
+            <h1>Eletron</h1>
         </div>
-      </div>
-      <button type="submit" class="btn btn-primary">Entre</button>
-    </form>
-  </div>
+    </header>
+
+    <div class="login">
+        <h1>Login</h1>
+        <br />
+        <br />
+
+        <form>
+
+            <input id="email" type="email" placeholder="E-mail" value="" /> <br> <br>
+            <input id="password" type="password" placeholder="Senha" value="" />  <br /> <br />
+
+            <input id="btnLogin" class="botao" type="submit" value="Avançar" /> <br> <br>
+            <input class="botao" type="reset" value="Apagar" />
+        </form>
+        <button > <a href="./registro.html">Registar</a></button>
+    </div>
+
+    <script>
+        // Função para obter os dados do localStorage
+        function getUserDataFromLocalStorage() {
+          const userDataJSON = localStorage.getItem('userData');
+          return userDataJSON ? JSON.parse(userDataJSON) : null;
+        }
+    
+        // Evento de submissão do formulário
+        document.getElementById('btnLogin').addEventListener('click', function(event) {
+          event.preventDefault(); // Evita o comportamento padrão de enviar o formulário
+    
+          // Captura os valores dos campos de email e senha
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+    
+          // Obtém os dados do localStorage
+          const userData = getUserDataFromLocalStorage();
+    
+          // Verifica se os dados correspondem
+          if (userData && userData.email === email && userData.password === password) {
+            alert('Login bem-sucedido!');
+            // Redireciona para a página home.html
+            window.location.href = '../PaginaInicial/index.html';
+          } else {
+            alert('Email ou senha incorretos. Por favor, tente novamente.');
+          }
+        });
+      </script>
+</body>
+</html>

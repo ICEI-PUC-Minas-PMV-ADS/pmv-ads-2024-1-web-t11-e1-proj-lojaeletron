@@ -317,3 +317,11 @@ footer {
         footer img {
             margin-left: 10px;
         }
+        .content {
+            background-color: #fff;
+            position: absolute;
+            left: 37%;
+            top: 36px;
+            width: 304px;
+            color: black;
+        }

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="./assets/index.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+body{
+
+    font-family: arial;
+    background-color: aliceblue;
+
+}
+
+header {
+
+    background-color: #001234;
+    position: sticky;
+    top: 0%;
+    color: #FFD200;
+    text-align: center;
+    min-height: 150px;
+    font-size: 30px;
+
+}
+
+.login {
+
+    color: #FFD200;
+    background-color: #001234;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 70px;
+    border-radius: 15px;
+
+}
+
+input{
+
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+ 
+}
+
+.botao{
+      background: #FFD200;
+      border: none;
+      width: 100%;
+      border-radius: 10px;
+}
+
+.botao:hover{
+
+    background-color: #faf493;
+    cursor: pointer;
+
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="cabecalho">
+            <br>
+            
+            <h1>Eletron</h1>
+        </div>
+    </header>
+
+    <div class="login">
+        <h1>Registro</h1>
+        <br />
+        <br />
+
+        <form>
+
+            <input id="email" type="email" placeholder="E-mail" value="" /> <br> <br>
+            <input  id="password" type="password" placeholder="Senha" value="" />  <br /> <br />
+
+            <input id="btnRegister" class="botao" type="submit" value="Cadastrar" /> <br> <br>
+            <input class="botao" type="reset" value="Apagar" />
+        </form>
+    </div>
+
+    <script>
+        // Função para salvar os dados no localStorage
+        function saveDataToLocalStorage(email, password) {
+          const userData = { email, password };
+          localStorage.setItem('userData', JSON.stringify(userData));
+        }
+
+        document.getElementById('btnRegister').addEventListener('click', function(event) {
+            event.preventDefault();
+             // Captura os valores dos campos de email e senha
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+          
+           // Salva os dados no localStorage
+           saveDataToLocalStorage(email, password);
+    
+            // Redireciona para a página home.html
+            window.location.href = 'login.html';
+
+        });
+      </script>
+</body>
+</html>
