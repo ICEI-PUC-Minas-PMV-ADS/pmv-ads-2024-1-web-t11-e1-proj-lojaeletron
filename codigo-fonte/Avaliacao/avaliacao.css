@@ -1,0 +1,53 @@
+body {
+    height: 100vh;
+}
+
+.avaliacaogreen {
+    color: green;
+}
+
+.avaliacaored {
+   color: red;
+}
+
+
+#main {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.texto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 100px;
+
+    background-color: rgb(209, 209, 209);
+    border-radius: 20px;
+
+    height: 300px;
+    width: 800px;
+}
+
+#bordaa {
+    background-color: #d1d1d1;
+    border-radius: 80px;
+    margin: 0% 5% 0% 5%;
+    
+    
+    }
+
+    #bordab{
+        background-color: #d1d1d1 ;
+        border-radius: 80px;
+        margin: 0% 5% 0% 5%;
+    }
+
+.carrinho{
+
+    background-color: green;
+    border-radius: 20px;
+}
+
