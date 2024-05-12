@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="stylesheet" href="../PaginaInicial/css/styles.css">
     <script src="./assets/index.js"></script>
-    <title>Document</title>
+    <title>Cadastro</title>
     <style>
         * {
     margin: 0;
@@ -118,17 +118,22 @@ input{
       </script>
 </body>
 
- <!--Rodape-->
+  <!--Rodape-->
 
- <footer style="margin-bottom: 0px; margin-top: 605px">
-    <div id="contact-and-logos">
-        <p>Entre em contato através de <a href="mailto:suporte.eletron@gmail.com">suporte.eletron@gmail.com</a></p>
-        <img src="../includes/imgs/seloebit.png" alt="Logotipo do Ebit">
-        <img src="../includes/imgs/selogoogle.png" alt="Logotipo do Google">
-        <img src="../includes/imgs/seloblindado.png" alt="Logotipo Blindado">
+  <footer class="d-flex" style="margin-bottom: 0px; margin-top: 605px">
+    <div id="contact-and-logos" class="d-flex" style="flex-grow: 3; flex-direction: column;">
+        
+        <div style="flex-grow: 1">
+          <p>Entre em contato através de <a href="mailto:suporte.eletron@gmail.com">suporte.eletron@gmail.com</a></p>
+        </div>
+        <div style="flex-grow: 1">
+          <img src="../includes/imgs/seloebit.png" alt="Logotipo do Ebit">
+          <img src="../includes/imgs/selogoogle.png" alt="Logotipo do Google">
+          <img src="../includes/imgs/seloblindado.png" alt="Logotipo Blindado">
+        </div>
         <!-- <a href="URL_DO_SEU_PERFIL_DO_INSTAGRAM" target="_blank"><img src="caminho/para/o/logo_do_instagram.png" alt="Instagram"></a> -->
     </div>
-    <div id="newsletter">
+    <div id="newsletter" style="flex-grow: 1">
         <h2>Assine Nossa Newsletter</h2>
         <p>Receba atualizações mensais diretamente na sua caixa de entrada!</p>
         <form action="URL_DO_SEU_SCRIPT_DE_INSCRIÇÃO" method="POST">
@@ -136,7 +141,7 @@ input{
             <button type="submit">Assinar</button>
         </form>
     </div>
-  </footer>
-  
-  <script src="../Scripts/pages.js"></script>
+</footer>
+
+<script src="../Scripts/pages.js"></script>
 </html>
