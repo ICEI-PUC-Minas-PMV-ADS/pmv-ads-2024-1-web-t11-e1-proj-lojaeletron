@@ -109,8 +109,10 @@ body {
     unicode-bidi: bidi-override;
     color: #FFD200;
     font-size: 30px;
-    width: 150px;
+    width: auto;
     margin: 10px 0;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .estrelas>span {
