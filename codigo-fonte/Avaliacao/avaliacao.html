@@ -16,7 +16,7 @@
 
     <!--Fontes-->
     <script src="https://kit.fontawesome.com/cf6b0cd6b1.js"></script>
-    <mstyle>
+    <style>
         @import
         url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
         </style>
@@ -128,10 +128,85 @@
 
             <br>
         <div>
-            <H1 style="margin: 0%  3% 0% 3%;"> (implementar) Avaliação do Cliente</H1>
-            <br>
-                  <h1> 5/5 </h1>
-            </p>
+            <div id="comentarios">
+                <h2>O que achou do Produto?</h2>
+                <textarea id="opiniao" rows="4" placeholder="Digite sua opinião aqui..."></textarea><br>
+                <label for="pontuacao">Pontuação:</label>
+                <div class="estrelas" id="estrelas">
+                    <span onclick="selecionarPontuacao(1)">&#9733;</span>
+                    <span onclick="selecionarPontuacao(2)">&#9733;</span>
+                    <span onclick="selecionarPontuacao(3)">&#9733;</span>
+                    <span onclick="selecionarPontuacao(4)">&#9733;</span>
+                    <span onclick="selecionarPontuacao(5)">&#9733;</span>
+                </div>
+                <button onclick="adicionarComentario()">Adicionar Comentário</button>
+                <div id="listaComentarios"></div>
+            </div>
+        
+            <script>
+                var pontuacaoSelecionada = 0;
+        
+                function selecionarPontuacao(pontuacao) {
+                    pontuacaoSelecionada = pontuacao;
+                    var estrelas = document.querySelectorAll('.estrelas > span');
+                    estrelas.forEach(function (star, index) {
+                        if (index < pontuacao) {
+                            star.classList.add('clicked');
+                        } else {
+                            star.classList.remove('clicked');
+                        }
+                    });
+                }
+        
+                function adicionarComentario() {
+                    var opiniao = document.getElementById('opiniao').value.trim();
+        
+                    if (opiniao === '') {
+                        alert('Por favor, escreva sua opinião antes de enviar.');
+                        return;
+                    }
+        
+                    var comentarios = localStorage.getItem('comentarios');
+                    comentarios = comentarios ? JSON.parse(comentarios) : [];
+        
+                    var comentario = {
+                        pontuacao: pontuacaoSelecionada,
+                        opiniao: opiniao
+                    };
+        
+                    comentarios.push(comentario);
+                    localStorage.setItem('comentarios', JSON.stringify(comentarios));
+        
+                    exibirComentarios();
+                    limparCampos();
+                }
+        
+                function exibirComentarios() {
+                    var comentarios = localStorage.getItem('comentarios');
+                    comentarios = comentarios ? JSON.parse(comentarios) : [];
+        
+                    var listaComentarios = document.getElementById('listaComentarios');
+                    listaComentarios.innerHTML = '';
+        
+                    comentarios.forEach(function (comentario) {
+                        var divComentario = document.createElement('div');
+                        divComentario.classList.add('comentario');
+                        divComentario.innerHTML = '<p><strong>Pontuação:</strong> ' + comentario.pontuacao + '</p>' +
+                            '<p><strong>Opinião:</strong> ' + comentario.opiniao + '</p>';
+                        listaComentarios.appendChild(divComentario);
+                    });
+                }
+        
+                function limparCampos() {
+                    document.getElementById('opiniao').value = '';
+                    pontuacaoSelecionada = 0;
+                    document.querySelectorAll('.estrelas > span').forEach(function (star) {
+                        star.classList.remove('clicked');
+                    });
+                }
+        
+                exibirComentarios();
+            </script>
         </div>
 
     </main>

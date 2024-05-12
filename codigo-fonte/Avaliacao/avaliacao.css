@@ -7,7 +7,7 @@ body {
 }
 
 .avaliacaored {
-   color: red;
+   color: gold;
 }
 
 
@@ -51,3 +51,79 @@ body {
     border-radius: 20px;
 }
 
+
+
+/* --------------------- COMENTARIO DE PRODUTOS ---------------------------------- */
+
+
+ /* Estilos CSS para a seção de opiniões dos clientes */
+ #comentarios {
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #001234;
+    color: #fff;
+    border-radius: 10px;
+}
+
+#comentarios textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    color: #001234;
+    border: none;
+    border-radius: 5px;
+}
+
+#comentarios button {
+    padding: 10px 15px;
+    background-color: #FFD200;
+    color: #001234;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#comentarios button:hover {
+    background-color: #45E555;
+}
+
+#listaComentarios {
+    margin-top: 20px;
+}
+
+.comentario {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.comentario p {
+    margin: 0;
+    color: #fff;
+}
+
+.estrelas {
+    unicode-bidi: bidi-override;
+    color: #FFD200;
+    font-size: 30px;
+    width: 150px;
+    margin: 10px 0;
+}
+
+.estrelas>span {
+    display: inline-block;
+    position: relative;
+    width: 1.2em;
+    cursor: pointer;
+}
+
+.estrelas>span:hover:before,
+.estrelas>span.clicked:before,
+.estrelas>span.clicked~span:before {
+    content: "\2605";
+    position: absolute;
+    color: #45E555;
+}
