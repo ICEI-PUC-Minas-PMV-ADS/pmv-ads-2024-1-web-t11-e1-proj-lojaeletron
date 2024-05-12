@@ -53,34 +53,27 @@
           </div> -->
 
     <div id="main">
-        <img src="../Includes/imgs/monitor.jpg" width="500" height="500" alt="Monitor Gamer">
-        <div class="texto">
-            <div class="cardbranco">
-                <h1>
-                    <p>Monitor Gamer AOC Viper 165hz
-                </h1>
-                <h3>
-                    <p>27" Full, 1ms, IPS, HDMI e DisplayPort, FreeSync - 27G2SE</p>
-                </h3>
-                <H1 class="avaliacaored">R̶$̶ ̶1̶.̶1̶0̶2̶,̶2̶9̶</H1>
-                <h1 class="avaliacaogreen">R$ 939,90</h1>
-                    
+    <img src="../Includes/imgs/monitor.jpg" width="500" height="500" alt="Monitor Gamer">
+    <div class="texto">
+        <div class="cardbranco">
+            <h1>
+                <p>Monitor Gamer AOC Viper 165hz
+            </h1>
+            <h3>
+                <p>27" Full, 1ms, IPS, HDMI e DisplayPort, FreeSync - 27G2SE</p>
+            </h3>
+            <H1 class="avaliacaored">R̶$̶ ̶1̶.̶1̶0̶2̶,̶2̶9̶</H1>
+            <h1 class="avaliacaogreen">R$ 939,90</h1>
+            
+                <form action="../Includes/comprafinalizacao.html">
+
+                    <h1><input   class="carrinho"  type="submit" value="Adicionar ao carrinho"></h1>
                 
-                        <form action="../Includes/carrinhoooo.html">
-
-                            <h1><input   class="carrinho"  type="submit" value="Adicionar ao carrinho"></h1>
-                        
-                        </form>
-                    </div>
-
-
-
-            </div>
+                </form>
             </div>
         </div>
-
-
-        
+        </div>
+    </div>
 
 
 
@@ -140,85 +133,85 @@
             <br>
         </div>
 
-            <br>
-        <div>
-            <div id="comentarios">
-                <h2>O que achou do Produto?</h2>
-                <textarea id="opiniao" rows="4" placeholder="Digite sua opinião aqui..."></textarea><br>
-                <label for="pontuacao">Pontuação:</label>
-                <div class="estrelas" id="estrelas">
-                    <span onclick="selecionarPontuacao(1)">&#9733;</span><span onclick="selecionarPontuacao(2)">&#9733;</span><span onclick="selecionarPontuacao(3)">&#9733;</span><span onclick="selecionarPontuacao(4)">&#9733;</span><span onclick="selecionarPontuacao(5)">&#9733;</span>
-                </div>                
-                
-                <button onclick="adicionarComentario()">Adicionar Comentário</button>
-                <div id="listaComentarios"></div>
-            </div>
-        
-            <script>
-                var pontuacaoSelecionada = 0;
-        
-                function selecionarPontuacao(pontuacao) {
-                    pontuacaoSelecionada = pontuacao;
-                    var estrelas = document.querySelectorAll('.estrelas > span');
-                    estrelas.forEach(function (star, index) {
-                        if (index < pontuacao) {
-                            star.classList.add('clicked');
-                        } else {
-                            star.classList.remove('clicked');
-                        }
-                    });
-                }
-        
-                function adicionarComentario() {
-                    var opiniao = document.getElementById('opiniao').value.trim();
-        
-                    if (opiniao === '') {
-                        alert('Por favor, escreva sua opinião antes de enviar.');
-                        return;
-                    }
-        
-                    var comentarios = localStorage.getItem('comentarios');
-                    comentarios = comentarios ? JSON.parse(comentarios) : [];
-        
-                    var comentario = {
-                        pontuacao: pontuacaoSelecionada,
-                        opiniao: opiniao
-                    };
-        
-                    comentarios.push(comentario);
-                    localStorage.setItem('comentarios', JSON.stringify(comentarios));
-        
-                    exibirComentarios();
-                    limparCampos();
-                }
-        
-                function exibirComentarios() {
-                    var comentarios = localStorage.getItem('comentarios');
-                    comentarios = comentarios ? JSON.parse(comentarios) : [];
-        
-                    var listaComentarios = document.getElementById('listaComentarios');
-                    listaComentarios.innerHTML = '';
-        
-                    comentarios.forEach(function (comentario) {
-                        var divComentario = document.createElement('div');
-                        divComentario.classList.add('comentario');
-                        divComentario.innerHTML = '<p><strong>Pontuação:</strong> ' + comentario.pontuacao + '</p>' +
-                            '<p><strong>Opinião:</strong> ' + comentario.opiniao + '</p>';
-                        listaComentarios.appendChild(divComentario);
-                    });
-                }
-        
-                function limparCampos() {
-                    document.getElementById('opiniao').value = '';
-                    pontuacaoSelecionada = 0;
-                    document.querySelectorAll('.estrelas > span').forEach(function (star) {
-                        star.classList.remove('clicked');
-                    });
-                }
-        
-                exibirComentarios();
-            </script>
+        <br>
+    <div>
+        <div id="comentarios">
+            <h2>O que achou do Produto?</h2>
+            <textarea id="opiniao" rows="4" placeholder="Digite sua opinião aqui..."></textarea><br>
+            <label for="pontuacao">Pontuação:</label>
+            <div class="estrelas" id="estrelas">
+                <span onclick="selecionarPontuacao(1)">&#9733;</span><span onclick="selecionarPontuacao(2)">&#9733;</span><span onclick="selecionarPontuacao(3)">&#9733;</span><span onclick="selecionarPontuacao(4)">&#9733;</span><span onclick="selecionarPontuacao(5)">&#9733;</span>
+            </div>                
+            
+            <button onclick="adicionarComentario()">Adicionar Comentário</button>
+            <div id="listaComentarios"></div>
         </div>
+    
+        <script>
+            var pontuacaoSelecionada = 0;
+    
+            function selecionarPontuacao(pontuacao) {
+                pontuacaoSelecionada = pontuacao;
+                var estrelas = document.querySelectorAll('.estrelas > span');
+                estrelas.forEach(function (star, index) {
+                    if (index < pontuacao) {
+                        star.classList.add('clicked');
+                    } else {
+                        star.classList.remove('clicked');
+                    }
+                });
+            }
+    
+            function adicionarComentario() {
+                var opiniao = document.getElementById('opiniao').value.trim();
+    
+                if (opiniao === '') {
+                    alert('Por favor, escreva sua opinião antes de enviar.');
+                    return;
+                }
+    
+                var comentarios = localStorage.getItem('comentarios');
+                comentarios = comentarios ? JSON.parse(comentarios) : [];
+    
+                var comentario = {
+                    pontuacao: pontuacaoSelecionada,
+                    opiniao: opiniao
+                };
+    
+                comentarios.push(comentario);
+                localStorage.setItem('comentarios', JSON.stringify(comentarios));
+    
+                exibirComentarios();
+                limparCampos();
+            }
+    
+            function exibirComentarios() {
+                var comentarios = localStorage.getItem('comentarios');
+                comentarios = comentarios ? JSON.parse(comentarios) : [];
+    
+                var listaComentarios = document.getElementById('listaComentarios');
+                listaComentarios.innerHTML = '';
+    
+                comentarios.forEach(function (comentario) {
+                    var divComentario = document.createElement('div');
+                    divComentario.classList.add('comentario');
+                    divComentario.innerHTML = '<p><strong>Pontuação:</strong> ' + comentario.pontuacao + '</p>' +
+                        '<p><strong>Opinião:</strong> ' + comentario.opiniao + '</p>';
+                    listaComentarios.appendChild(divComentario);
+                });
+            }
+    
+            function limparCampos() {
+                document.getElementById('opiniao').value = '';
+                pontuacaoSelecionada = 0;
+                document.querySelectorAll('.estrelas > span').forEach(function (star) {
+                    star.classList.remove('clicked');
+                });
+            }
+    
+            exibirComentarios();
+        </script>
+    </div>
 
     </main>
 

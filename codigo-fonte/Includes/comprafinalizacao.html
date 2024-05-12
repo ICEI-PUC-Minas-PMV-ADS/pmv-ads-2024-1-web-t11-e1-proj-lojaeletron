@@ -1,7 +1,10 @@
 <span id="header"></span>
 
 <link rel="stylesheet" href="../Includes/carrinho.css">
-<body>
+  
+  </head>
+  <body>
+   
     <main class="d-flex container-fluid">
       <div class="d-flex container-fluid pt-5">
         <section>
@@ -21,27 +24,26 @@
                   <div class="product">
                     <img src="./imgs/samsungnotebook.png" width="300" height="205" alt="" />
                     <div class="info">
-                      <div class="name">NOTEBOOK SAMSUNG 
-                        </div>
-                      <div class="category">SNAPDRAGON/4G/128G 14"</div>
+                      <div class="name">Gabinete UP CRONOS</div>
+                      <div class="category">ATX / Mini-ATX / Micro-ATX, 4 Fan 120mm, 2 USB 1.0 / 1 USB 3.0</div>
                     </div>
                   </div>
                 </td>
-                <td>R$1.719,00</td>
+                <td>R$3.299,00</td>
                 <td>
                   <div class="qty">
-                    <button onclick="subtrair()">
+                    <button onclick="subtract()">
                         -
                     </button>
                     <span id="span_quantidadeProd1">1</span>
-                    <button onclick="somar()">
+                    <button onclick="soma()">
                         +
                     </button>
                   </div>
                 </td>
-                <td>R$1.719,00</td>
+                <td>R$3.299,00</td>
                 <td>
-                  <button class="remove" onclick="removerLinhaDois()">
+                  <button class="remove" onclick="removerLinhaUm()">
                     x
                 </button>
                 </td>
@@ -51,25 +53,24 @@
                   <div class="product">
                     <img src="./imgs/gabinetegamer.png" width="300" height="205" alt="" />
                     <div class="info">
-                      <div class="name">Gabinete Gamer K-Mex Yaiba 1 05AA
-                        </div>
-                      <div class="category">Lateral em Vidro Temperado - USB 3.0 - Iluminação LED - ATX - Preto </div>
+                      <div class="name">Gabinete UP CRONOS</div>
+                      <div class="category">ATX / Mini-ATX / Micro-ATX, 4 Fan 120mm, 2 USB 1.0 / 1 USB 3.0</div>
                     </div>
                   </div>
                 </td>
-                <td>R$310</td>
+                <td>R$310,00</td>
                 <td>
                   <div class="qty">
-                    <button onclick="subtrair()">
+                    <button onclick="subtract()">
                         -
                     </button>
                     <span id="span_quantidadeProd1">1</span>
-                    <button onclick="somar()">
+                    <button onclick="soma()">
                         +
                     </button>
                   </div>
                 </td>
-                <td>R$8.419,00</td>
+                <td>R$310,00</td>
                 <td>
                   <button class="remove" onclick="removerLinhaDois()">
                     x
@@ -81,28 +82,26 @@
                   <div class="product">
                     <img src="./imgs/watercooler.png" width="300" height="205" alt="" />
                     <div class="info">
-                      <div class="name">Water cooler Corsair
-                        HYDRO H110L
-                        </div>
-                      <div class="category">CW-9060014-WW</div>
+                      <div class="name">Gabinete UP CRONOS</div>
+                      <div class="category">ATX / Mini-ATX / Micro-ATX, 4 Fan 120mm, 2 USB 1.0 / 1 USB 3.0</div>
                     </div>
                   </div>
                 </td>
-                <td>R$310</td>
+                <td>R$1250,00</td>
                 <td>
                   <div class="qty">
-                    <button onclick="subtrair()">
+                    <button onclick="subtract()">
                         -
                     </button>
                     <span id="span_quantidadeProd1">1</span>
-                    <button onclick="somar()">
+                    <button onclick="soma()">
                         +
                     </button>
                   </div>
                 </td>
-                <td>R$419,00</td>
+                <td>R$4.859,00</td>
                 <td>
-                  <button class="remove" onclick="removerLinhaDois()">
+                  <button class="remove" onclick="removerLinhaTres()">
                     x
                 </button>
                 </td>
@@ -114,7 +113,7 @@
           <div class="box">
             <header>Resumo da compra</header>
             <div class="info">
-              <div><span>Sub-total</span><span>R$ 6.859,00</span></div>
+              <div><span>Sub-total</span><span>R$ 3.299,00</span></div>
               <div><span>Sub-total</span><span>R$ 310,00</span></div>
               <div><span>Sub-total</span><span>R$ 1250,00</span></div>
               <div><span>Frete</span><span>Gratuito</span></div>
@@ -127,92 +126,88 @@
             </div>
             <footer>
               <span>Total</span>
-              <span>R$8.419,00</span>
+              <span>R$4.859,00</span>
             </footer>
           </div>
           <button onclick="FinalizarCompra()">FinalizarCompra</button>
         </aside>
       </div>
     </main>
-
+    
     <!-- <script src="script.js"></script> -->
   </body>
 
   <script>
-    function FinalizarCompra(){
-      alert("Obrigado pela compra!!")
-    }
+      function FinalizarCompra(){
+        alert("Obrigado pela compra!!")
+      }
 
-    let somatoria = 1;
+      let somatoria = 1;
 
-    function somar() {
-        somatoria += 1;
+      function somar() {
+          somatoria += 1;
 
-        let quantidadeProduto = document.querySelector('#span_quantidadeProd1');
-        quantidadeProduto.innerHTML = somatoria;
+          let quantidadeProduto = document.querySelector('#span_quantidadeProd1');
+          quantidadeProduto.innerHTML = somatoria;
 
-    }
-    function subtrair() {
-        let quantidadeProduto = document.querySelector('#span_quantidadeProd1');
+      }
+      function subtrair() {
+          let quantidadeProduto = document.querySelector('#span_quantidadeProd1');
 
-        if (somatoria <= 1) {
-            quantidadeProduto.innerHTML = (somatoria - somatoria) + 1;
+          if (somatoria <= 1) {
+              quantidadeProduto.innerHTML = (somatoria - somatoria) + 1;
 
-        } else {
+          } else {
 
-            somatoria -= 1;
-            quantidadeProduto.innerHTML = somatoria;
-        }
+              somatoria -= 1;
+              quantidadeProduto.innerHTML = somatoria;
+          }
 
-    } 
+      } 
 
-    let tableOne = document.querySelector('#table-rowOne');
-    let tableTwo = document.querySelector('#table-rowTwo');
-    let tableThree = document.querySelector('#table-rowThree');
+      let tableOne = document.querySelector('#table-rowOne');
+      let tableTwo = document.querySelector('#table-rowTwo');
+      let tableThree = document.querySelector('#table-rowThree');
 
-    function remover() {
+      function remover() {
 
-        tableOne.style.display = 'none';
-    }
-    
-    function removerLinhaDois() {
+          tableOne.style.display = 'none';
+      }
+      
+      function removerLinhaDois() {
 
-        tableTwo.style.display = 'none';
-    }
+          tableTwo.style.display = 'none';
+      }
 
-    function removerLinhaTres() {
+      function removerLinhaTres() {
 
-        tableThree.style.display = 'none';
-    }
-    
-    
-  </script>
+          tableThree.style.display = 'none';
+      }
+      
+</script>
 
+    <footer class="d-flex">
+      <div id="contact-and-logos" class="d-flex" style="flex-grow: 3; flex-direction: column;">
+          
+          <div style="flex-grow: 1">
+            <p>Entre em contato através de <a href="mailto:suporte.eletron@gmail.com">suporte.eletron@gmail.com</a></p>
+          </div>
+          <div style="flex-grow: 1">
+            <img src="../includes/imgs/seloebit.png" alt="Logotipo do Ebit">
+            <img src="../includes/imgs/selogoogle.png" alt="Logotipo do Google">
+            <img src="../includes/imgs/seloblindado.png" alt="Logotipo Blindado">
+          </div>
+          <!-- <a href="URL_DO_SEU_PERFIL_DO_INSTAGRAM" target="_blank"><img src="caminho/para/o/logo_do_instagram.png" alt="Instagram"></a> -->
+      </div>
+      <div id="newsletter" style="flex-grow: 1">
+          <h2>Assine Nossa Newsletter</h2>
+          <p>Receba atualizações mensais diretamente na sua caixa de entrada!</p>
+          <form action="URL_DO_SEU_SCRIPT_DE_INSCRIÇÃO" method="POST">
+              <input type="email" name="email" placeholder="Seu endereço de e-mail" required>
+              <button type="submit">Assinar</button>
+          </form>
+      </div>
+    </footer>
 
-  <!--Rodape-->
-
-  <footer class="d-flex">
-    <div id="contact-and-logos" class="d-flex" style="flex-grow: 3; flex-direction: column;">
-        
-        <div style="flex-grow: 1">
-          <p>Entre em contato através de <a href="mailto:suporte.eletron@gmail.com">suporte.eletron@gmail.com</a></p>
-        </div>
-        <div style="flex-grow: 1">
-          <img src="../includes/imgs/seloebit.png" alt="Logotipo do Ebit">
-          <img src="../includes/imgs/selogoogle.png" alt="Logotipo do Google">
-          <img src="../includes/imgs/seloblindado.png" alt="Logotipo Blindado">
-        </div>
-        <!-- <a href="URL_DO_SEU_PERFIL_DO_INSTAGRAM" target="_blank"><img src="caminho/para/o/logo_do_instagram.png" alt="Instagram"></a> -->
-    </div>
-    <div id="newsletter" style="flex-grow: 1">
-        <h2>Assine Nossa Newsletter</h2>
-        <p>Receba atualizações mensais diretamente na sua caixa de entrada!</p>
-        <form action="URL_DO_SEU_SCRIPT_DE_INSCRIÇÃO" method="POST">
-            <input type="email" name="email" placeholder="Seu endereço de e-mail" required>
-            <button type="submit">Assinar</button>
-        </form>
-    </div>
-</footer>
-
-<script src="../Scripts/pages.js"></script>
+    <script src="../Scripts/pages.js"></script>
  </html>
