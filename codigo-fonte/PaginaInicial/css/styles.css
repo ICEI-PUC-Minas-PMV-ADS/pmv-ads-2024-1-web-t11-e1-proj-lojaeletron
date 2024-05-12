@@ -262,11 +262,14 @@ footer {
 
 .card-img{
     flex-grow: 1;
-    width: 100%;
+    max-width: 160px;
+    max-height: 100px;
 }
 
 .card-container{
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -577,6 +580,18 @@ aside > button {
 aside > button:hover {
   background: #3bc55b;
 }
+
+.carousel{
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+
+a[type="button"] {
+   margin-bottom: 20px;
+}
+
+
 
 
 /* ---------------------------AVALIAÇAO USUARIO ---------------------- */

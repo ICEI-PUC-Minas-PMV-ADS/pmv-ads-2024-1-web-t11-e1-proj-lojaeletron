@@ -75,6 +75,30 @@ fetch('../Includes/carrousel4.html')
 document.getElementById('carrousel4').innerHTML = data;
 });
 
+fetch('../Includes/carrousel5.html')
+    .then(response => response.text())
+    .then(data => {
+document.getElementById('carrousel5').innerHTML = data;
+});
+
+fetch('../Includes/carrousel6.html')
+    .then(response => response.text())
+    .then(data => {
+document.getElementById('carrousel6').innerHTML = data;
+});
+
+fetch('../Includes/carrousel7.html')
+    .then(response => response.text())
+    .then(data => {
+document.getElementById('carrousel7').innerHTML = data;
+});
+
+fetch('../Includes/carrousel8.html')
+    .then(response => response.text())
+    .then(data => {
+document.getElementById('carrousel8').innerHTML = data;
+});
+
 fetch('../Includes/login.html')
     .then(response => response.text())
     .then(data => {
@@ -86,3 +110,4 @@ fetch('../Includes/carrinho.html')
     .then(data => {
     document.getElementById('carrinho').innerHTML = data;
 });
+
