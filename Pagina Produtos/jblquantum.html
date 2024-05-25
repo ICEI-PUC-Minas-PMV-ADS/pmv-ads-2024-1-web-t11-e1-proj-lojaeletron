@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!--Bootstrap CDN , suporte aos servidores -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- Parte interativa JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../codigo-fonte/PaginaInicial/css/styles.css">
+    <link rel="stylesheet" href="../codigo-fonte/Avaliacao/avaliacao.css">
+
+
+    <!--Fontes-->
+    <script src="https://kit.fontawesome.com/cf6b0cd6b1.js"></script>
+    <style>
+        @import
+        url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+        </style>
+
+        <!-- MetaTags de Compatibilidade e Creditos-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta name="author" content="Arthur Isidorio, Gabriel Nakazato, Matheus Estrela, Vitor Hugo, Yuji Ohasi">
+        <meta name="description" content="Loja de Produtos Eletronicos em Geral!">
+        <meta name="keywords" content="Eletron">
+
+</head>
+
+
+<body>
+    <!--------cabecalho------->
+    <span id="header"></span>
+    <main>
+
+    <div id="main">
+    <img src="/Pagina Produtos/img/fone1-removebg-preview.png" width="500" height="500" alt="Monitor Gamer">
+    <div class="texto">
+        <div class="cardbranco">
+            <h1>
+                <p>Fone de Ouvido Gamer Intra Auricular JBL Quantum 50</p>
+            </h1>
+            <h3>
+                <p>Fone de Ouvido Gamer Intra Auricular JBL Quantum 50, Preto - JBLQUANTUM50BLK</p>
+            </h3>
+            <H1 class="avaliacaored">R̶$̶ ̶1̶.̶1̶0̶2̶,̶2̶9̶</H1>
+            <h1 class="avaliacaogreen">R$ 999,99</h1>
+            
+                <form action="/codigo-fonte/Includes/comprafinalizacao.html">
+
+                    <h1><input   class="carrinho"  type="submit" value="Adicionar ao carrinho"></h1>
+                
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+        <div id="bordaa">
+            <br>
+            <h1 style="margin: 0%  3% 0% 3%;">Descrição do Produto</h1>
+            <br>
+            <p style="margin: 0%  3% 0% 3%;">Todo som importa, e com o exclusivo JBL Quantum 50 você ouve seus inimigos (e amigos) como nunca antes. </p>
+            <br>
+            <p style="margin: 0%  3% 0% 3%;">Feitos para dispositivos móveis e compatíveis com todas as plataformas, para você jogar conforme preferência. Tenha conforto e estabilidade para usar por muito e muito tempo com a tecnologia Twistlock.</p> 
+
+                </p>
+            <br>
+            <p style="margin: 0%  3% 0% 3%;">  
+            <br>
+            Concentre-se para derrotar o inimigo tendo um controle completo com botão deslizante de volume, silenciamento de microfone e botão multifuncional para administrar chamadas e música. Escolha a cor perfeita para o seu estilo. Som limpo significa cabeça limpa. É você no comando!
+
+        </p>
+ 
+            <br>
+            </div>
+            
+            <br>
+            
+            <div id="bordab">
+            <br>
+            <H1 style="margin: 0%  3% 0% 3%;"> Informações Técnicas</H1>
+            <br>
+            <p style="margin: 0%  3% 0% 3%;">
+            <ul style="margin: 0%  3% 0% 3%;">Características:</ul>
+            <li style="margin: 0%  3% 0% 3%;">- Marca: JBL-</li>
+            <li style="margin: 0%  3% 0% 3%;">- Modelo: Quantum 50 </p>
+            </li>
+            <p style="margin: 0%  3% 0% 3%;">
+            <ul style="margin: 0%  3% 0% 3%;">
+                <li>Especificações Técnicas:</li>
+               <li>Fone de ouvido JBL Quantum 50</li>
+               <li>- Adaptadores tamanho E/D</li>
+               <li>Ponteiras auriculares de silicone em três tamanhos (P, M e G)</li>
+               <li>- Guia de início rápido</li>
+               <li>- Certificado de garantia</li>
+               <li>- Cartão de advertência</li>
+            <br>
+        </div>
+
+        <br>
+    <div>
+        <div id="comentarios">
+            <h2>O que achou do Produto?</h2>
+            <textarea id="opiniao" rows="4" placeholder="Digite sua opinião aqui..."></textarea><br>
+            <label for="pontuacao">Pontuação:</label>
+            <div class="estrelas" id="estrelas">
+                <span onclick="selecionarPontuacao(1)">&#9733;</span><span onclick="selecionarPontuacao(2)">&#9733;</span><span onclick="selecionarPontuacao(3)">&#9733;</span><span onclick="selecionarPontuacao(4)">&#9733;</span><span onclick="selecionarPontuacao(5)">&#9733;</span>
+            </div>                
+            
+            <button onclick="adicionarComentario()">Adicionar Comentário</button>
+            <div id="listaComentarios"></div>
+        </div>
+    
+        <script>
+            var pontuacaoSelecionada = 0;
+    
+            function selecionarPontuacao(pontuacao) {
+                pontuacaoSelecionada = pontuacao;
+                var estrelas = document.querySelectorAll('.estrelas > span');
+                estrelas.forEach(function (star, index) {
+                    if (index < pontuacao) {
+                        star.classList.add('clicked');
+                    } else {
+                        star.classList.remove('clicked');
+                    }
+                });
+            }
+    
+            function adicionarComentario() {
+                var opiniao = document.getElementById('opiniao').value.trim();
+    
+                if (opiniao === '') {
+                    alert('Por favor, escreva sua opinião antes de enviar.');
+                    return;
+                }
+    
+                var comentarios = localStorage.getItem('comentarios');
+                comentarios = comentarios ? JSON.parse(comentarios) : [];
+    
+                var comentario = {
+                    pontuacao: pontuacaoSelecionada,
+                    opiniao: opiniao
+                };
+    
+                comentarios.push(comentario);
+                localStorage.setItem('comentarios', JSON.stringify(comentarios));
+    
+                exibirComentarios();
+                limparCampos();
+            }
+    
+            function exibirComentarios() {
+                var comentarios = localStorage.getItem('comentarios');
+                comentarios = comentarios ? JSON.parse(comentarios) : [];
+    
+                var listaComentarios = document.getElementById('listaComentarios');
+                listaComentarios.innerHTML = '';
+    
+                comentarios.forEach(function (comentario) {
+                    var divComentario = document.createElement('div');
+                    divComentario.classList.add('comentario');
+                    divComentario.innerHTML = '<p><strong>Pontuação:</strong> ' + comentario.pontuacao + '</p>' +
+                        '<p><strong>Opinião:</strong> ' + comentario.opiniao + '</p>';
+                    listaComentarios.appendChild(divComentario);
+                });
+            }
+    
+            function limparCampos() {
+                document.getElementById('opiniao').value = '';
+                pontuacaoSelecionada = 0;
+                document.querySelectorAll('.estrelas > span').forEach(function (star) {
+                    star.classList.remove('clicked');
+                });
+            }
+    
+            exibirComentarios();
+        </script>
+    </div>
+
+    </main>

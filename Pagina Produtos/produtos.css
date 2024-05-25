@@ -1,0 +1,731 @@
+
+/*---------------------------------------- Parte do Estilo -------------------------------------------*/
+/*Pallete Color */
+
+#001234
+#FFD200                                                                                
+#45E555
+/* Reset CSS para remover estilos padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    padding: 0px;
+    margin: 0px;
+}
+
+li{
+    list-style: none;
+    font-size: 15px;
+}
+
+a {
+    
+    text-decoration: none;
+}
+
+
+/* Estilos gerais */
+body {
+    font-family: "Ubuntu", Georgia, serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    gap: 8px;
+    display: grid;
+
+}
+
+.side-nav ul li{
+    font-family: "ubuntu";
+    font-size: 15px;
+}
+
+.side-nav a {
+    display: block;
+    color: (0, 0, 0, 0.1);
+    border-radius: 5px;    
+    font-size: 30px;
+    transition: 0.1;
+}
+
+.side-nav a:hover{
+    background: tomato ;
+    transition: 0.5;
+}
+
+
+.d-flex{
+    display: flex;
+    justify-content: center;
+}
+
+.d-flex input[type="search"] {
+    max-width: 300px; /* Define o valor máximo */
+    
+}
+/* Estilos para o cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+/* Estilos para a navegação */
+
+
+
+/* Estilos para o conteúdo */
+section {
+    padding: 20px;
+}
+
+footer {
+    
+    background-color: #001234 ;
+    text-align: center;
+    color: #FEB900;
+}
+
+
+/*--------------------------------------- Parte do Grid e Flexbox-----------------------------------------*/
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+ /* Isso faz com que o conteúdo ocupe pelo menos toda a altura da viewport */
+}
+
+.content {
+    flex: 1; /* O conteúdo se expandirá para preencher o espaço restante */
+}
+
+footer {
+    
+    padding: 20px 0;
+    width: 100%;
+    bottom: 0;
+}
+
+
+.header {
+    display: flex;
+    flex-direction: column;
+    background-color: #001234;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000; /* Isso garante que o header fique sobre outros elementos */
+
+}
+
+.content {
+    margin-top: 80px; /* Ajuste esse valor para corresponder à altura do seu header */
+    /* O restante do seu estilo de conteúdo */
+}
+
+/*------------------------------ Parte de interacao do Bootstrap --------------*/
+#HomeTitle {
+    font-size: 50px;
+    color: #FEB900;
+    font-family: "Ubuntu",Arial, Helvetica, sans-serif;
+}
+
+.header-menu {
+
+    background-color: #001234; 
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+/* Fundo de cor da div "header-menu" alterado para a cor padrão do header */
+}
+
+.grid-list {
+    list-style-type: none; /* Remove os pontos */
+    padding: 0; 
+    margin: 0; 
+
+  }
+
+
+.side-nav{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 20 px;
+    padding-top: 15px;
+    list-style: color #000000;
+    font: Arial;
+    background-color: #ffaa00;
+
+}
+
+.side-nav ul {
+    color: #030303;
+    list-style-type: none;
+    width: 100%;
+    padding: 95px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    display: flex; /* Use flexbox para exibir os itens em uma linha */
+    flex-wrap: wrap; /* Permita que os itens sejam quebrados em várias linhas se necessário */
+}
+
+.side-nav li {
+    margin-right: 10px; /* Espaçamento entre os itens */
+}
+
+.side-nav li:last-child {
+    margin-right: 0; /* Remover o espaçamento direito do último item */
+}
+
+.side-nav li a {
+    display: block; /* Transformar os links em elementos de bloco */
+    color: #850808; /* Cor do texto */
+    text-decoration: none; /* Remover sublinhado do texto */
+} 
+
+
+.grid-template-columns-1{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+    
+}
+
+/* produtros */
+
+.estoque {
+    color: green;
+}
+
+.valor1 {
+    color: blue;
+}
+
+.valor2 {
+    color: green;
+}
+
+.estrela {
+    color: yellow;
+}
+
+.comprar {
+    color: green;
+}
+
+/*------------------------------------- Itens do Bootstrap -----------------------------------------*/
+.carousel { 
+    width: 400px !important;
+}
+
+.carousel-item  img { 
+    width: 747px;
+    height: 460px;
+}
+
+.carousel-caption h5 {
+    color: #850808;
+}
+
+.carousel-caption{
+    background: rgba(0,0,0,0.5);
+}
+
+.carousel2{
+    padding-left: 40px;
+}
+
+.card-carrinho{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.card-img{
+    flex-grow: 1;
+    max-width: 160px;
+    max-height: 100px;
+}
+
+.card-container{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ------------------------------------------------ Footer --------------------------------------------------------------- */
+
+        /* Estilos CSS para a newsletter e footer */
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #001234;
+            color: #FFD200;
+            text-align: center;
+            padding: 20px;
+        }
+        #newsletter {
+            background-color: #001234;
+            color: #FFD200;
+            padding: 10px;
+            text-align: center;
+        }
+        #newsletter h2 {
+            color: #FFD200;
+        }
+        #newsletter p {
+            color: #FFD200;
+            margin: 5px 0;
+        }
+        #newsletter input[type="email"] {
+            padding: 10px;
+            border: 1px solid #FFD200;
+            margin-bottom: 5px;
+        }
+        #newsletter button {
+            padding: 10px 20px;
+            background-color: #45E555;
+            border: none;
+            color: #001234;
+            cursor: pointer;
+        }
+        #newsletter button:hover {
+            background-color: #37C444;
+        }
+        #contact-and-logos {
+            display: flex;
+            align-items: center;
+        }
+        footer img {
+            margin-left: 10px;
+        }
+        .content {
+            background-color: #fff;
+            position: absolute;
+            left: 37%;
+            top: 36px;
+            width: 304px;
+            color: black;
+        }
+
+/* ---------------------------arquivo da pagina compras ---------------------- */
+
+
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ffffff;
+  font-family: 'Lato', sans-serif;
+}
+
+body > header {
+  background: #001234;
+  color: #ffd200;
+  font-size: 24px;
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body > main {
+  background: #fff;
+  padding: 0 30px 30px;
+}
+
+body > main .page-title {
+  font-size: 40px;
+  padding: 50px 0;
+  text-align: center;
+}
+
+body > main .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body > main .content section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+body > main .content aside {
+  min-width: 250px;
+}
+
+button {
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table thead tr {
+  border-bottom: 3px solid #eee;
+}
+
+table thead tr th {
+  text-align: left;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  color: #666;
+}
+
+table tbody tr {
+  border-bottom: 3px solid #eee;
+}
+
+table tbody tr:last-child {
+  border: 0;
+}
+
+table tbody tr td {
+  padding: 30px 0;
+}
+
+.product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product img {
+  border-radius: 6px;
+}
+
+.product .info {
+  margin-left: 20px;
+}
+
+.product .info .name {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.product .info .category {
+  color: #666;
+}
+
+.qty {
+  background: #eee;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0 0;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 60px;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 30px;
+}
+
+.qty span {
+  margin: 0 10px;
+}
+
+.qty button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+  border: 0;
+  padding: 0 10px;
+  font-size: 20px;
+  height: 100%;
+}
+
+.qty button:hover {
+  background: #ddd;
+}
+
+.remove {
+  background: #eee;
+  border: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 20px;
+}
+
+.remove:hover {
+  background: #ddd;
+}
+
+aside {
+  margin-left: 30px;
+}
+
+aside .box {
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  background: #eee;
+  color: #222;
+}
+
+aside .box header {
+  padding: 15px 20px;
+  font-size: 18px;
+  border-bottom: 1px solid #ccc;
+}
+
+aside .box .info {
+  padding: 20px;
+  font-size: 16px;
+}
+
+aside .box .info > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+aside .box .info > div:last-child {
+  margin: 0;
+}
+
+aside .box .info button {
+  color: #28a745;
+  background: transparent;
+  border: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+}
+
+aside .box footer {
+  padding: 15px 20px;
+  background: #ddd;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+aside > button {
+  border: 0;
+  padding: 15px 0;
+  color: white;
+  background: #28a745;
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+aside > button:hover {
+  background: #3bc55b;
+}
+
+.carousel{
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+
+a[type="button"] {
+   margin-bottom: 20px;
+}
+
+
+
+
+/* ---------------------------AVALIAÇAO USUARIO ---------------------- */
+
+
+body {
+    height: 100vh;
+}
+
+.avaliacaogreen {
+    color: green;
+}
+
+.avaliacaored {
+   color: red;
+}
+
+
+#main {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.texto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 100px;
+
+    background-color: rgb(209, 209, 209);
+    border-radius: 20px;
+
+    height: 300px;
+    width: 800px;
+}
+
+#bordaa {
+    background-color: #d1d1d1;
+    border-radius: 80px;
+    margin: 0% 5% 0% 5%;
+    
+    
+    }
+
+    #bordab{
+        background-color: #d1d1d1 ;
+        border-radius: 80px;
+        margin: 0% 5% 0% 5%;
+    }
+
+.carrinho{
+
+    background-color: green;
+    border-radius: 20px;
+}
+
+
+
+/* --------------------- COMENTARIO DE PRODUTOS ---------------------------------- */
+
+
+ /* Estilos CSS para a seção de opiniões dos clientes */
+ #comentarios {
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #001234;
+    color: #fff;
+    border-radius: 10px;
+}
+
+#comentarios textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    color: #001234;
+    border: none;
+    border-radius: 5px;
+}
+
+#comentarios button {
+    padding: 10px 15px;
+    background-color: #FFD200;
+    color: #001234;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#comentarios button:hover {
+    background-color: #45E555;
+}
+
+#listaComentarios {
+    margin-top: 20px;
+}
+
+.comentario {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.comentario p {
+    margin: 0;
+    color: #fff;
+}
+
+.estrelas {
+    unicode-bidi: bidi-override;
+    color: #FFD200;
+    font-size: 30px;
+    width: auto;
+    margin: 10px 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.estrelas>span {
+    display: inline-block;
+    position: relative;
+    width: 1.2em;
+    cursor: pointer;
+}
+
+.estrelas>span:hover:before,
+.estrelas>span.clicked:before,
+.estrelas>span.clicked~span:before {
+    content: "\2605";
+    position: absolute;
+    color: #45E555;
+}
+
