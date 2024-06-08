@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtrar Produtos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <style>
+        .produto {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .produto img {
+            max-width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Filtrar Produtos</h1>
+        <form id="filtro-form">
+            <div class="form-group">
+                <label for="valor-minimo">Valor Mínimo:</label>
+                <input type="number" id="valor-minimo" name="valor-minimo" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="valor-maximo">Valor Máximo:</label>
+                <input type="number" id="valor-maximo" name="valor-maximo" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Filtrar</button>
+        </form>
+        <div id="resultados" class="mt-4"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('filtro-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const valorMinimo = parseFloat(document.getElementById('valor-minimo').value) || 0;
+                const valorMaximo = parseFloat(document.getElementById('valor-maximo').value) || Infinity;
+
+                fetch('../PaginaInicial/catalogo.json') // Corrigindo o caminho para o arquivo JSON
+                    .then(response => response.json())
+                    .then(data => {
+                        let produtos = data.catalogo.produtos;
+
+                        // Filtrar por preço
+                        produtos = produtos.filter(produto => produto.preco >= valorMinimo && produto.preco <= valorMaximo);
+
+                        exibirResultados(produtos);
+                    })
+                    .catch(error => console.error('Erro ao carregar os produtos:', error));
+            });
+
+            function exibirResultados(produtos) {
+                const resultadosDiv = document.getElementById('resultados');
+                resultadosDiv.innerHTML = '';
+
+                if (produtos.length === 0) {
+                    resultadosDiv.textContent = 'Nenhum produto encontrado.';
+                    return;
+                }
+
+                produtos.forEach(produto => {
+                    const produtoDiv = document.createElement('div');
+                    produtoDiv.classList.add('produto');
+
+                    produtoDiv.innerHTML = `
+                        <img src="${produto.imagens[0]}" alt="${produto.nome}">
+                        <h3>${produto.nome}</h3>
+                        <p>${produto.descricao}</p>
+                        <p>Preço: R$${produto.preco.toFixed(2)}</p>
+                    `;
+
+                    resultadosDiv.appendChild(produtoDiv);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

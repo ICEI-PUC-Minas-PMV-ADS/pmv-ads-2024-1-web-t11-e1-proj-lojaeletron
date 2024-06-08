@@ -1,7 +1,6 @@
 document.getElementById('signup-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    var accountType = document.querySelector('input[name="accountType"]:checked').value;
     var fullname = document.getElementById('fullname').value;
     var gender = document.getElementById('gender').value;
     var phone = document.getElementById('phone').value;
@@ -19,14 +18,13 @@ document.getElementById('signup-form').addEventListener('submit', function(event
     }
 
     // Verificar se as senhas coincidem
-    if (password !== confirmPassword) {
+    if (password!== confirmPassword) {
         document.getElementById('response').innerHTML = 'As senhas não coincidem.';
         return;
     }
 
     // Armazenar os dados no Local Storage
     var userData = {
-        accountType: accountType,
         fullname: fullname,
         gender: gender,
         phone: phone,
@@ -50,39 +48,37 @@ document.getElementById('signup-form').addEventListener('submit', function(event
     }, 2000);
 });
 
-function onlyNumbers(event) {
-    var key = event.keyCode || event.which;
-    var allowedKeys = /^[0-9]$/;
+// Google Sign-in
+const express = require('express');
+const bodyParser = require('body-parser');
+const {OAuth2Client} = require('google-auth-library');
 
-    // Verificar se a tecla pressionada é um número
-    if (!allowedKeys.test(String.fromCharCode(key))) {
-        event.preventDefault();
+const CLIENT_ID = '79566223665-reqmqlnjlqk893ck5asut9in040o8eff.apps.googleusercontent.com';
+const client = new OAuth2Client(CLIENT_ID);
+
+const app = express();
+const PORT = 5000;
+
+app.use(bodyParser.json());
+
+app.post('/login', async (req, res) => {
+    const token = req.body.credential;
+
+    try {
+        const ticket = await client.verifyIdToken({
+            idToken: token,
+            audience: CLIENT_ID,
+        });
+        const payload = ticket.getPayload();
+        const userid = payload['sub'];
+
+        // Aqui você pode criar uma sessão para o usuário, armazenar informações no banco de dados, etc.
+        res.status(200).json({message: 'Login bem-sucedido', user: payload});
+    } catch (error) {
+        res.status(401).json({message: 'Token inválido', error: error.message});
     }
-}
+});
 
-function handleCredentialResponse(response) {
-    const data = jwt_decode(response.credential);
-    console.log(data);
-
-    // Aqui você pode fazer algo com os dados do usuário
-    // Por exemplo, preenchendo automaticamente os campos do formulário
-    document.getElementById('fullname').value = data.name;
-    document.getElementById('email').value = data.email;
-}
-
-// Carregar e inicializar a API do Google Identity Services
-window.onload = function () {
-    google.accounts.id.initialize({
-        client_id: 'SEU_CLIENT_ID',
-        callback: handleCredentialResponse
-    });
-    google.accounts.id.renderButton(
-        document.querySelector(".g_id_signin"),
-        { theme: "outline", size: "large" }  // Personalização do botão
-    );
-    google.accounts.id.prompt(); // Solicita o login do usuário
-};
-
-// Finalização de uma compra ( cartao de credito)
-
-
+app.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
+});

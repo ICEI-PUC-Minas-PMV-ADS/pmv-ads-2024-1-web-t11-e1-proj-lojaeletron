@@ -3,83 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
     <link rel="stylesheet" href="../PaginaInicial/css/styles.css">
-    <script src="./assets/index.js"></script>
     <title>Cadastro</title>
-    <style>
-        * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-
-body{
-
-    font-family: arial;
-    background-color: aliceblue;
-
+    <style>       
+        .unique-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color:#001234;
+            font-family: Arial, sans-serif;
+        }
+        
+        .unique-container h1 {
+            color: #FFD200;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .unique-container .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .unique-container .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            input[type="tel"],
+            input[type="date"],
+            select {
+                width: 100%;
+                padding: 10px;
+                margin-top: 5px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                background-color: #fff;
+                color: black;
 }
+        label[for="fullname"], #fullname{
+            color: goldenrod;
+        }
+        label[for="gender"], #fullname {
+            color: goldenrod;
+        }
+        label[for="birthdate"], #fullname {
+            color: goldenrod;
+        }
+        label[for="phone"], #fullname {
+            color: goldenrod;
+        }
+        label[for="email"], #fullname {
+            color: goldenrod;
+        }
+        label[for="password"], #fullname {
+            color: goldenrod;
+        }
+        label[for="confirm-password"], #fullname {
+            color: goldenrod;
+        }
+        label[for="referral"], #fullname {
+            color: goldenrod;
+        }
 
-header {
-
-    background-color: #001234;
-    position: sticky;
-    top: 0%;
-    color: #FFD200;
-    text-align: center;
-    min-height: 150px;
-    font-size: 30px;
-
+        label[for="cpf"], #cpf {
+            color: goldenrod;
 }
-
-.login {
-
-    color: #FFD200;
-    background-color: #001234;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 70px;
-    border-radius: 15px;
-
-}
-
-input{
-
-    padding: 15px;
-    border: none;
-    outline: none;
-    font-size: 15px;
- 
-}
-
-.botao{
-      background: #FFD200;
-      border: none;
-      width: 100%;
-      border-radius: 10px;
-}
-
-.botao:hover{
-
-    background-color: #faf493;
-    cursor: pointer;
-
-}
+        .unique-container .form-group input,
+        .unique-container .form-group select,
+        .unique-container .social-button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .unique-container .social-button {
+            display: block;
+            margin: 10px 0;
+            background-color: gold;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        .unique-container .social-button.apple {
+            background-color: #000;
+        }
+        
+        .unique-container .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .unique-container .form-group.full-width {
+            grid-column: span 2;
+        }
+        
+        .unique-container button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .unique-container button[type="submit"]:hover {
+            background-color: #218838;
+        }
+        
     </style>
-</head>
-<body>
-    <header>
+ <body>
+          
+        <header>
+        <h1>Eletron</h1>
         <div class="cabecalho">
             <br>
-            
-            <h1>ELETRON</h1>
         </div>
     </header>
-    <div class="container">
+    <div class="unique-container">
         <h1>CRIE SUA CONTA</h1>
         <form id="signup-form">
        
@@ -143,29 +190,7 @@ input{
             $('#cpf').mask('000.000.000-00', {reverse: false});
     </script>
 
-    <script>
-        // Função para salvar os dados no localStorage
-        function saveDataToLocalStorage(email, password) {
-          const userData = { email, password };
-          localStorage.setItem('userData', JSON.stringify(userData));
-        }
-
-        document.getElementById('btnRegister').addEventListener('click', function(event) {
-            event.preventDefault();
-             // Captura os valores dos campos de email e senha
-          const email = document.getElementById('email').value;
-          const password = document.getElementById('password').value;
-          
-           // Salva os dados no localStorage
-           saveDataToLocalStorage(email, password);
-    
-            // Redireciona para a página home.html
-            window.location.href = 'login.html';
-
-        });
-      </script>
 </body>
-
   <!--Rodape-->
 
   <footer class="d-flex" style="margin-bottom: 0px; margin-top: 605px">
@@ -190,6 +215,6 @@ input{
         </form>
     </div>
 </footer>
-
 <script src="../Scripts/pages.js"></script>
+<script src="../Scripts/script.js"></script>
 </html>

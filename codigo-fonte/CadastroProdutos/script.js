@@ -4,7 +4,7 @@ const inputSearch = document.querySelector("input[type='search']");
 let products = []; // Armazenará todos os produtos
 
 // Carrega o arquivo JSON localmente
-fetch("data.json")
+fetch("catalogo.json")
     .then((response) => response.json())
     .then((data) => {
         // Armazena todos os produtos

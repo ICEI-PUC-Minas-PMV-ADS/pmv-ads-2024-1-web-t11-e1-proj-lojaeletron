@@ -110,3 +110,115 @@ button:hover {
     margin-right: 5px;
 }
 
+/* REGISTRO */
+
+.unique-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color:#001234;
+    font-family: Arial, sans-serif;
+}
+
+.unique-container h1 {
+    color: #FFD200;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.unique-container .form-group {
+    margin-bottom: 15px;
+}
+
+.unique-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="date"],
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: black;
+        color: #fff;
+}
+label[for="fullname"], #fullname{
+    color: goldenrod;
+}
+label[for="gender"], #fullname {
+    color: goldenrod;
+}
+label[for="birthdate"], #fullname {
+    color: goldenrod;
+}
+label[for="phone"], #fullname {
+    color: goldenrod;
+}
+label[for="email"], #fullname {
+    color: goldenrod;
+}
+label[for="password"], #fullname {
+    color: goldenrod;
+}
+label[for="confirm-password"], #fullname {
+    color: goldenrod;
+}
+label[for="referral"], #fullname {
+    color: goldenrod;
+}
+
+label[for="cpf"], #cpf {
+    color: goldenrod;
+}
+.unique-container .form-group input,
+.unique-container .form-group select,
+.unique-container .social-button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.unique-container .social-button {
+    display: block;
+    margin: 10px 0;
+    background-color: gold;
+    color: #fff;
+    cursor: pointer;
+}
+
+.unique-container .social-button.apple {
+    background-color: #000;
+}
+
+.unique-container .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.unique-container .form-group.full-width {
+    grid-column: span 2;
+}
+
+.unique-container button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.unique-container button[type="submit"]:hover {
+    background-color: #218838;
+}
