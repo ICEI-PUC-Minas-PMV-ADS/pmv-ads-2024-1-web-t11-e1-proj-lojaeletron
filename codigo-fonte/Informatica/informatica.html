@@ -202,15 +202,21 @@
             </div>
             <!-- <a href="URL_DO_SEU_PERFIL_DO_INSTAGRAM" target="_blank"><img src="caminho/para/o/logo_do_instagram.png" alt="Instagram"></a> -->
         </div>
-        <div id="newsletter" style="flex-grow: 1">
-            <h2>Assine Nossa Newsletter</h2>
-            <p>Receba atualizações mensais diretamente na sua caixa de entrada!</p>
-            <form action="URL_DO_SEU_SCRIPT_DE_INSCRIÇÃO" method="POST">
-                <input type="email" name="email" placeholder="Seu endereço de e-mail" required>
+        <div class="container" styles="flex-grow: 1">
+            <h1>Assine nossa Newsletter</h1>
+            <form id="newsletter" styles="flex-grow: 1">
+                <input type="email" id="user-email" placeholder="Digite seu email" required>
                 <button type="submit">Assinar</button>
             </form>
+            <p id="status-message"></p>
         </div>
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script>
+            (function(){
+                emailjs.init("gf-oHRiua7K86fIND"); // User ID do EmailJS
+            })();
+        </script>
+        <script src="/codigo-fonte/Scripts/script.js"></script>
     </footer>
-
     <script src="../Scripts/pages.js"></script>
 </body>
