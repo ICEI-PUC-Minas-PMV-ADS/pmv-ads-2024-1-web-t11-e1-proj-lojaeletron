@@ -1,4 +1,4 @@
-document.getElementById('newsletter-form').addEventListener('submit', function(event) {
+document.getElementById('newsletter').addEventListener('submit', function(event) {
     event.preventDefault();
 
     // Obter o email do usuário
