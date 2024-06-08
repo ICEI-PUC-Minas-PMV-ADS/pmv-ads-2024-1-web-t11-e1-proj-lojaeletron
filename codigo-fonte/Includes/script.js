@@ -83,4 +83,6 @@ window.onload = function () {
     google.accounts.id.prompt(); // Solicita o login do usuário
 };
 
+// Finalização de uma compra ( cartao de credito)
+
 

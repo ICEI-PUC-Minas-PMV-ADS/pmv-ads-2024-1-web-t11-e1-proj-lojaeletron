@@ -257,3 +257,29 @@ document.getElementById('searchInput').addEventListener('input', function() {
 });
 
 
+document.addEventListener('DOMContentLoaded', (event) => {
+  const toggleButton = document.getElementById('toggleButton');
+
+  // Verificar se o usuário já tem uma preferência salva
+  if (localStorage.getItem('dark-mode') === 'true') {
+      document.body.classList.add('dark-mode');
+      toggleButton.classList.add('dark-mode');
+      toggleButton.textContent = 'Light Mode';
+  } else {
+      toggleButton.textContent = 'Dark Mode';
+  }
+
+  toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggleButton.classList.toggle('dark-mode');
+
+      // Salvar a preferência do usuário
+      if (document.body.classList.contains('dark-mode')) {
+          localStorage.setItem('dark-mode', 'true');
+          toggleButton.textContent = 'Light Mode';
+      } else {
+          localStorage.setItem('dark-mode', 'false');
+          toggleButton.textContent = 'Dark Mode';
+      }
+  });
+});

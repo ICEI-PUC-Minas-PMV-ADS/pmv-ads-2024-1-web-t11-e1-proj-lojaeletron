@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="cartao.css">
+</head>
+<body>
+
+        <main>
+            <div class="container">
+                <h2>Finalizar compra</h2>
+                <form id="payment-form">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00">
+                    
+                    <label for="card-number">Número do Cartão:</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="XXXX XXXX XXXX XXXX">
+                    
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv"  maxlength="3" placeholder="xxx">
+
+                    <label for="data">Data:</label>
+                    <input type="month" id="data" name="data">
+
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" onkeypress="bloquearNumeros(event)" required>
+                    
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" name="cep" required pattern="\d{5}-\d{3}" placeholder="00000-000">
+                    
+                    <button type="submit">Pagar</button>
+                </form>
+            </div>
+        </main>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+
+    <script>
+            $('#card-number').mask('0000 0000 0000 0000');
+            $('#cpf').mask('000.000.000-00', {reverse: false});
+            $('#cep').mask('00000-000');
+    </script>
+
+</body>
+</html>
