@@ -23,3 +23,36 @@ document.getElementById('newsletter').addEventListener('submit', function(event)
             statusMessage.textContent = "Ocorreu um erro ao tentar se inscrever. Tente novamente.";
         });
 });
+
+// FAbook Autenticador
+
+function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+  
+  function statusChangeCallback(response) {
+    if (response.status === 'connected') {
+      // O usuário está conectado ao Facebook e à sua aplicação.
+      FB.api('/me', {fields: 'name, email'}, function(response) {
+        document.getElementById('fullname').value = response.name;
+        document.getElementById('email').value = response.email;
+        document.getElementById('response').innerHTML = 'Você está logado com o Facebook.';
+      });
+    } else {
+      // O usuário não está logado no Facebook ou não autorizou sua aplicação.
+      FB.login(function(response) {
+        if (response.authResponse) {
+          FB.api('/me', {fields: 'name, email'}, function(response) {
+            document.getElementById('fullname').value = response.name;
+            document.getElementById('email').value = response.email;
+            document.getElementById('response').innerHTML = 'Você está logado com o Facebook.';
+          });
+        } else {
+          document.getElementById('response').innerHTML = 'Login com o Facebook falhou.';
+        }
+      }, {scope: 'public_profile,email'});
+    }
+  }
+  

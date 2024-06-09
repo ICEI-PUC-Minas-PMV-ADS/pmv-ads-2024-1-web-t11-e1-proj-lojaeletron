@@ -78,11 +78,11 @@ button:hover {
 }
 
 .social-button.google {
-    background-color: gold;
+    background-color: orangered;
 }
 
 .social-button.apple {
-    background-color: #000;
+    background-color: #0000ff ;
 }
 
 #response {
@@ -190,13 +190,13 @@ label[for="cpf"], #cpf {
 .unique-container .social-button {
     display: block;
     margin: 10px 0;
-    background-color: gold;
+    background-color: orangered;
     color: #fff;
     cursor: pointer;
 }
 
 .unique-container .social-button.apple {
-    background-color: #000;
+    background-color: #0000ff;
 }
 
 .unique-container .form-grid {

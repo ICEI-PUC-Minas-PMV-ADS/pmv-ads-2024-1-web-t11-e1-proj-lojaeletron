@@ -48,37 +48,34 @@ document.getElementById('signup-form').addEventListener('submit', function(event
     }, 2000);
 });
 
-// Google Sign-in
-const express = require('express');
-const bodyParser = require('body-parser');
-const {OAuth2Client} = require('google-auth-library');
-
-const CLIENT_ID = '79566223665-reqmqlnjlqk893ck5asut9in040o8eff.apps.googleusercontent.com';
-const client = new OAuth2Client(CLIENT_ID);
-
-const app = express();
-const PORT = 5000;
-
-app.use(bodyParser.json());
-
-app.post('/login', async (req, res) => {
-    const token = req.body.credential;
-
-    try {
-        const ticket = await client.verifyIdToken({
-            idToken: token,
-            audience: CLIENT_ID,
-        });
-        const payload = ticket.getPayload();
-        const userid = payload['sub'];
-
-        // Aqui você pode criar uma sessão para o usuário, armazenar informações no banco de dados, etc.
-        res.status(200).json({message: 'Login bem-sucedido', user: payload});
-    } catch (error) {
-        res.status(401).json({message: 'Token inválido', error: error.message});
+/// Faceboko autenticador
+function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+  
+  function statusChangeCallback(response) {
+    if (response.status === 'connected') {
+      // O usuário está conectado ao Facebook e à sua aplicação.
+      FB.api('/me', {fields: 'name, email'}, function(response) {
+        document.getElementById('fullname').value = response.name;
+        document.getElementById('email').value = response.email;
+        document.getElementById('response').innerHTML = 'Você está logado com o Facebook.';
+      });
+    } else {
+      // O usuário não está logado no Facebook ou não autorizou sua aplicação.
+      FB.login(function(response) {
+        if (response.authResponse) {
+          FB.api('/me', {fields: 'name, email'}, function(response) {
+            document.getElementById('fullname').value = response.name;
+            document.getElementById('email').value = response.email;
+            document.getElementById('response').innerHTML = 'Você está logado com o Facebook.';
+          });
+        } else {
+          document.getElementById('response').innerHTML = 'Login com o Facebook falhou.';
+        }
+      }, {scope: 'public_profile,email'});
     }
-});
-
-app.listen(PORT, () => {
-    console.log(`Servidor rodando na porta ${PORT}`);
-});
+  }
+  

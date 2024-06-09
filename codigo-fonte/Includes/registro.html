@@ -4,6 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../PaginaInicial/css/styles.css">
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '346449305132298', // Substitua pelo seu App ID do Facebook
+            cookie     : true,
+            xfbml      : true,
+            version    : 'v13.0'
+          });
+    
+          FB.AppEvents.logPageView();   
+        };
+    
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "https://connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+      </script>
+    
+      <!-- Adicione um script para verificar o status do login -->
+      <script>
+        function checkLoginState() {
+          FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+          });
+        }
+    
+        function statusChangeCallback(response) {
+          if (response.status === 'connected') {
+            // O usuário está logado e autorizou o aplicativo
+            console.log('Bem-vindo! Veja sua informação: ', response);
+            // Você pode obter informações do usuário aqui
+            FB.api('/me', function(response) {
+              console.log('Nome: ' + response.name);
+            });
+          } else {
+            // O usuário não está logado ou não autorizou o aplicativo
+            console.log('Por favor, faça login no aplicativo.');
+          }
+        }
+      </script>
     <title>Cadastro</title>
     <style>       
         .unique-container {
@@ -84,13 +128,13 @@
         .unique-container .social-button {
             display: block;
             margin: 10px 0;
-            background-color: gold;
+            background-color: orangered;
             color: #fff;
             cursor: pointer;
         }
         
         .unique-container .social-button.apple {
-            background-color: #000;
+            background-color: #0000ff;
         }
         
         .unique-container .form-grid {
@@ -132,7 +176,7 @@
        
             <div class="form-group">
                 <button type="button" class="social-button google">Cadastrar com o Google</button>
-                <button type="button" class="social-button apple">Cadastrar com a Apple</button>
+                <button type="button" class="social-button apple" onclick="checkLoginState();">Cadastrar com o Facebook</button>
             </div>
             <div class="form-grid">
                 <div class="form-group">
