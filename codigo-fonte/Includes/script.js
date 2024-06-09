@@ -73,7 +73,7 @@ function checkLoginState() {
             document.getElementById('response').innerHTML = 'Você está logado com o Facebook.';
           });
         } else {
-          document.getElementById('response').innerHTML = 'Login com o Facebook falhou.';
+          document.getElementById('response').innerHTML = 'Login com o Faceboo.';
         }
       }, {scope: 'public_profile,email'});
     }
