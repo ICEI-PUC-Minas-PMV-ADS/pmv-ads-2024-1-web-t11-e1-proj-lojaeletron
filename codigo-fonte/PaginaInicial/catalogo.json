@@ -9,7 +9,7 @@
         "categoria": "Hardware",
         "disponibilidade": true,
         "imagens": [
-          "imgs/monitor.jpg"
+          "imgs/monitor_150x150.png"
         ],
         "especificacoes": {
           "material": "",
@@ -25,7 +25,7 @@
         "categoria": "Perifericos",
         "disponibilidade": true,
         "imagens": [
-          "imgs/mouse.jpg"
+          "imgs/mouse_150x150.jpeg"
         ],
         "especificacoes": {
           "material": "",
@@ -40,7 +40,7 @@
         "categoria": "Hardware",
         "disponibilidade": false,
         "imagens": [
-          "imgs/placa.jpg"
+          "imgs/placa_150x96.jpeg"
         ],
         "especificacoes": {
           "material": "",
@@ -134,7 +134,7 @@
         "categoria": "Perifericos",
         "disponibilidade": false,
         "imagens": [
-          "imgs/fone1.jpg"
+          "imgs/fone1.jpeg"
         ],
         "especificacoes": {
           "material": "",
@@ -165,7 +165,7 @@
         "categoria": "Perifericos",
         "disponibilidade": false,
         "imagens": [
-          "imgs/razerhuntsman.jpg"
+          "imgs/razerhuntsman_150x84.jpeg"
         ],
         "especificacoes": {
           "material": "",
@@ -181,7 +181,7 @@
         "categoria": "Perifericos",
         "disponibilidade": false,
         "imagens": [
-          "imgs/reddragon zeus.jpg"
+          "imgs/fonefdp_122x120.jpeg"
         ],
         "especificacoes": {
           "material": "",
@@ -213,7 +213,7 @@
         "categoria": "Eletronico",
         "disponibilidade": false,
         "imagens": [
-          "imgs/galaxybook2.jpg"
+          "imgs/galaxybook2_150x105.jpeg"
         ],
         "especificacoes": {
           "material": "",
@@ -229,7 +229,7 @@
         "categoria": "Eletronico",
         "disponibilidade": false,
         "imagens": [
-          "imgs/echodot.jpg"
+          "imgs/echodot_150x110.jpeg"
         ],
         "especificacoes": {
           "material": "",
@@ -245,7 +245,7 @@
         "categoria": "Eletronico",
         "disponibilidade": false,
         "imagens": [
-          "imgs/galaxywatch.jpg"
+          "imgs/galaxywatch_131x150.jpeg"
         ],
         "especificacoes": {
           "material": "",
@@ -261,7 +261,7 @@
         "categoria": "Informatica",
         "disponibilidade": false,
         "imagens": [
-          "imgs/caboderede.jpg"
+          "imgs/caboderede_111x150.jpeg"
         ],
         "especificacoes": {
           "material": "",
@@ -277,7 +277,7 @@
       "categoria": "Informatica",
       "disponibilidade": false,
       "imagens": [
-        "imgs/Gabineteup.jpg"
+        "imgs/Gabineteup_83x120.jpeg"
       ],
       "especificacoes": {
         "material": "",
@@ -293,7 +293,7 @@
         "categoria": "Eletronico",
         "disponibilidade": false,
         "imagens": [
-          "imgs/dualsense.jpg"
+          "imgs/dualsense_120x120.jpeg"
         ],
         "especificacoes": {
           "material": "",
@@ -309,7 +309,7 @@
         "categoria": "Eletronico",
         "disponibilidade": false,
         "imagens": [
-          "imgs/cabohdmi.jpg"
+          "imgs/cabohdmi_120x120.jpeg"
         ],
         "especificacoes": {
           "material": "",
@@ -341,7 +341,7 @@
         "categoria": "Games",
         "disponibilidade": false,
         "imagens": [
-          "imgs/ps5.jpg"
+          "imgs/ps5_120x120.jpeg"
         ],
         "especificacoes": {
           "material": "",
@@ -357,7 +357,7 @@
         "categoria": "Games",
         "disponibilidade": false,
         "imagens": [
-          "imgs/spiderman.jpg"
+          "imgs/spiderman_94x120.jpeg"
         ],
         "especificacoes": {
           "material": "",
@@ -373,7 +373,7 @@
         "categoria": "Games",
         "disponibilidade": false,
         "imagens": [
-          "imgs/FC24.jpg"
+          "imgs/FC24_95X120.jpeg"
         ],
         "especificacoes": {
           "material": "",
@@ -389,7 +389,7 @@
         "categoria": "Games",
         "disponibilidade": false,
         "imagens": [
-          "imgs/tlou.jpg"
+          "imgs/tlou_94x120.jpeg"
         ],
         "especificacoes": {
           "material": "",
@@ -405,7 +405,7 @@
         "categoria": "Games",
         "disponibilidade": false,
         "imagens": [
-          "imgs/gow.jpg"
+          "imgs/gow_150x84.jpeg"
         ],
         "especificacoes": {
           "material": "",
