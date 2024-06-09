@@ -120,6 +120,13 @@ input{
             alert('Login bem-sucedido!');
             // Redireciona para a página home.html
             window.location.href = '../PaginaInicial/index.html';
+          } else if (email == "eletron" && password == "eletron"){
+            let userData= {
+                "name": "admin",
+                "category": "adm"
+            }
+            localStorage.setItem("userData", JSON.stringify(userData))
+            window.location.href= '/codigo-fonte/Includes/admin.html'
           } else {
             alert('Email ou senha incorretos. Por favor, tente novamente.');
           }

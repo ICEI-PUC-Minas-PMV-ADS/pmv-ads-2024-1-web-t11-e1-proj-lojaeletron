@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="/codigo-fonte/Includes/src/styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .hidden {
+      display: none;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    form input, form button {
+      display: block;
+      margin: 10px 0;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+    }
+    button {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div id="login-section" style="display: none !important">
+    <h2>Login</h2>
+    <form id="login-form">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <div id="admin-section">
+    <h2>ADMINISTRAÇÃO</h2>
+    <button id="logout-button" onclick="logout()""">Logout</button>
+    <form id="product-form">
+      <input type="text" id="product-name" placeholder="Product Name" required>
+      <input type="number" id="product-price" placeholder="Product Price" required>
+      <button type="submit">Add Product</button>
+    </form>
+    <ul id="product-list"></ul>
+  </div>
+</div>
+
+
+
+<script>
+    let logout= () => {
+      window.location.href="/codigo-fonte/Includes/login.html"
+    }
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const loginSection = document.getElementById('login-section');
+    const adminSection = document.getElementById('admin-section');
+    const loginForm = document.getElementById('login-form');
+    const productForm = document.getElementById('product-form');
+    const productList = document.getElementById('product-list');
+    const logoutButton = document.getElementById('logout-button');
+
+    const adminUsername = 'admin';
+    const adminPassword = 'admin';
+
+    const loadProducts = () => { 
+
+      //const data_user = localStorage.getItem('userData'); 
+      const products = JSON.parse(localStorage.getItem('products')) || [];
+      productList.innerHTML = '';
+      products.forEach((product, index) => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+          ${product.name} - $${product.price}
+          <button onclick="editProduct(${index})">Edit</button>
+          <button onclick="deleteProduct(${index})">Delete</button>
+        `;
+        productList.appendChild(li);
+      });
+
+      //if(data_user.category != 'adm')
+      //{
+      //    document.getElementById("edit_permissions").style.display = "none";
+      //}
+
+    };
+
+    const saveProduct = (product) => {
+      const products = JSON.parse(localStorage.getItem('products')) || [];
+      products.push(product);
+      localStorage.setItem('products', JSON.stringify(products));
+      loadProducts();
+    };
+
+    const updateProduct = (index, updatedProduct) => {
+      const products = JSON.parse(localStorage.getItem('products')) || [];
+      products[index] = updatedProduct;
+      localStorage.setItem('products', JSON.stringify(products));
+      loadProducts();
+    };
+
+    const deleteProduct = (index) => {
+      const products = JSON.parse(localStorage.getItem('products')) || [];
+      products.splice(index, 1);
+      localStorage.setItem('products', JSON.stringify(products));
+      loadProducts();
+    };
+
+    const editProduct = (index) => {
+      const products = JSON.parse(localStorage.getItem('products')) || [];
+      const product = products[index];
+      document.getElementById('product-name').value = product.name;
+      document.getElementById('product-price').value = product.price;
+      productForm.onsubmit = (e) => {
+        e.preventDefault();
+        const updatedProduct = {
+          name: document.getElementById('product-name').value,
+          price: document.getElementById('product-price').value,
+        };
+        updateProduct(index, updatedProduct);
+        productForm.reset();
+        productForm.onsubmit = addProductHandler;
+      };
+    };
+
+    const addProductHandler = (e) => {
+      e.preventDefault();
+      const product = {
+        name: document.getElementById('product-name').value,
+        price: document.getElementById('product-price').value,
+      };
+      saveProduct(product);
+      productForm.reset();
+    };
+
+    const handleLogin = (e) => {
+      e.preventDefault();
+
+      /*const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      if (username === adminUsername && password === adminPassword) {
+        localStorage.setItem('isLoggedIn', 'true');
+        loginSection.classList.add('hidden');
+        adminSection.classList.remove('hidden');
+        loadProducts();
+      } else {
+        alert('Invalid credentials');
+      }*/
+
+      localStorage.setItem('isLoggedIn', 'true');
+      loginSection.classList.add('hidden');
+      adminSection.classList.remove('hidden');
+      loadProducts();
+    };
+
+    const handleLogout = () => {
+      localStorage.removeItem('isLoggedIn');
+      loginSection.classList.remove('hidden');
+      adminSection.classList.add('hidden');
+    };
+
+    if (localStorage.getItem('isLoggedIn') === 'true') {
+      loginSection.classList.add('hidden');
+      adminSection.classList.remove('hidden');
+      loadProducts();
+    }
+
+    loginForm.addEventListener('submit', handleLogin);
+    productForm.addEventListener('submit', addProductHandler);
+    logoutButton.addEventListener('click', handleLogout);
+  });
+
+  const editProduct = (index) => {
+    const products = JSON.parse(localStorage.getItem('products')) || [];
+    const product = products[index];
+    document.getElementById('product-name').value = product.name;
+    document.getElementById('product-price').value = product.price;
+    document.getElementById('product-form').onsubmit = (e) => {
+      e.preventDefault();
+      const updatedProduct = {
+        name: document.getElementById('product-name').value,
+        price: document.getElementById('product-price').value,
+      };
+      updateProduct(index, updatedProduct);
+      document.getElementById('product-form').reset();
+      document.getElementById('product-form').onsubmit = addProductHandler;
+    };
+  };
+
+  const deleteProduct = (index) => {
+    const products = JSON.parse(localStorage.getItem('products')) || [];
+    products.splice(index, 1);
+    localStorage.setItem('products', JSON.stringify(products));
+    loadProducts();
+  };
+
+  const updateProduct = (index, updatedProduct) => {
+    const products = JSON.parse(localStorage.getItem('products')) || [];
+    products[index] = updatedProduct;
+    localStorage.setItem('products', JSON.stringify(products));
+    loadProducts();
+  };
+
+  const loadProducts = () => {
+    const products = JSON.parse(localStorage.getItem('products')) || [];
+    document.getElementById('product-list').innerHTML = '';
+    products.forEach((product, index) => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        ${product.name} - $${product.price}
+        <button onclick="editProduct(${index})" class="edit_permissions">Edit</button>
+        <button onclick="deleteProduct(${index})">Delete</button>
+      `;
+      document.getElementById('product-list').appendChild(li);
+    });
+  };
+
+  const addProductHandler = (e) => {
+    e.preventDefault();
+    const product = {
+      name: document.getElementById('product-name').value,
+      price: document.getElementById('product-price').value,
+    };
+    saveProduct(product);
+    document.getElementById('product-form').reset();
+  };
+
+  const saveProduct = (product) => {
+    const products = JSON.parse(localStorage.getItem('products')) || [];
+    products.push(product);
+    localStorage.setItem('products', JSON.stringify(products));
+    loadProducts();
+  };
+
+  loadProducts();
+</script>
+
+</body>
+</html>
