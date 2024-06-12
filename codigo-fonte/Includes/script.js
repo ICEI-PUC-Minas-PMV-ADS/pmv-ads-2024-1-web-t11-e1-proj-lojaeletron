@@ -530,7 +530,3 @@ window.onload = function() {
   }
 };
 
-
-
-  
-  
