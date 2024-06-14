@@ -53,3 +53,36 @@ function addToCart(product) {
     localStorage.setItem('cart', JSON.stringify(cart));
     window.location.href = 'carrinho.html';
 }
+
+//CARTAO DE CREDITO
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cartItemsContainer = document.getElementById('cart-items');
+    const totalPriceContainer = document.getElementById('total-price');
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    if (cart.length > 0) {
+        cart.forEach(product => {
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'cart-item';
+            itemDiv.innerHTML = `
+                <h2>${product.nome}</h2>
+                <p>Preço: R$${product.preco.toFixed(2)}</p>
+                <img src="${product.imagens[0]}" alt="${product.nome}">
+            `;
+            cartItemsContainer.appendChild(itemDiv);
+        });
+
+        const totalPrice = cart.reduce((sum, product) => sum + product.preco, 0);
+        totalPriceContainer.textContent = `Total: R$${totalPrice.toFixed(2)}`;
+    } else {
+        cartItemsContainer.innerHTML = '<p>O carrinho está vazio.</p>';
+    }
+
+    const finalizarCompraButton = document.getElementById('finalizar-compra');
+    finalizarCompraButton.addEventListener('click', () => {
+        window.location.href = 'cartao.html'; // Redireciona para a página de checkout
+    });
+});
+
+
