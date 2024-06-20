@@ -59,7 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const product = data.catalogo.produtos.find(p => p.id == productId);
 
             if (product) {
-            
+                productDetails.innerHTML = ``;
+
                 addToCartButton.addEventListener('click', () => {
                     addToCart(product);
                 });
@@ -83,3 +84,14 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = 'cartao.html'; // Redireciona para a página de checkout
     });
 });
+
+// Seção de cartão de crédito
+//document.addEventListener('DOMContentLoaded', () => {
+//CARTAO DE CREDITO
+
+
+
+    //const finalizarCompraButton = document.getElementById('finalizar-compra');
+    //finalizarCompraButton.addEventListener('click', () => {
+       // window.location.href = 'cartao.html'; // Redireciona para a página de checkout
+//});
