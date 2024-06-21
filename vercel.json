@@ -1,8 +1,12 @@
 {
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "/codigo-fonte/index.html"
+      "src": "/",
+      "dest": "/codigo-fonte/Index.html"
+    },
+    {
+      "src": "/includes/(.*)",
+      "dest": "/codigo-fonte/Includes/$1"
     }
   ]
 }
