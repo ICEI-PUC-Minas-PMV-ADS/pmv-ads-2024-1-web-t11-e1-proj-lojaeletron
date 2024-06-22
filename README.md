@@ -1,5 +1,5 @@
 # Loja Eletron
-A loja nasce com a visão de proporcionar o melhor custo-beneficio e experiencia para os clientes, entendemos que a busca por produtos de qualidade, combinada com o desejo de adquiri-los a preço acessiveis, é o que impulsiona o mercado.
+A loja foi criada com a visão clara de oferecer o melhor custo-benefício e uma experiência de compra excepcional para seus clientes. Reconhecemos que a busca por produtos de alta qualidade, aliada ao desejo de adquiri-los por preços acessíveis, é o principal fator que movimenta o mercado. Nosso compromisso é atender a essas necessidades, garantindo que cada cliente encontre em nossa loja a combinação perfeita entre qualidade e preço justo, resultando em uma experiência de compra satisfatória e vantajosa.
 
 # ELETRON
 
