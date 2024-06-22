@@ -165,7 +165,7 @@
  <body>
           
         <header>
-        <h1>Eletron</h1>
+        <h1>ELETRON</h1>
         <div class="cabecalho">
             <br>
         </div>
@@ -234,31 +234,37 @@
             $('#cpf').mask('000.000.000-00', {reverse: false});
     </script>
 
-</body>
-  <!--Rodape-->
 
-  <footer class="d-flex" style="margin-bottom: 0px; margin-top: 605px">
-    <div id="contact-and-logos" class="d-flex" style="flex-grow: 3; flex-direction: column;">
-        
-        <div style="flex-grow: 1">
-          <p>Entre em contato através de <a href="mailto:suporte.eletron@gmail.com">suporte.eletron@gmail.com</a></p>
+    <!--Rodape-->
+    
+    <footer class="d-flex">
+        <div id="contact-and-logos" class="d-flex" style="flex-grow: 3; flex-direction: column;">
+            
+            <div style="flex-grow: 1">
+              <p>Entre em contato através de <a href="mailto:suporte.eletron@gmail.com">suporte.eletron@gmail.com</a></p>
+            </div>
+            <div style="flex-grow: 1">
+              <img src="../includes/imgs/seloebit.png" alt="Logotipo do Ebit">
+              <img src="../includes/imgs/selogoogle.png" alt="Logotipo do Google">
+              <img src="../includes/imgs/seloblindado.png" alt="Logotipo Blindado">
+            </div>
+            <!-- <a href="URL_DO_SEU_PERFIL_DO_INSTAGRAM" target="_blank"><img src="caminho/para/o/logo_do_instagram.png" alt="Instagram"></a> -->
         </div>
-        <div style="flex-grow: 1">
-          <img src="../includes/imgs/seloebit.png" alt="Logotipo do Ebit">
-          <img src="../includes/imgs/selogoogle.png" alt="Logotipo do Google">
-          <img src="../includes/imgs/seloblindado.png" alt="Logotipo Blindado">
+        <div class="container" styles="flex-grow: 1">
+            <h1>Assine nossa Newsletter</h1>
+            <form id="newsletter" styles="flex-grow: 1">
+                <input type="email" id="user-email" placeholder="Digite seu email" required>
+                <button type="submit">Assinar</button>
+            </form>
+            <p id="status-message"></p>
         </div>
-        <!-- <a href="URL_DO_SEU_PERFIL_DO_INSTAGRAM" target="_blank"><img src="caminho/para/o/logo_do_instagram.png" alt="Instagram"></a> -->
-    </div>
-    <div id="newsletter" style="flex-grow: 1">
-        <h2>Assine Nossa Newsletter</h2>
-        <p>Receba atualizações mensais diretamente na sua caixa de entrada!</p>
-        <form action="URL_DO_SEU_SCRIPT_DE_INSCRIÇÃO" method="POST">
-            <input type="email" name="email" placeholder="Seu endereço de e-mail" required>
-            <button type="submit">Assinar</button>
-        </form>
-    </div>
-</footer>
-<script src="../Scripts/pages.js"></script>
-<script src="../Scripts/script.js"></script>
-</html>
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script>
+            (function(){
+                emailjs.init("gf-oHRiua7K86fIND"); // User ID do EmailJS
+            })();
+        </script>
+        <script src="/codigo-fonte/Scripts/script.js"></script>
+    </footer>
+    <script src="../Scripts/pages.js"></script>
+</body>
