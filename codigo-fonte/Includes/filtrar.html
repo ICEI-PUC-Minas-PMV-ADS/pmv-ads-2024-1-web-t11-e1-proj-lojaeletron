@@ -6,7 +6,6 @@
     <title>Filtrar Produtos</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/codigo-fonte/PaginaInicial/css/styles.css">
-    
     <style>
         .produto {
             border: 1px solid #ddd;
@@ -21,18 +20,15 @@
 <body>
     <span id="header"></span>
     <div style="width: 100%; padding: 30px"></div>
-
+  
     
-
     <!-- Barra de pesquisa -->
    
     <div id="produtos"></div>
     <div id="carrinho"></div>
     
-
-    
     <script src="../Scripts/pages.js"></script>
-
+    
     <div class="container">
         <h1>Filtrar Produtos</h1>
         <form id="filtro-form">
@@ -57,16 +53,7 @@
                 const valorMinimo = parseFloat(document.getElementById('valor-minimo').value) || 0;
                 const valorMaximo = parseFloat(document.getElementById('valor-maximo').value) || Infinity;
 
-                // Corrigindo o caminho para o arquivo JSON
-                fetch('../PaginaInicial/catalogo.json')
-                fetch('../codigo-fonte/Games/games.html')
-                fetch('../codigo-fonte/Eletronicos/eletro.html')
-                fetch('../codigo-fonte/Hardware/hardware.html')
-                fetch('../codigo-fonte/Games/games.html')
-                fetch('../codigo-fonte/Games/games.html')
-                fetch('../codigo-fonte/Games/games.html')
-                fetch('../codigo-fonte/Games/games.html')
-                 
+                fetch('../PaginaInicial/catalogo.json') // Corrigindo o caminho para o arquivo JSON
                     .then(response => response.json())
                     .then(data => {
                         let produtos = data.catalogo.produtos;
@@ -104,52 +91,55 @@
             }
         });
     </script>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-         <footer class="d-flex">
-            <div id="contact-and-logos" class="d-flex" style="flex-grow: 3; flex-direction: column;">
-                
-                <div style="flex-grow: 1">
-                  <p>Entre em contato através de <a href="mailto:suporte.eletron@gmail.com">suporte.eletron@gmail.com</a></p>
-                </div>
-                <div style="flex-grow: 1">
-                  <img src="../includes/imgs/seloebit.png" alt="Logotipo do Ebit">
-                  <img src="../includes/imgs/selogoogle.png" alt="Logotipo do Google">
-                  <img src="../includes/imgs/seloblindado.png" alt="Logotipo Blindado">
-                </div>
-                <!-- <a href="URL_DO_SEU_PERFIL_DO_INSTAGRAM" target="_blank"><img src="caminho/para/o/logo_do_instagram.png" alt="Instagram"></a> -->
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <!--Rodape-->
+    
+    <footer class="d-flex">
+        <div id="contact-and-logos" class="d-flex" style="flex-grow: 3; flex-direction: column;">
+            
+            <div style="flex-grow: 1">
+              <p>Entre em contato através de <a href="mailto:suporte.eletron@gmail.com">suporte.eletron@gmail.com</a></p>
             </div>
-            <div class="container" styles="flex-grow: 1">
-                <h1>Assine nossa Newsletter</h1>
-                <form id="newsletter" styles="flex-grow: 1">
-                    <input type="email" id="user-email" placeholder="Digite seu email" required>
-                    <button type="submit">Assinar</button>
-                </form>
-                <p id="status-message"></p>
+            <div style="flex-grow: 1">
+              <img src="../includes/imgs/seloebit.png" alt="Logotipo do Ebit">
+              <img src="../includes/imgs/selogoogle.png" alt="Logotipo do Google">
+              <img src="../includes/imgs/seloblindado.png" alt="Logotipo Blindado">
             </div>
-            <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-            <script>
-                (function(){
-                    emailjs.init("gf-oHRiua7K86fIND"); // User ID do EmailJS
-                })();
-            </script>
-            <script src="/codigo-fonte/Scripts/script.js"></script>
-        </footer>
+            <!-- <a href="URL_DO_SEU_PERFIL_DO_INSTAGRAM" target="_blank"><img src="caminho/para/o/logo_do_instagram.png" alt="Instagram"></a> -->
+        </div>
+        <div class="container" styles="flex-grow: 1">
+            <h1>Assine nossa Newsletter</h1>
+            <form id="newsletter" styles="flex-grow: 1">
+                <input type="email" id="user-email" placeholder="Digite seu email" required>
+                <button type="submit">Assinar</button>
+            </form>
+            <p id="status-message"></p>
+        </div>
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script>
+            (function(){
+                emailjs.init("gf-oHRiua7K86fIND"); // User ID do EmailJS
+            })();
+        </script>
+        <script src="/codigo-fonte/Scripts/script.js"></script>
+    </footer>
+
 </body>
 </html>
