@@ -1,0 +1,100 @@
+{
+  "catalogo": {
+    "produtos": [
+      {
+        "id": 2,
+        "nome": "Mouse Razer",
+        "descricao": "Mouse optico , 12000 dpi",
+        "preco": 79.99,
+        "categoria": "Perifericos",
+        "disponibilidade": true,
+        "imagens": [
+          "imgs/mouse_150x150.jpeg"
+        ],
+        "especificacoes": {
+          "material": "",
+          "tamanhosDisponiveis": []
+        }
+      },
+      {
+        "id": 6,
+        "nome": "Mouse Gamer Sem Fio Logitech G PRO",
+        "descricao": "Wireless LIGHTSPEED, RGB LIGHTSYNC",
+        "preco": 699.99,
+        "categoria": "Perifericos",
+        "disponibilidade": false,
+        "imagens": [
+          "imgs/mouseGPRO.jpeg"
+        ],
+        "especificacoes": {
+          "material": "",
+          "tamanhosDisponiveis": [],
+          "coresDisponiveis": ["Preto", "Branco"]
+      }
+      },
+      {
+        "id": 8,
+        "nome": "Kit Gamer Redragon RGB",
+        "descricao": "Headset Lamia 2 Surround 7.1 + Teclado Kumara Switch Outemu Blue + Mouse Cobra",
+        "preco": 499.99,
+        "categoria": "Perifericos",
+        "disponibilidade": false,
+        "imagens": [
+          "imgs/kitreddragon.png"
+        ],
+        "especificacoes": {
+          "material": "",
+          "tamanhosDisponiveis": []
+      }
+    },
+    {
+      "id": 9,
+      "nome": "JBL Quantum 50",
+      "descricao": "Fone de Ouvido Gamer Intra Auricular",
+      "preco": 129.99,
+      "categoria": "Perifericos",
+      "disponibilidade": false,
+      "imagens": [
+        "imgs/fone1.jpeg"
+      ],
+      "especificacoes": {
+        "material": "",
+        "tamanhosDisponiveis": []
+    }
+  },
+  {
+    "id": 11,
+    "nome": "Razer Huntsman Mini",
+    "descricao": "Chroma, Razer Switch Red",
+    "preco": 999.00,
+    "categoria": "Perifericos",
+    "disponibilidade": false,
+    "imagens": [
+      "imgs/razerhuntsman_150x84.jpeg"
+    ],
+    "especificacoes": {
+      "material": "",
+      "tamanhosDisponiveis": [],
+      "coresDisponiveis": []
+  }
+},
+{
+  "id": 12,
+  "nome": "Redragon Zeus",
+  "descricao": "Headset Gamer, 7.1",
+  "preco": 299.00,
+  "categoria": "Perifericos",
+  "disponibilidade": false,
+  "imagens": [
+    "imgs/fonefdp_122x120.jpeg"
+  ],
+  "especificacoes": {
+    "material": "",
+    "tamanhosDisponiveis": [],
+    "coresDisponiveis": []
+  }
+}
+]
+}
+
+}

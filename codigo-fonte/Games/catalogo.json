@@ -1,0 +1,73 @@
+{
+  "catalogo": {
+    "produtos": [
+      {
+        "id": 23,
+        "nome": "Marvel's Spider-Man 2",
+        "descricao": "Edição Standard - PlayStation 5",
+        "preco": 250.00,
+        "categoria": "Games",
+        "disponibilidade": false,
+        "imagens": [
+          "imgs/spiderman_94x120.jpeg"
+        ],
+        "especificacoes": {
+          "material": "",
+          "tamanhosDisponiveis": [],
+          "coresDisponiveis": []
+      }
+      },
+      {
+        "id": 24,
+        "nome": "EA Sports FC 24",
+        "descricao": "PlayStation 5",
+        "preco": 290.99,
+        "categoria": "Games",
+        "disponibilidade": false,
+        "imagens": [
+          "imgs/FC24_95X120.jpeg"
+        ],
+        "especificacoes": {
+          "material": "",
+          "tamanhosDisponiveis": [],
+          "coresDisponiveis": []
+      }
+      },
+      {
+        "id": 25,
+        "nome": "The Last of Us Part II",
+        "descricao": "Remastered, PS5",
+        "preco": 175.00,
+        "categoria": "Games",
+        "disponibilidade": false,
+        "imagens": [
+          "imgs/tlou_94x120.jpeg"
+        ],
+        "especificacoes": {
+          "material": "",
+          "tamanhosDisponiveis": [],
+          "coresDisponiveis": []
+      }
+      },
+      {
+        "id": 26,
+        "nome": "God of War Ragnarök",
+        "descricao": "God of War Ragnarök",
+        "preco": 299.99,
+        "categoria": "Games",
+        "disponibilidade": false,
+        "imagens": [
+          "imgs/gow_150x84.jpeg"
+        ],
+        "especificacoes": {
+          "material": "",
+          "tamanhosDisponiveis": [],
+          "coresDisponiveis": []
+          
+        }
+      }
+    ]
+      }
+    
+  }
+

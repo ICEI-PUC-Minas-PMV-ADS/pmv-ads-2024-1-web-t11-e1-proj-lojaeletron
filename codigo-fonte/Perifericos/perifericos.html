@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     
-<head>
+<head id=""> <head id=""></head>
     <!--Bootstrap CDN , suporte aos servidores -->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
@@ -25,168 +25,32 @@
     <meta name="description" content="Loja de Produtos Eletronicos em Geral!">
     <meta name="keywords" content="Eletron">
 
+    <link rel="stylesheet" href="styles.css">
+
+
     
 </head>
-</body>
 
-<!--Cabecalho-->
-<span id="header"></span>
+<body>
+    <span id="header"></span>
+    <div style="width: 100%; padding: 30px"></div>
 
-<div style="width: 100%; padding: 30px"></div>
+    
+    <!-- Barra de pesquisa -->
+    <input type="text" id="searchInput" placeholder="Buscar produtos...">
+    <div id="produtos"></div>
+    <div id="carrinho"></div>
+    
 
-<!----------------------Carrousel--------------------------->
-
-<main class="container-fluid d-flex">
-    <row class="row" style="display: flex; justify-content: center">
-    <col class="col-3">
-    <div style="display: flex; flex-direction: column; align-items: center">
-  
-        <div style="flex-grow: 1">
-            <col>
-                <div class="carousel slide d-block" id="carrousel"></div>
-            </col>
-        </div>
-  
-        <div style="flex-grow: 1">
-            <div>
-                <a href="/codigo-fonte/Avaliacao/avaliacao.html" type="button" class="btn btn-success btn-close w-100" aria-label="Close">COMPRAR <i class="fa-solid fa-cart-shopping"></i></a>
-            </div>
-        </div>
-        
-    </div>
-    </col>
-    <col class="col-3">
-    <div style="display: flex; flex-direction: column ; align-items: center;">
-  
-        <div style="flex-grow: 1">
-            <col>
-                <div class="carousel slide d-block" id="carrousel2"></div>
-            </col>
-        </div>
-  
-        <div style="flex-grow: 1">
-            <col>
-                <a href="/codigo-fonte/Avaliacao/avaliacao.html" type="button" class="btn btn-success btn-close w-100" aria-label="Close">COMPRAR <i class="fa-solid fa-cart-shopping"></i></a>
-            </col>
-        </div>
-  
-    </div>
-    </col>
-    <col class="col-3">
-        <div style="display: flex; flex-direction: column; align-items: center;">
-  
-            <div style="flex-grow: 1">
-                <col>
-                    <div class="carousel slide d-block" id="carrousel3"></div>
-                </col>
-            </div>
-  
-            <div style="flex-grow: 1">
-                <col>
-                    <a href="/codigo-fonte/Avaliacao/avaliacao.html" type="button" class="btn btn-success btn-close w-100" aria-label="Close">COMPRAR <i class="fa-solid fa-cart-shopping"></i></a>
-                </col>
-            </div>
-  
-        </div>
-    </col>
-    <col class="col-3">
-    <div style="display: flex; flex-direction: column; align-items: center;">
-  
-        <div style="flex-grow: 1">
-            <col>
-                <div class="carousel slide d-block" id="carrousel4"></div>
-            </col>
-        </div>
-  
-        <div style="flex-grow: 1">
-            <col>
-                <a href="/codigo-fonte/Avaliacao/avaliacao.html" type="button" class="btn btn-success btn-close w-100" aria-label="Close">COMPRAR <i class="fa-solid fa-cart-shopping"></i></a>
-            </col>
-        </div>
-    </div>
-  
-    <!-- inicioteste-->
     
-    <col class="col-3">
-      <div style="display: flex; flex-direction: column; align-items: center;">
+    <script src="../Scripts/pages.js"></script>
     
-          <div style="flex-grow: 1">
-              <col>
-                  <div class="carousel slide d-block" id="carrousel5"></div>
-              </col>
-          </div>
-    
-          <div style="flex-grow: 1">
-              <div>
-                  <a href="/codigo-fonte/Avaliacao/avaliacao.html" type="button" class="btn btn-success btn-close w-100" aria-label="Close">COMPRAR <i class="fa-solid fa-cart-shopping"></i></a>
-              </div>
-          </div>
-    
-      </div>
-      </col>
-      <col class="col-3">
-      <div style="display: flex; flex-direction: column ; align-items: center;">
-    
-          <div style="flex-grow: 1">
-              <col>
-                  <div class="carousel slide d-block" id="carrousel6"></div>
-              </col>
-          </div>
-    
-          <div style="flex-grow: 1">
-              <col>
-                  <a href="/codigo-fonte/Avaliacao/avaliacao.html" type="button" class="btn btn-success btn-close w-100" aria-label="Close">COMPRAR <i class="fa-solid fa-cart-shopping"></i></a>
-              </col>
-          </div>
-    
-      </div>
-      </col>
-      <col class="col-3">
-          <div style="display: flex; flex-direction: column; align-items: center;">
-    
-              <div style="flex-grow: 1">
-                  <col>
-                      <div class="carousel slide d-block" id="carrousel7"></div>
-                  </col>
-              </div>
-    
-              <div style="flex-grow: 1">
-                  <col>
-                      <a href="/codigo-fonte/Avaliacao/avaliacao.html" type="button" class="btn btn-success btn-close w-100" aria-label="Close">COMPRAR <i class="fa-solid fa-cart-shopping"></i></a>
-                  </col>
-              </div>
-    
-          </div>
-      </col>
-      <col class="col-3">
-      <div style="display: flex; flex-direction: column; align-items: center;">
-    
-          <div style="flex-grow: 1">
-              <col>
-                  <div class="carousel slide d-block" id="carrousel8"></div>
-              </col>
-          </div>
-    
-          <div style="flex-grow: 1">
-              <col>
-                  <a href="/codigo-fonte/Avaliacao/avaliacao.html" type="button" class="btn btn-success btn-close w-100" aria-label="Close">COMPRAR <i class="fa-solid fa-cart-shopping"></i></a>
-              </col>
-          </div>
-      </div>
-      </col>
-  
-    </col>
-    
-  
-  </row>
   </main>
   
-  
-  <!---------------------Carrousel---------------------------->
-  
-    <!--Rodape-->
+
+     <!--Rodape-->
     
-    <footer class="d-flex">
+     <footer class="d-flex">
         <div id="contact-and-logos" class="d-flex" style="flex-grow: 3; flex-direction: column;">
             
             <div style="flex-grow: 1">
@@ -217,3 +81,4 @@
     </footer>
     <script src="../Scripts/pages.js"></script>
 </body>
+    
