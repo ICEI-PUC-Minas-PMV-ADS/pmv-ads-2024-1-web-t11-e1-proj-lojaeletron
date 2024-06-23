@@ -1,0 +1,572 @@
+
+  <!DOCTYPE html>
+  <html lang="pt-br">
+      
+  <head id=""> <head id=""></head>
+      <!--Bootstrap CDN , suporte aos servidores -->
+  
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+      <!-- Parte interativa JS --> 
+  
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>  
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script> 
+      <link rel="stylesheet" href="/codigo-fonte/Avaliacao/avaliacao.css">
+  
+  
+      <!--Fontes-->
+      <script src="https://kit.fontawesome.com/cf6b0cd6b1.js"></script>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+      </style>
+  
+      <!-- MetaTags de Compatibilidade e Creditos-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+      <meta name="author" content="Arthur Isidorio, Gabriel Nakazato, Matheus Estrela, Vitor Hugo, Yuji Ohasi">
+      <meta name="description" content="Loja de Produtos Eletronicos em Geral!">
+      <meta name="keywords" content="Eletron">
+  
+      <link rel="stylesheet" href="styles.css">
+  
+  
+      
+  </head>
+<body>
+  <span id="header"></span>
+  <div style="width: 100%; padding: 30px"></div>
+
+  
+  <!-- Barra de pesquisa -->
+ 
+  <div id="produtos"></div>
+  <div id="carrinho"></div>
+  
+
+  
+  <script src="../Scripts/pages.js"></script>
+
+  
+
+    <main>
+        <div id="main">
+            <img id="produto-imagem" src="" width="500" height="500" alt="Imagem do Produto">
+            <div class="texto">
+                <div class="cardbranco">
+                    <h1 id="produto-nome"></h1>
+                    <h3 id="produto-descricao"></h3>
+                    <h1 class="avaliacaored" id="produto-preco-original"></h1>
+                    <h1 class="avaliacaogreen" id="produto-preco"></h1>
+                    <div id="product-details"></div>
+                    <button id="add-to-cart">Adicionar ao Carrinho</button>
+                    <script src="../PaginaInicial/cart.js"></script>
+                    <!---<form action="../Includes/comprafinalizacao.html">
+                        <h1><input class="carrinho" type="submit" value="Adicionar ao carrinho"></h1>
+                    </form> !--->
+                </div>
+            </div>
+        </div>
+        <div id="bordaa">
+            <br>
+            <h1 style="margin: 0%  3% 0% 3%;">Descrição do Produto</h1>
+            <br>
+            <p id="produto-detalhes" style="margin: 0%  3% 0% 3%;"></p>
+        </div>
+        <br>
+        <div id="bordab">
+            <br>
+            <h1 style="margin: 0%  3% 0% 3%;"> Informações Técnicas</h1>
+            <br>
+            <p id="produto-especificacoes" style="margin: 0%  3% 0% 3%;"></p>
+        </div>
+        <br>
+        <div id="comentarios">
+            <h2>O que achou do Produto?</h2>
+            <textarea id="opiniao" rows="4" placeholder="Digite sua opinião aqui..."></textarea><br>
+            <label for="pontuacao">Pontuação:</label>
+            <div class="estrelas" id="estrelas">
+                <span onclick="selecionarPontuacao(1)">&#9733;</span>
+                <span onclick="selecionarPontuacao(2)">&#9733;</span>
+                <span onclick="selecionarPontuacao(3)">&#9733;</span>
+                <span onclick="selecionarPontuacao(4)">&#9733;</span>
+                <span onclick="selecionarPontuacao(5)">&#9733;</span>
+            </div>
+            <button onclick="adicionarComentario()">Adicionar Comentário</button>
+            <div id="listaComentarios"></div>
+        </div>
+    </main>
+    <footer class="d-flex">
+        <div id="contact-and-logos" class="d-flex" style="flex-grow: 3; flex-direction: column;">
+            <div style="flex-grow: 1">
+                <p>Entre em contato através de <a href="mailto:suporte.eletron@gmail.com">suporte.eletron@gmail.com</a></p>
+            </div>
+            <div style="flex-grow: 1">
+                <img src="../includes/imgs/seloebit.png" alt="Logotipo do Ebit">
+                <img src="../includes/imgs/selogoogle.png" alt="Logotipo do Google">
+                <img src="../includes/imgs/seloblindado.png" alt="Logotipo Blindado">
+            </div>
+        </div>
+        <div class="container" styles="flex-grow: 1">
+            <h1>Assine nossa Newsletter</h1>
+            <form id="newsletter" styles="flex-grow: 1">
+                <input type="email" id="user-email" placeholder="Digite seu email" required>
+                <button type="submit">Assinar</button>
+            </form>
+            <p id="status-message"></p>
+        </div>
+        <script>
+            
+const catalogo = {
+    "catalogo": {
+        "produtos": [
+            {
+                "id": 1,
+                "nome": "Monitor",
+                "descricao": "Monitor 144hz, AOC",
+                "preco": 1129.99,
+                "categoria": "Hardware",
+                "disponibilidade": true,
+                "imagens": [
+                    "imgs/monitor_150x150.png"
+                    
+                ],
+                "especificacoes": {
+                    "material": "",
+                    "tamanhosDisponiveis": []
+                }
+            },
+            {
+                "id": 2,
+                "nome": "Mouse Razer",
+                "descricao": "Mouse optico , 12000 dpi",
+                "preco": 79.99,
+                "categoria": "Perifericos",
+                "disponibilidade": true,
+                "imagens": [
+                    "imgs/mouse_150x150.jpeg"
+                ],
+                "especificacoes": {
+                    "material": "",
+                    "tamanhosDisponiveis": []
+                }
+            },
+            {
+    "id": 3,
+    "nome": "Placa de video",
+    "descricao": "Placa de video Radeon",
+    "preco": 1399.99,
+    "categoria": "Hardware",
+    "disponibilidade": false,
+    "imagens": [
+      "imgs/placa_150x96.jpeg"
+    ],
+    "especificacoes": {
+      "material": "",
+      "tamanhosDisponiveis": [],
+      "coresDisponiveis": ["Preto", "Branco", "Cinza"]
+    }
+  },
+
+{
+"id": 4,
+"nome": "Placa Mae",
+"descricao": "Placa Mae Asus",
+"preco": 598.99,
+"categoria": "Hardware",
+"disponibilidade": false,
+"imagens": [
+  "imgs/placamae.png"
+],
+"especificacoes": {
+  "material": "",
+  "tamanhosDisponiveis": [],
+  "coresDisponiveis": []
+}
+},
+{
+"id": 5,
+"nome": "Placa de Vídeo RTX 3060 ",
+"descricao": "Ventus 2X MSI NVIDIA GeForce, 12GB GDDR6",
+"preco": 1799.99,
+"categoria": "Hardware",
+"disponibilidade": false,
+"imagens": [
+  "imgs/placartx.png"
+],
+"especificacoes": {
+  "material": "",
+  "tamanhosDisponiveis": [],
+  "coresDisponiveis":[]
+}
+},
+{
+"id": 6,
+"nome": "Mouse Gamer Sem Fio Logitech G PRO",
+"descricao": "Wireless LIGHTSPEED, RGB LIGHTSYNC",
+"preco": 699.99,
+"categoria": "Perifericos",
+"disponibilidade": false,
+"imagens": [
+  "imgs/mouseGPRO.jpeg"
+],
+"especificacoes": {
+  "material": "",
+  "tamanhosDisponiveis": [],
+  "coresDisponiveis": ["Preto", "Branco"]
+}
+},
+{
+"id": 7,
+"nome": "Fonte XPG Core Reactor, 850W",
+"descricao": "80 Plus Gold, Modular",
+"preco": 599.99,
+"categoria": "Hardware",
+"disponibilidade": false,
+"imagens": [
+  "imgs/fonte xpg.png"
+],
+"especificacoes": {
+  "material": "",
+  "tamanhosDisponiveis": []
+}
+},
+{
+"id": 8,
+"nome": "Kit Gamer Redragon RGB",
+"descricao": "Headset Lamia 2 Surround 7.1 + Teclado Kumara Switch Outemu Blue + Mouse Cobra",
+"preco": 499.99,
+"categoria": "Perifericos",
+"disponibilidade": false,
+"imagens": [
+  "imgs/kitreddragon.png"
+],
+"especificacoes": {
+  "material": "",
+  "tamanhosDisponiveis": []
+}
+},
+{
+"id": 9,
+"nome": "JBL Quantum 50",
+"descricao": "Fone de Ouvido Gamer Intra Auricular",
+"preco": 129.99,
+"categoria": "Perifericos",
+"disponibilidade": false,
+"imagens": [
+  "imgs/fone1.jpeg"
+],
+"especificacoes": {
+  "material": "",
+  "tamanhosDisponiveis": []
+}
+},
+{
+"id": 10,
+"nome": "Epson EcoTank L3250",
+"descricao": "Multifuncional, Tanque de Tinta Colorida",
+"preco": 1135.00,
+"categoria": "Eletronico",
+"disponibilidade": false,
+"imagens": [
+  "imgs/impressora1.png"
+],
+"especificacoes": {
+  "material": "",
+  "tamanhosDisponiveis": [],
+  "coresDisponiveis": ["Preto", "Branco", "Cinza"]
+}
+},
+{
+"id": 11,
+"nome": "Razer Huntsman Mini",
+"descricao": "Chroma, Razer Switch Red",
+"preco": 999.00,
+"categoria": "Perifericos",
+"disponibilidade": false,
+"imagens": [
+  "imgs/razerhuntsman_150x84.jpeg"
+],
+"especificacoes": {
+  "material": "",
+  "tamanhosDisponiveis": [],
+  "coresDisponiveis": []
+}
+},
+{
+"id": 12,
+"nome": "Redragon Zeus",
+"descricao": "Headset Gamer, 7.1",
+"preco": 299.00,
+"categoria": "Perifericos",
+"disponibilidade": false,
+"imagens": [
+  "imgs/fonefdp_122x120.jpeg"
+],
+"especificacoes": {
+  "material": "",
+  "tamanhosDisponiveis": [],
+  "coresDisponiveis": []
+}
+},
+{
+"id": 13,
+"nome": "Iphone 12 128gb",
+"descricao": " Câmera 12MP, Tela 6.1",
+"preco": 3199.99,
+"categoria": "Eletronico",
+"disponibilidade": false,
+"imagens": [
+  "imgs/iphone12.png"
+],
+"especificacoes": {
+  "material": "",
+  "tamanhosDisponiveis": [],
+  "coresDisponiveis": ["Preto", "Branco"]
+}
+},
+{
+"id": 14,
+"nome": "Notebook Samsung Galaxy Book2",
+"descricao": "Intel Core i5-1235U, 8GB RAM, SSD 256GB",
+"preco": 2399.99,
+"categoria": "Eletronico",
+"disponibilidade": false,
+"imagens": [
+  "imgs/galaxybook2_150x105.jpeg"
+],
+"especificacoes": {
+  "material": "",
+  "tamanhosDisponiveis": [],
+  "coresDisponiveis": ["Preto"]
+}
+},
+{
+"id": 15,
+"nome": "Echo Dot 5ª geração Amazon",
+"descricao": "com Alexa, Smart Speaker",
+"preco": 379.99,
+"categoria": "Eletronico",
+"disponibilidade": false,
+"imagens": [
+  "imgs/echodot_150x110.jpeg"
+],
+"especificacoes": {
+  "material": "",
+  "tamanhosDisponiveis": [],
+  "coresDisponiveis": ["Preto"]
+}
+},
+{
+"id": 16,
+"nome": "Samsung Galaxy Watch4",
+"descricao": "BT 40mm - Relógio inteligente",
+"preco": 965.99,
+"categoria": "Eletronico",
+"disponibilidade": false,
+"imagens": [
+  "imgs/galaxywatch_131x150.jpeg"
+],
+"especificacoes": {
+  "material": "",
+  "tamanhosDisponiveis": [],
+  "coresDisponiveis": ["Preto"]
+}
+},
+{
+"id": 17,
+"nome": "Cabo de Rede",
+"descricao": "Patch Cord CAT.6 Plus Cable,10m, Azul ",
+"preco": 20.99,
+"categoria": "Informatica",
+"disponibilidade": false,
+"imagens": [
+  "imgs/caboderede_111x150.jpeg"
+],
+"especificacoes": {
+  "material": "",
+  "tamanhosDisponiveis": [],
+  "coresDisponiveis": []
+}
+},
+{
+"id": 18,
+"nome": "Gabinete UP Gamer Cronos",
+"descricao": "RGB, ATX, Micro ATX",
+"preco": 300.99,
+"categoria": "Informatica",
+"disponibilidade": false,
+"imagens": [
+"imgs/Gabineteup_83x120.jpeg"
+],
+"especificacoes": {
+"material": "",
+"tamanhosDisponiveis": [],
+"coresDisponiveis": ["Preto"]
+}
+},
+{
+"id": 19,
+"nome": "Controle Sony DualSense PS5",
+"descricao": "Sem Fio, Midnight Black ",
+"preco": 399.99,
+"categoria": "Eletronico",
+"disponibilidade": false,
+"imagens": [
+  "imgs/dualsense_120x120.jpeg"
+],
+"especificacoes": {
+  "material": "",
+  "tamanhosDisponiveis": [],
+  "coresDisponiveis": ["Preto"]
+}
+},
+{
+"id": 20,
+"nome": "Cabo HDMI 2.0",
+"descricao": "4K PIX, 2 Metros, 19 Pinos",
+"preco": 21.99,
+"categoria": "Eletronico",
+"disponibilidade": false,
+"imagens": [
+  "imgs/cabohdmi_120x120.jpeg"
+],
+"especificacoes": {
+  "material": "",
+  "tamanhosDisponiveis": [],
+  "coresDisponiveis": []
+}
+},
+{
+"id": 21,
+"nome": "Carregador USB-C",
+"descricao": "20W Branco Apple Original",
+"preco": 119.99,
+"categoria": "Eletronico",
+"disponibilidade": false,
+"imagens": [
+  "imgs/carregadorapple.jpeg"
+],
+"especificacoes": {
+  "material": "",
+  "tamanhosDisponiveis": [],
+  "coresDisponiveis": ["Branco"]
+}
+},
+{
+"id": 22,
+"nome": "Playstation 5 Sony",
+"descricao": "SSD 825GB, Controle sem fio DualSense",
+"preco": 3440.99,
+"categoria": "Games",
+"disponibilidade": false,
+"imagens": [
+  "imgs/ps5_120x120.jpeg"
+],
+"especificacoes": {
+  "material": "",
+  "tamanhosDisponiveis": [],
+  "coresDisponiveis": ["Branco"]
+}
+},
+{
+"id": 23,
+"nome": "Marvel's Spider-Man 2",
+"descricao": "Edição Standard - PlayStation 5",
+"preco": 250.00,
+"categoria": "Games",
+"disponibilidade": false,
+"imagens": [
+  "imgs/spiderman_94x120.jpeg"
+],
+"especificacoes": {
+  "material": "",
+  "tamanhosDisponiveis": [],
+  "coresDisponiveis": []
+}
+},
+{
+"id": 24,
+"nome": "EA Sports FC 24",
+"descricao": "PlayStation 5",
+"preco": 290.99,
+"categoria": "Games",
+"disponibilidade": false,
+"imagens": [
+  "imgs/FC24_95X120.jpeg"
+],
+"especificacoes": {
+  "material": "",
+  "tamanhosDisponiveis": [],
+  "coresDisponiveis": []
+}
+},
+{
+"id": 25,
+"nome": "The Last of Us Part II",
+"descricao": "Remastered, PS5",
+"preco": 175.00,
+"categoria": "Games",
+"disponibilidade": false,
+"imagens": [
+  "imgs/tlou_94x120.jpeg"
+],
+"especificacoes": {
+  "material": "",
+  "tamanhosDisponiveis": [],
+  "coresDisponiveis": []
+}
+},
+{
+"id": 26,
+"nome": "God of War Ragnarök",
+"descricao": "God of War Ragnarök",
+"preco": 299.99,
+"categoria": "Games",
+"disponibilidade": false,
+"imagens": [
+  "imgs/gow_150x84.jpeg"
+],
+"especificacoes": {
+  "material": "",
+  "tamanhosDisponiveis": [],
+  "coresDisponiveis": []
+}
+}
+]
+}
+}
+
+
+function carregarProduto(id) {
+    const produto = catalogo.catalogo.produtos.find(p => p.id === id);
+    if (produto) {
+        document.getElementById('produto-imagem').src = produto.imagens[0];
+        document.getElementById('produto-nome').textContent = produto.nome;
+        document.getElementById('produto-descricao').textContent = produto.descricao;
+        document.getElementById('produto-preco-original').textContent = "R̶$̶ " + (produto.preco * 1.2).toFixed(2); // Exemplo de preço original
+        document.getElementById('produto-preco').textContent = "R$ " + produto.preco.toFixed(2);
+        document.getElementById('produto-detalhes').textContent = produto.descricao; // Usando descrição como detalhes
+        document.getElementById('produto-especificacoes').textContent = "Categoria: " + produto.categoria; // Exemplo de especificações
+    }
+}
+
+function obterParametroId() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return parseInt(urlParams.get('id'));
+}
+
+window.onload = function() {
+    const produtoId = obterParametroId();
+    if (produtoId) {
+        carregarProduto(produtoId);
+    } else {
+        console.error("ID do produto não encontrado na URL.");
+    }
+};
+
+        </script>
+    </footer>
+    
+  
+    <script src="../Includes/script.js"></script>
+</body>
+</html>
