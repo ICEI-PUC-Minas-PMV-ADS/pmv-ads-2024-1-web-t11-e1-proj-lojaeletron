@@ -19,7 +19,7 @@ A Iniciativa do projeto tem como objetivo, suprir a  necessidade do mercado por 
 * Vitor Hugo
 * Yuji Ohasi
 
-# Mentora
+# Orientadora
 
 * Amália Vasconcelos
 
@@ -40,8 +40,8 @@ A Iniciativa do projeto tem como objetivo, suprir a  necessidade do mercado por 
 
 # Hospedagem
 
-Hospedagem fica por conta do GITHUB.IO.
-A aplicação em HTML/CSS/JS é um projeto que pode ser utilizado tanto em servidores como em navegadores web. Clique <a href="#">aqui</a> para acessá-lo. 
+Hospedagem fica por conta do NETLIFY.
+A aplicação em HTML/CSS/JS é um projeto que pode ser utilizado tanto em servidores como em navegadores web. Clique <a href="https://lojaeletron.netlify.app/codigo-fonte/informatica/informatica">aqui</a> para acessá-lo. 
 
 # Código-Fonte
 
