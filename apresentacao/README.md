@@ -24,4 +24,4 @@ https://youtu.be/yAdD5NrlnLE
 
 ## Hospedagem
 
-https://lojaeletron.netlify.app/codigo-fonte/paginainicial/
+Foi utilizada a plataforma Netlify como ambiente de hospedagem do site do projeto, que será mantido na URL: https://lojaeletron.netlify.app/codigo-fonte/paginainicial/.
