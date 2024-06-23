@@ -7,7 +7,7 @@
         "descricao": "Placa de video Radeon",
         "preco": 1399.99,
         "categoria": "Hardware",
-        "disponibilidade": false,
+        "disponibilidade": true,
         "imagens": [
           "imgs/placa_150x96.jpeg"
         ],
@@ -23,7 +23,7 @@
         "descricao": "Placa Mae Asus",
         "preco": 598.99,
         "categoria": "Hardware",
-        "disponibilidade": false,
+        "disponibilidade": true,
         "imagens": [
           "imgs/placamae.png"
         ],
@@ -39,7 +39,7 @@
         "descricao": "Ventus 2X MSI NVIDIA GeForce, 12GB GDDR6",
         "preco": 1799.99,
         "categoria": "Hardware",
-        "disponibilidade": false,
+        "disponibilidade": true,
         "imagens": [
           "imgs/placartx.png"
         ],
@@ -72,7 +72,7 @@
           "descricao": "80 Plus Gold, Modular",
           "preco": 599.99,
           "categoria": "Hardware",
-          "disponibilidade": false,
+          "disponibilidade": true,
           "imagens": [
             "imgs/fonte xpg.png"
           ],

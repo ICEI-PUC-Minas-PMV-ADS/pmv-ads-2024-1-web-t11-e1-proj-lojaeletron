@@ -7,7 +7,7 @@
       "descricao": "Multifuncional, Tanque de Tinta Colorida",
       "preco": 1135.00,
       "categoria": "Eletronico",
-      "disponibilidade": false,
+      "disponibilidade": true,
       "imagens": [
         "imgs/impressora1.png"
       ],
@@ -23,7 +23,7 @@
     "descricao": " Câmera 12MP, Tela 6.1",
     "preco": 3199.99,
     "categoria": "Eletronico",
-    "disponibilidade": false,
+    "disponibilidade": true,
     "imagens": [
       "imgs/iphone12.png"
     ],
@@ -39,7 +39,7 @@
     "descricao": "Intel Core i5-1235U, 8GB RAM, SSD 256GB",
     "preco": 2399.99,
     "categoria": "Eletronico",
-    "disponibilidade": false,
+    "disponibilidade": true,
     "imagens": [
       "imgs/galaxybook2_150x105.jpeg"
     ],
@@ -55,7 +55,7 @@
     "descricao": "com Alexa, Smart Speaker",
     "preco": 379.99,
     "categoria": "Eletronico",
-    "disponibilidade": false,
+    "disponibilidade": true,
     "imagens": [
       "imgs/echodot_150x110.jpeg"
     ],
@@ -71,7 +71,7 @@
     "descricao": "BT 40mm - Relógio inteligente",
     "preco": 965.99,
     "categoria": "Eletronico",
-    "disponibilidade": false,
+    "disponibilidade": true,
     "imagens": [
       "imgs/galaxywatch_131x150.jpeg"
     ],
@@ -87,7 +87,7 @@
     "descricao": "Sem Fio, Midnight Black ",
     "preco": 399.99,
     "categoria": "Eletronico",
-    "disponibilidade": false,
+    "disponibilidade": true,
     "imagens": [
       "imgs/dualsense_120x120.jpeg"
     ],
@@ -103,7 +103,7 @@
     "descricao": "SSD 825GB, Controle sem fio DualSense",
     "preco": 3440.99,
     "categoria": "Eletronico",
-    "disponibilidade": false,
+    "disponibilidade": true,
     "imagens": [
       "imgs/ps5_120x120.jpeg"
     ],
