@@ -143,9 +143,16 @@ footer {
 
 /*------------------------------ Parte de interacao do Bootstrap --------------*/
 #HomeTitle {
-    font-size: 50px;
-    color: #FEB900;
-    font-family: "Ubuntu",Arial, Helvetica, sans-serif;
+  text-align: center; /* Para centralizar o botÃ£o */
+}
+
+#eletronButton {
+  font-size: 40px;
+  color: #FEB900;
+  font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .header-menu {
