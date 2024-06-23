@@ -19,7 +19,7 @@ A Iniciativa do projeto tem como objetivo, suprir a  necessidade do mercado por 
 * Vitor Hugo
 * Yuji Ohasi
 
-# Mentora
+# Orientadora
 
 * Amália Vasconcelos
 
