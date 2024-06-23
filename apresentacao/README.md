@@ -1,18 +1,32 @@
-# Instruções de utilização
+# Apresentação do Projeto
 
-## Estratégia de Organização de Codificação 
+## Conjunto de Slides
 
-Nesse primeiro eixo do curso, para simplificar a utilização do Git e a organização das pastas e artefatos de implementação no sistema de arquivos, sugerimos que o projeto seja estruturado de modo que cada aluno trabalhe com seus arquivos nas suas respectivas pastas, identificadas por nomes das suas respectivas telas. Por exemplo:
-- Pasta src (root do projeto): index.html, index.css, index.js - Desenvolvedora responsável: Aluna X.
-- Pasta src\clientes: clientes.html, clientes.css, clientes.js - Desenvolvedor responsável: Aluno Y.
-- Pasta src\funcionarios: funcionarios.html, funcionarios.css, funcionarios.js  - Desenvolvedora responsável: Aluna Z.
+A apresentação do projeto consiste na geração de um conjunto de slides em um arquivo no formato ppt, pptx ou pdf, contemplando os seguintes itens:
 
-## Instalação do Site
+> - Contexto (Problema, Público-alvo)
+> - Requisitos
+> - Solução Implementada (funcionalidades de software)
+> - Conclusão da elaboração do projeto (pontos positivos, desafios, aprendizado).
 
-O site em HTML/CSS/JS é um projeto estático. É necessário implantá-lo em um servidor web de sua preferência. Existem diversos servidores web gratuitos que podem ser utilizados, tal como GitHub Pages (GitHub.IO), Vercel, Render, Netlify, Surge.sh, entre outros. Nesse primeiro eixo, recomenda-se inclusive a utilização do GitHub Pages. [Insira o endereço eletrônico público para acessá-lo.] 
+[Adicione pdf de apresentação.]
 
-## Histórico de versões
+> **Links Úteis**:
+> - [A regra 10-20-30 para apresentações de sucesso](https://revistapegn.globo.com/Noticias/noticia/2014/07/regra-10-20-30-para-apresentacoes-de-sucesso.html)
+> - [Top Tips for Effective Presentations](https://www.skillsyouneed.com/present/presentation-tips.html)
+> - [How to make a great presentation](https://www.ted.com/playlists/574/how_to_make_a_great_presentation)
 
-### [0.1.0] - DD/MM/AAAA
-#### Adicionado/Atualizado/Removido
-- Relação de artefatos ...
+## Vídeo de apresentação
+
+A equipe também deverá gravar um vídeo de, no máximo, três minutos, com a apresentação da solução. Vocês deverão abrir a aplicação hospedada e apresentar o seu funcionamento.  Poderão ser utilizados quaisquer recursos na montagem do vídeo, mas não se esqueçam de mostrar as funcionalidades da aplicação. Seguem as especificações técnicas que devem ser obedecidas na geração do vídeo:
+
+> - tamanho do arquivo limitado a 90Mb
+> - taxa de FPS limitada a 30 quadros por segundo
+> - resolução HD (720p) ou Full HD (1080p)
+> - formato mp4.
+
+[Adicione vídeo de apresentação.]
+
+## Hospedagem
+
+[Adicione o endereço eletrônico público onde o site encontra-se hospedado.]

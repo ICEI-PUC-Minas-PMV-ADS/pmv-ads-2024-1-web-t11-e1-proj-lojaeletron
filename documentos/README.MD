@@ -40,8 +40,8 @@ A Iniciativa do projeto tem como objetivo, suprir a  necessidade do mercado por 
 
 # Hospedagem
 
-Hospedagem fica por conta do GITHUB.IO.
-A aplicação em HTML/CSS/JS é um projeto que pode ser utilizado tanto em servidores como em navegadores web. Clique <a href="https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2022-1-e1-proj-web-t3-vida-de-estudante/src/paginaHome/index.html">aqui</a> para acessá-lo. 
+Hospedagem fica por conta do Netlify.
+A aplicação em HTML/CSS/JS é um projeto que pode ser utilizado tanto em servidores como em navegadores web. Clique <a href="https://lojaeletron.netlify.app/codigo-fonte/paginainicial/">aqui</a> para acessá-lo. 
 
 # Código-Fonte
 
