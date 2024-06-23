@@ -45,7 +45,40 @@
   
   <script src="../Scripts/pages.js"></script>
 
-  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const productId = params.get('id');
+    
+      fetch('catalogo.json')
+        .then(response => response.json())
+        .then(data => {
+          const products = data.catalogo.produtos;
+          const product = products.find(p => p.id == productId);
+          const container = document.getElementById('product-details');
+    
+          if (product) {
+            container.innerHTML = `
+              <div class="col-md-6 offset-md-3">
+                <div class="card">
+                  <img src="${product.imagens[0]}" class="card-img-top" alt="${product.nome}">
+                  <div class="card-body">
+                    <h5 class="card-title">${product.nome}</h5>
+                    <p class="card-text">${product.descricao}</p>
+                    <p class="card-text"><strong>Preço: </strong>R$${product.preco.toFixed(2)}</p>
+                    <p class="card-text"><strong>Disponibilidade: </strong>${product.disponibilidade ? 'Disponível' : 'Indisponível'}</p>
+                    <a href="carrinho.html?id=${product.id}" class="btn btn-primary">Adicionar ao Carrinho</a>
+                  </div>
+                </div>
+              </div>
+            `;
+          } else {
+            container.innerHTML = '<p>Produto não encontrado.</p>';
+          }
+        })
+        .catch(error => console.error('Erro ao carregar o JSON:', error));
+    });
+</script>
 
     <main>
         <div id="main">

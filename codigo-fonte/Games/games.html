@@ -53,33 +53,6 @@
 
   </main>
   <script>
-
-function carregarProduto(id) {
-    const produto = catalogo.catalogo.produtos.find(p => p.id === id);
-    if (produto) {
-        document.getElementById('produto-imagem').src = produto.imagens[0];
-        document.getElementById('produto-nome').textContent = produto.nome;
-        document.getElementById('produto-descricao').textContent = produto.descricao;
-        document.getElementById('produto-preco-original').textContent = "R̶$̶ " + (produto.preco * 1.2).toFixed(2); // Exemplo de preço original
-        document.getElementById('produto-preco').textContent = "R$ " + produto.preco.toFixed(2);
-        document.getElementById('produto-detalhes').textContent = produto.descricao; // Usando descrição como detalhes
-        document.getElementById('produto-especificacoes').textContent = "Categoria: " + produto.categoria; // Exemplo de especificações
-    }
-}
-
-function obterParametroId() {
-    const urlParams = new URLSearchParams(window.location.search);
-    return parseInt(urlParams.get('id'));
-}
-
-window.onload = function() {
-    const produtoId = obterParametroId();
-    if (produtoId) {
-        carregarProduto(produtoId);
-    } else {
-        console.error("ID do produto não encontrado na URL.");
-    }
-};
     // Carregar JSON dinamicamente
     fetch('catalogo.json')
       .then(response => response.json())
@@ -104,7 +77,7 @@ window.onload = function() {
                 <p class="card-text">${product.descricao}</p>
                 <p class="card-text"><strong>Preço: </strong>R$${product.preco.toFixed(2)}</p>
                 <p class="card-text"><strong>Disponibilidade: </strong>${disponibilidade}</p>
-                <a href="../Games/detalhesnovo.html" class="btn btn-primary">Compre</a>
+                <a href="/codigo-fonte/Games/detalhesnovo.html?id=${product.id}"class="btn btn-primary">Compre</a>
               </div>
             </div>
           `;
