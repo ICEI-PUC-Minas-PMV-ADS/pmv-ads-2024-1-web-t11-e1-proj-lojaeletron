@@ -1,0 +1,72 @@
+{
+  "catalogo": {
+    "produtos": [
+      {
+        "id": 17,
+        "nome": "Cabo de Rede",
+        "descricao": "Patch Cord CAT.6 Plus Cable,10m, Azul ",
+        "preco": 20.99,
+        "categoria": "Informatica",
+        "disponibilidade": false,
+        "imagens": [
+          "imgs/caboderede_111x150.jpeg"
+        ],
+        "especificacoes": {
+          "material": "",
+          "tamanhosDisponiveis": [],
+          "coresDisponiveis": []
+      }
+    },
+    {
+      "id": 18,
+      "nome": "Gabinete UP Gamer Cronos",
+      "descricao": "RGB, ATX, Micro ATX",
+      "preco": 300.99,
+      "categoria": "Informatica",
+      "disponibilidade": false,
+      "imagens": [
+        "imgs/Gabineteup_83x120.jpeg"
+      ],
+      "especificacoes": {
+        "material": "",
+        "tamanhosDisponiveis": [],
+        "coresDisponiveis": ["Preto"]       
+        }
+      },
+        {
+          "id": 20,
+          "nome": "Cabo HDMI 2.0",
+          "descricao": "4K PIX, 2 Metros, 19 Pinos",
+          "preco": 21.99,
+          "categoria": "Eletronico",
+          "disponibilidade": false,
+          "imagens": [
+            "imgs/cabohdmi_120x120.jpeg"
+          ],
+          "especificacoes": {
+            "material": "",
+            "tamanhosDisponiveis": [],
+            "coresDisponiveis": []
+        }
+        },
+        {
+          "id": 21,
+          "nome": "Carregador USB-C",
+          "descricao": "20W Branco Apple Original",
+          "preco": 119.99,
+          "categoria": "Eletronico",
+          "disponibilidade": false,
+          "imagens": [
+            "imgs/carregadorapple.jpeg"
+          ],
+          "especificacoes": {
+            "material": "",
+            "tamanhosDisponiveis": [],
+            "coresDisponiveis": ["Branco"]
+        }
+      }
+    ]
+      }
+    
+  }
+

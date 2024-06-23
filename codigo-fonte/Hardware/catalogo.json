@@ -1,0 +1,94 @@
+{
+  "catalogo": {
+    "produtos": [
+      {
+        "id": 3,
+        "nome": "Placa de video",
+        "descricao": "Placa de video Radeon",
+        "preco": 1399.99,
+        "categoria": "Hardware",
+        "disponibilidade": false,
+        "imagens": [
+          "imgs/placa_150x96.jpeg"
+        ],
+        "especificacoes": {
+          "material": "",
+          "tamanhosDisponiveis": [],
+          "coresDisponiveis": ["Preto", "Branco", "Cinza"]
+        }
+      },
+      {
+        "id": 4,
+        "nome": "Placa Mae",
+        "descricao": "Placa Mae Asus",
+        "preco": 598.99,
+        "categoria": "Hardware",
+        "disponibilidade": false,
+        "imagens": [
+          "imgs/placamae.png"
+        ],
+        "especificacoes": {
+          "material": "",
+          "tamanhosDisponiveis": [],
+          "coresDisponiveis": []
+        }
+      },
+      {
+        "id": 5,
+        "nome": "Placa de Vídeo RTX 3060 ",
+        "descricao": "Ventus 2X MSI NVIDIA GeForce, 12GB GDDR6",
+        "preco": 1799.99,
+        "categoria": "Hardware",
+        "disponibilidade": false,
+        "imagens": [
+          "imgs/placartx.png"
+        ],
+        "especificacoes": {
+          "material": "",
+          "tamanhosDisponiveis": [],
+          "coresDisponiveis":[]
+        }
+      },
+        {
+          "id": 1,
+          "nome": "Monitor",
+          "descricao": "Monitor 144hz, AOC",
+          "preco": 1129.99,
+          "categoria": "Hardware",
+          "disponibilidade": true,
+          "imagens": [
+            "imgs/monitor_150x150.png"
+            
+          ],
+          "especificacoes": {
+            "material": "",
+            "tamanhosDisponiveis": []
+            
+          }
+        },
+        {
+          "id": 7,
+          "nome": "Fonte XPG Core Reactor, 850W",
+          "descricao": "80 Plus Gold, Modular",
+          "preco": 599.99,
+          "categoria": "Hardware",
+          "disponibilidade": false,
+          "imagens": [
+            "imgs/fonte xpg.png"
+          ],
+          "especificacoes": {
+            "material": "",
+            "tamanhosDisponiveis": []
+          }
+        }
+          ]
+        }
+      }
+   
+
+          
+        
+        
+      
+  
+

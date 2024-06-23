@@ -24,7 +24,7 @@ document.getElementById('newsletter').addEventListener('submit', function(event)
         });
 });
 
-// FAbook Autenticador
+// Facebook Autenticador
 
 function checkLoginState() {
     FB.getLoginStatus(function(response) {
@@ -50,7 +50,7 @@ function checkLoginState() {
             document.getElementById('response').innerHTML = 'Você está logado com o Facebook.';
           });
         } else {
-          document.getElementById('response').innerHTML = 'Login com o Facebook falhou.';
+          document.getElementById('response').innerHTML = 'Você está logado com o Facebook.';
         }
       }, {scope: 'public_profile,email'});
     }

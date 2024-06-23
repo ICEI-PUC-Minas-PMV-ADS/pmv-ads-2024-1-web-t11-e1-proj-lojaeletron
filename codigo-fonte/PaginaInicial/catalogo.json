@@ -339,7 +339,7 @@
         "nome": "Playstation 5 Sony",
         "descricao": "SSD 825GB, Controle sem fio DualSense",
         "preco": 3440.99,
-        "categoria": "Games",
+        "categoria": "Eletronico",
         "disponibilidade": false,
         "imagens": [
           "imgs/ps5_120x120.jpeg"

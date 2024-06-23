@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     
-<head>
+<head id=""> <head id=""></head>
     <!--Bootstrap CDN , suporte aos servidores -->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
@@ -11,12 +11,17 @@
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script> 
     <link rel="stylesheet" href="/codigo-fonte/PaginaInicial/css/styles.css">
-
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!--Fontes-->
     <script src="https://kit.fontawesome.com/cf6b0cd6b1.js"></script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+      .card-img-top {
+        width: 100%;
+        height: 200px; /* Altura fixa */
+        object-fit: cover; /* Manter proporção e cortar se necessário */
+      }
     </style>
 
     <!-- MetaTags de Compatibilidade e Creditos-->
@@ -25,168 +30,71 @@
     <meta name="description" content="Loja de Produtos Eletronicos em Geral!">
     <meta name="keywords" content="Eletron">
 
+    <link rel="stylesheet" href="styles.css">
+
+
     
 </head>
-</body>
 
-<!--Cabecalho-->
-<span id="header"></span>
+<body>
+    <span id="header"></span>
+    <div style="width: 100%; padding: 30px"></div>
 
-<div style="width: 100%; padding: 30px"></div>
-
-<!----------------------Carrousel--------------------------->
-
-<main class="container-fluid d-flex">
-    <row class="row" style="display: flex; justify-content: center">
-    <col class="col-3">
-    <div style="display: flex; flex-direction: column; align-items: center">
-  
-        <div style="flex-grow: 1">
-            <col>
-                <div class="carousel slide d-block" id="carrousel"></div>
-            </col>
-        </div>
-  
-        <div style="flex-grow: 1">
-            <div>
-                <a href="/codigo-fonte/Avaliacao/avaliacao.html" type="button" class="btn btn-success btn-close w-100" aria-label="Close">COMPRAR <i class="fa-solid fa-cart-shopping"></i></a>
-            </div>
-        </div>
-        
-    </div>
-    </col>
-    <col class="col-3">
-    <div style="display: flex; flex-direction: column ; align-items: center;">
-  
-        <div style="flex-grow: 1">
-            <col>
-                <div class="carousel slide d-block" id="carrousel2"></div>
-            </col>
-        </div>
-  
-        <div style="flex-grow: 1">
-            <col>
-                <a href="/codigo-fonte/Avaliacao/avaliacao.html" type="button" class="btn btn-success btn-close w-100" aria-label="Close">COMPRAR <i class="fa-solid fa-cart-shopping"></i></a>
-            </col>
-        </div>
-  
-    </div>
-    </col>
-    <col class="col-3">
-        <div style="display: flex; flex-direction: column; align-items: center;">
-  
-            <div style="flex-grow: 1">
-                <col>
-                    <div class="carousel slide d-block" id="carrousel3"></div>
-                </col>
-            </div>
-  
-            <div style="flex-grow: 1">
-                <col>
-                    <a href="/codigo-fonte/Avaliacao/avaliacao.html" type="button" class="btn btn-success btn-close w-100" aria-label="Close">COMPRAR <i class="fa-solid fa-cart-shopping"></i></a>
-                </col>
-            </div>
-  
-        </div>
-    </col>
-    <col class="col-3">
-    <div style="display: flex; flex-direction: column; align-items: center;">
-  
-        <div style="flex-grow: 1">
-            <col>
-                <div class="carousel slide d-block" id="carrousel4"></div>
-            </col>
-        </div>
-  
-        <div style="flex-grow: 1">
-            <col>
-                <a href="/codigo-fonte/Avaliacao/avaliacao.html" type="button" class="btn btn-success btn-close w-100" aria-label="Close">COMPRAR <i class="fa-solid fa-cart-shopping"></i></a>
-            </col>
-        </div>
-    </div>
-  
-    <!-- inicioteste-->
-    
-    <col class="col-3">
-      <div style="display: flex; flex-direction: column; align-items: center;">
-    
-          <div style="flex-grow: 1">
-              <col>
-                  <div class="carousel slide d-block" id="carrousel5"></div>
-              </col>
-          </div>
-    
-          <div style="flex-grow: 1">
-              <div>
-                  <a href="/codigo-fonte/Avaliacao/avaliacao.html" type="button" class="btn btn-success btn-close w-100" aria-label="Close">COMPRAR <i class="fa-solid fa-cart-shopping"></i></a>
-              </div>
-          </div>
-    
+    <div class="container mt-5">
+      <div id="cards-container" class="row">
+        <!-- Os cards serão gerados dinamicamente aqui -->
       </div>
-      </col>
-      <col class="col-3">
-      <div style="display: flex; flex-direction: column ; align-items: center;">
+    </div>
+    <!-- Barra de pesquisa -->
+    <input class="d-none" type="text" id="searchInput d-none" placeholder="Buscar produtos...">
+    <div id="produtos"></div>
+    <div id="carrinho"></div>
     
-          <div style="flex-grow: 1">
-              <col>
-                  <div class="carousel slide d-block" id="carrousel6"></div>
-              </col>
-          </div>
+
     
-          <div style="flex-grow: 1">
-              <col>
-                  <a href="/codigo-fonte/Avaliacao/avaliacao.html" type="button" class="btn btn-success btn-close w-100" aria-label="Close">COMPRAR <i class="fa-solid fa-cart-shopping"></i></a>
-              </col>
-          </div>
+    <script src="../Scripts/pages.js"></script>
     
-      </div>
-      </col>
-      <col class="col-3">
-          <div style="display: flex; flex-direction: column; align-items: center;">
-    
-              <div style="flex-grow: 1">
-                  <col>
-                      <div class="carousel slide d-block" id="carrousel7"></div>
-                  </col>
-              </div>
-    
-              <div style="flex-grow: 1">
-                  <col>
-                      <a href="/codigo-fonte/Avaliacao/avaliacao.html" type="button" class="btn btn-success btn-close w-100" aria-label="Close">COMPRAR <i class="fa-solid fa-cart-shopping"></i></a>
-                  </col>
-              </div>
-    
-          </div>
-      </col>
-      <col class="col-3">
-      <div style="display: flex; flex-direction: column; align-items: center;">
-    
-          <div style="flex-grow: 1">
-              <col>
-                  <div class="carousel slide d-block" id="carrousel8"></div>
-              </col>
-          </div>
-    
-          <div style="flex-grow: 1">
-              <col>
-                  <a href="/codigo-fonte/Avaliacao/avaliacao.html" type="button" class="btn btn-success btn-close w-100" aria-label="Close">COMPRAR <i class="fa-solid fa-cart-shopping"></i></a>
-              </col>
-          </div>
-      </div>
-      </col>
-  
-    </col>
-    
-  
-  </row>
   </main>
-  
-  
-  <!---------------------Carrousel---------------------------->
-  
-    <!--Rodape-->
+  <script>
+    // Carregar JSON dinamicamente
+    fetch('catalogo.json')
+      .then(response => response.json())
+      .then(data => {
+        const products = data.catalogo.produtos;
+        const container = document.getElementById('cards-container');
     
-    <footer class="d-flex">
+        products.forEach((product) => {
+          // Cria uma coluna
+          const col = document.createElement('div');
+          col.className = 'col-md-3 p-2';
+    
+          // Verificar se o produto está disponível
+          const disponibilidade = product.disponibilidade ? 'Disponível' : 'Indisponível';
+          
+          // Cria o card
+          col.innerHTML = `
+            <div class="card" style="width: 100%;">
+              <img src="${product.imagens[0]}" class="card-img-top" alt="${product.nome}">
+              <div class="card-body">
+                <h5 class="card-title">${product.nome}</h5>
+                <p class="card-text">${product.descricao}</p>
+                <p class="card-text"><strong>Preço: </strong>R$${product.preco.toFixed(2)}</p>
+                <p class="card-text"><strong>Disponibilidade: </strong>${disponibilidade}</p>
+                <a href="#" class="btn btn-primary">Compre</a>
+              </div>
+            </div>
+          `;
+    
+          // Adiciona a coluna ao container
+          container.appendChild(col);
+        });
+      })
+      .catch(error => console.error('Erro ao carregar o JSON:', error));
+    </script>
+
+     <!--Rodape-->
+    
+     <footer class="d-flex">
         <div id="contact-and-logos" class="d-flex" style="flex-grow: 3; flex-direction: column;">
             
             <div style="flex-grow: 1">
@@ -217,3 +125,4 @@
     </footer>
     <script src="../Scripts/pages.js"></script>
 </body>
+    

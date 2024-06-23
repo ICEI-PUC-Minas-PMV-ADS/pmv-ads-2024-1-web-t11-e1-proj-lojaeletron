@@ -6,11 +6,57 @@
     <title>Carrinho de Compras</title>
     <link rel="stylesheet" href="../PaginaInicial/carrin.css">
 </head>
+<span id="header"></span>
+<div style="width: 100%; padding: 30px"></div>
+
+
+
+<!-- Barra de pesquisa -->
+
+<div id="produtos"></div>
+<div id="carrinho"></div>
+
+
+
+<script src="../Scripts/pages.js"></script>
+
+
 <body>
     <h1>Carrinho de Compras</h1>
     <div id="cart-items"></div>
     <p id="total-price"></p>
     <button id="finalizar-compra">Finalizar Compra</button>
     <script src="cart.js"></script>
+
+    <footer class="d-flex">
+        <div id="contact-and-logos" class="d-flex" style="flex-grow: 3; flex-direction: column;">
+            
+            <div style="flex-grow: 1">
+              <p>Entre em contato através de <a href="mailto:suporte.eletron@gmail.com">suporte.eletron@gmail.com</a></p>
+            </div>
+            <div style="flex-grow: 1">
+              <img src="../includes/imgs/seloebit.png" alt="Logotipo do Ebit">
+              <img src="../includes/imgs/selogoogle.png" alt="Logotipo do Google">
+              <img src="../includes/imgs/seloblindado.png" alt="Logotipo Blindado">
+            </div>
+            <!-- <a href="URL_DO_SEU_PERFIL_DO_INSTAGRAM" target="_blank"><img src="caminho/para/o/logo_do_instagram.png" alt="Instagram"></a> -->
+        </div>
+        <div class="container" styles="flex-grow: 1">
+            <h1>Assine nossa Newsletter</h1>
+            <form id="newsletter" styles="flex-grow: 1">
+                <input type="email" id="user-email" placeholder="Digite seu email" required>
+                <button type="submit">Assinar</button>
+            </form>
+            <p id="status-message"></p>
+        </div>
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script>
+            (function(){
+                emailjs.init("gf-oHRiua7K86fIND"); // User ID do EmailJS
+            })();
+        </script>
+        <script src="/codigo-fonte/Scripts/script.js"></script>
+    </footer>
+</body>
 </body>
 </html>

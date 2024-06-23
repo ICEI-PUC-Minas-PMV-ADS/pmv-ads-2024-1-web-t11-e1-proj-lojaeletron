@@ -29,8 +29,25 @@
       
   </head>
   <header class="header">
-  <h1 id="HomeTitle">ELETRON</h1>
-      <div class="my-2" style="display: flex; flex-direction: row; flex-grow: 1">
+    <a href="/codigo-fonte/PaginaInicial/index.html"><h1 id="HomeTitle"><button id="eletronButton">ELETRON</button></h1></a>
+    <div class="my-2" style="display: flex; flex-direction: row; flex-grow: 1">
+      
+      
+      <script>
+        const { shell } = require('electron');
+
+document.addEventListener('DOMContentLoaded', () => {
+const paginaButton = document.getElementById('paginaButton');
+
+paginaButton.addEventListener('click', () => {
+  // Substitua a URL abaixo pela pÃ¡gina para a qual deseja navegar
+  const url = '' 
+
+  shell.openExternal(url);
+});
+});
+      </script>
+
         
         <div style="flex-grow: 1">
           <div id="carrinho"></div>
