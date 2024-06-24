@@ -30,11 +30,11 @@ A Iniciativa do projeto tem como objetivo, suprir a  necessidade do mercado por 
 <li><a href="/documentos/02.Especificação do Projeto.md"> Especificação do Projeto</a></li>
 <li><a href="/documentos/03.Metodologia.md"> Metodologia</a></li>
 <li><a href="/documentos/04.Projeto de Interface.md"> Projeto de Interface</a></li>
-<li><a href="/documentos/05.Template Padrāo.md"> Template padrão do Site</a></li>
+<li><a href="/documentos/05.Template Padrão.md"> Template padrão do Site</a></li>
 <li><a href="/documentos/06.Programaçāo de Funcionalidades.md"> Programação de Funcionalidades</a></li>
 <li><a href="/documentos/07.Plano de Testes.md"> Plano de Testes de Software</a></li>
 <li><a href="/documentos/08.Registro de Teste de Softwares.md"> Registro de Testes de Software</a></li>
-<li><a href="/documentos/09.Referências.md"> Referências</a></li>
+<li><a href="/documentos/Referências.md"> Referências</a></li>
 </ol>
 
 
