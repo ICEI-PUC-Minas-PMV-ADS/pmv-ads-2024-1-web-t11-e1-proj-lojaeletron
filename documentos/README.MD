@@ -1,5 +1,5 @@
 # Loja Eletron
-EA loja foi criada com a visão clara de oferecer o melhor custo-benefício e uma experiência de compra excepcional para seus clientes. Reconhecemos que a busca por produtos de alta qualidade, aliada ao desejo de adquiri-los por preços acessíveis, é o principal fator que movimenta o mercado. Nosso compromisso é atender a essas necessidades, garantindo que cada cliente encontre em nossa loja a combinação perfeita entre qualidade e preço justo, resultando em uma experiência de compra satisfatória e vantajosa.
+A loja foi criada com a visão clara de oferecer o melhor custo-benefício e uma experiência de compra excepcional para seus clientes. Reconhecemos que a busca por produtos de alta qualidade, aliada ao desejo de adquiri-los por preços acessíveis, é o principal fator que movimenta o mercado. Nosso compromisso é atender a essas necessidades, garantindo que cada cliente encontre em nossa loja a combinação perfeita entre qualidade e preço justo, resultando em uma experiência de compra satisfatória e vantajosa.
 # ELETRON
 
 `Análise e Desenvolvimento de Sistemas - PUC Minas`
