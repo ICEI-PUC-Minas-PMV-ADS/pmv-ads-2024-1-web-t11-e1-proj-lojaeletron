@@ -401,6 +401,3 @@ document.getElementById('searchInput').addEventListener('input', function() {
   );
   exibirProdutos(produtosFiltrados);
 });
-
-
-
