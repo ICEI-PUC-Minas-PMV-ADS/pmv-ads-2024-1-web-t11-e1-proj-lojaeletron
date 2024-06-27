@@ -53,7 +53,7 @@
         .unique-container {
             max-width: 600px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 50px;
             border: 1px solid #ccc;
             border-radius: 10px;
             background-color:#001234;
@@ -183,7 +183,7 @@
                     <label for="fullname">Nome completo</label>
                     <input type="text" id="fullname" name="fullname" maxlength="100" pattern="[A-Za-z\s]+" title="Apenas letras e espaços são permitidos." required>
                 </div>
-                <div class="form-group">
+                <div class="form-group" style="margin-left: 10px">
                     <label for="cpf">CPF*</label>
                     <input type="text" id="cpf" name="cpf" maxlength="11" onkeypress="return onlyNumbers(event)" required>
                 </div>
@@ -204,7 +204,7 @@
                     <label for="phone">Telefone celular</label>
                     <input type="tel" id="phone" name="phone" maxlength="15" onkeypress="return onlyNumbers(event)" placeholder="(xx) x xxxx-xxxx" required>
                 </div>            
-                <div class="form-group">
+                <div class="form-group" style="margin-left: 10px">
                     <label for="email">E-mail</label>
                     <input type="email" id="email" name="email" placeholder="example@email.com" required>
                 </div>
@@ -212,7 +212,7 @@
                     <label for="password">Crie sua senha</label>
                     <input type="password" id="password" name="password" required>
                 </div>
-                <div class="form-group">
+                <div class="form-group" style="margin-left: 10px">
                     <label for="confirm-password">Confirme sua senha</label>
                     <input type="password" id="confirm-password" name="confirm-password" required>
                 </div>
@@ -234,37 +234,44 @@
             $('#cpf').mask('000.000.000-00', {reverse: false});
     </script>
 
-
-    <!--Rodape-->
+  <!--Rodape-->
     
-    <footer class="d-flex">
-        <div id="contact-and-logos" class="d-flex" style="flex-grow: 3; flex-direction: column;">
-            
-            <div style="flex-grow: 1">
-              <p>Entre em contato através de <a href="mailto:suporte.eletron@gmail.com">suporte.eletron@gmail.com</a></p>
-            </div>
-            <div style="flex-grow: 1">
-              <img src="../includes/imgs/seloebit.png" alt="Logotipo do Ebit">
-              <img src="../includes/imgs/selogoogle.png" alt="Logotipo do Google">
-              <img src="../includes/imgs/seloblindado.png" alt="Logotipo Blindado">
-            </div>
-            <!-- <a href="URL_DO_SEU_PERFIL_DO_INSTAGRAM" target="_blank"><img src="caminho/para/o/logo_do_instagram.png" alt="Instagram"></a> -->
+  <footer class="d-flex">
+    <div id="contact-and-logos" class="d-flex" style="flex-grow: 1; flex-direction: column;">
+        
+        <div style="flex-grow: 1">
+          <p>Entre em contato através de <a href="mailto:suporte.eletron@gmail.com">suporte.eletron@gmail.com</a></p>
         </div>
-        <div class="container" styles="flex-grow: 1">
-            <h1>Assine nossa Newsletter</h1>
-            <form id="newsletter" styles="flex-grow: 1">
-                <input type="email" id="user-email" placeholder="Digite seu email" required>
-                <button type="submit">Assinar</button>
-            </form>
-            <p id="status-message"></p>
+        <div style="flex-grow: 1">
+          <img src="../includes/imgs/seloebit.png" alt="Logotipo do Ebit">
+          <img src="../includes/imgs/selogoogle.png" alt="Logotipo do Google">
+          <img src="../includes/imgs/seloblindado.png" alt="Logotipo Blindado">
         </div>
-        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-        <script>
-            (function(){
-                emailjs.init("gf-oHRiua7K86fIND"); // User ID do EmailJS
-            })();
-        </script>
-        <script src="/codigo-fonte/Scripts/script.js"></script>
+        <!-- <a href="URL_DO_SEU_PERFIL_DO_INSTAGRAM" target="_blank"><img src="caminho/para/o/logo_do_instagram.png" alt="Instagram"></a> -->
+    </div>
+    <div style="flex-grow: 1; padding: 10px">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4" style="display: flex; flex-direction: column;">
+                <div class="flex-grow: 1">
+                    <h1>Assine nossa Newsletter</h1>
+                </div>
+                 <form id="newsletter" style="flex-grow: 1">
+                    <input type="email" id="user-email" placeholder="Digite seu email" required style="width: 300px">
+                    <button type="submit">Assinar</button>
+                </form>
+                <p id="status-message"></p>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("gf-oHRiua7K86fIND"); // User ID do EmailJS
+        })();
+    </script>
+    <script src="/codigo-fonte/Scripts/script.js"></script>
     </footer>
-    <script src="../Scripts/pages.js"></script>
+<script src="../Scripts/pages.js"></script>
 </body>
