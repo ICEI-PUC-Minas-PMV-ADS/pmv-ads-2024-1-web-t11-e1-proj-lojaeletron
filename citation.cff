@@ -1,0 +1,29 @@
+message: Please cite this software using these metadata.
+title: Eeltron Vendas
+authors:
+  - family-names: Gaspar Isidorio Filgueira
+    given-names: Arthur
+  - family-names: Henrique Nakazato Amancio
+    given-names: Gabriel 
+  - family-names: Kevin Estrela da Silva
+    given-names: Matheus
+  - family-names: Ohasi Naskio Abico
+    given-names: Yuji
+  - family-names: Hugo Braga da Silva
+    given-names: Vitor 
+  - family-names: 
+    given-names: 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Borges Ramos
+    given-names: Joyce
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Soares Vieira de Vasconcelos
+    given-names: Amalia
+keywords:
+  - Vendas
+  - e-commerce
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-web-t11-e1-proj-lojaeletron.git
+version: 1.0.0
+date-released: 2024-06-21
